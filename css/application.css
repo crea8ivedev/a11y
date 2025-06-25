@@ -278,3 +278,16 @@
     @apply cursor-pointer transition-all duration-300 ease-in-out w-fit font-body font-semibold text-white uppercase min-w-[147px] min-h-45 text-16 leading-100p tracking-normal flex justify-center items-center px-25 gap-x-10 bg-primary-blue border border-primary-blue rounded-[100px] hover:bg-transparent hover:text-primary-blue;
   }
 }
+.announcement-bar-section .utility-bar {
+  @apply bg-primary-blue;
+}
+.announcement-bar-section .custom-html p,
+.announcement-bar-section .custom-html a {
+  @apply text-12 leading-16 font-semibold text-white;
+}
+.announcement-bar-section .custom-html a {
+  @apply underline hover:no-underline underline-offset-2;
+}
+.announcement-bar-section .utility-bar .custom-html {
+  @apply flex items-center gap-x-8 py-12;
+}
