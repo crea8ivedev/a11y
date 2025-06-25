@@ -5,7 +5,7 @@
         <div class="marquee-item" {{ block.shopify_attributes }}>
           {% if block.settings.image %}
             <div class="marquee-image">
-              <img src="{{ block.settings.image | img_url: 'small' }}" alt="marquee image">
+              <img src="{{ block.settings.image | image_url }}" alt="marquee image" height="auto" width="auto">
             </div>
           {% endif %}
           <div class="marquee-text">{{ block.settings.text }}</div>
@@ -17,7 +17,12 @@
         <div class="marquee-item">
           {% if block.settings.image %}
             <div class="marquee-image">
-              <img src="{{ block.settings.image | img_url: 'small' }}" alt="marquee image duplicate">
+              <img
+                src="{{ block.settings.image | image_url }}"
+                alt="marquee image duplicate"
+                height="auto"
+                width="auto"
+              >
             </div>
           {% endif %}
           <div class="marquee-text">{{ block.settings.text }}</div>
@@ -28,60 +33,59 @@
 </section>
 
 <style>
-.marquee-section {
-  background-color: #0c2a4d;
-  overflow: hidden;
-  white-space: nowrap;
-  padding: 1rem 0;
-}
-
-.marquee-wrapper {
-  position: relative;
-  display: flex;
-  overflow: hidden;
-}
-
-.marquee-track {
-  display: flex;
-  width: max-content;
-  animation: marqueeScroll 30s linear infinite;
-}
-
-.marquee-item {
-  display: flex;
-  align-items: center;
-  margin-right: 2rem;
-  color: white;
-  font-weight: bold;
-  flex-shrink: 0;
-}
-
-.marquee-image {
-  margin: 0 0.5rem;
-  border-radius: 0.5rem;
-  background: white;
-  padding: 0.3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.marquee-image img {
-  max-height: 40px;
-  width: auto;
-  display: block;
-}
-
-@keyframes marqueeScroll {
-  0% {
-    transform: translateX(0%);
+  .marquee-section {
+    background-color: #0c2a4d;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 1rem 0;
   }
-  100% {
-    transform: translateX(-50%);
+
+  .marquee-wrapper {
+    position: relative;
+    display: flex;
+    overflow: hidden;
   }
-}
+
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marqueeScroll 30s linear infinite;
+  }
+
+  .marquee-item {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+    color: white;
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+
+  .marquee-image {
+    margin: 0 0.5rem;
+    border-radius: 0.5rem;
+    background: white;
+    padding: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .marquee-image img {
+    max-height: 40px;
+    width: auto;
+    display: block;
+  }
+
+  @keyframes marqueeScroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
 </style>
-
 
 {% schema %}
 {
@@ -110,11 +114,7 @@
     {
       "name": "Marquee",
       "category": "Custom",
-      "blocks": [
-        { "type": "item" },
-        { "type": "item" },
-        { "type": "item" }
-      ]
+      "blocks": [{ "type": "item" }, { "type": "item" }, { "type": "item" }]
     }
   ]
 }

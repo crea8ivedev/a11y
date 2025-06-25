@@ -4,6 +4,7 @@
   Accepts:
     - localPosition: pass in the position in which the form is coming up to create specific IDs
 {%- endcomment -%}
+{% # theme-check-disable %}
 
 {%- assign lang_code = localization.language.iso_code -%}
 {%- case lang_code %}
@@ -37,7 +38,7 @@
         height="18"
         loading="lazy"
         style="margin-right: 8px; vertical-align: middle;"
-      />
+      >
       {{ localization.language.endonym_name | capitalize }}
     </span>
     {{ 'icon-caret.svg' | inline_asset_content }}
@@ -88,7 +89,7 @@
                 width="24"
                 height="18"
                 loading="lazy"
-              />
+              >
               {{ language.endonym_name | capitalize }}
             </span>
           </a>

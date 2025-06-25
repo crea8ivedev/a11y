@@ -1,0 +1,39 @@
+{
+	"name": "a11y",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+    "build": "npx @tailwindcss/cli -i css/application.css -o assets/application.css.liquid -w -m",
+		"format": "prettier --write snippets/ templates/ sections/ layout/ config/ assets/",
+		"prepare": "husky"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/crea8ivedev/a11y.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/crea8ivedev/a11y/issues"
+	},
+	"lint-staged": {
+		"*.js": "eslint --fix",
+		"*.{js,jsx,ts,tsx,css,md,liquid}": "prettier --write"
+	},
+	"homepage": "https://github.com/crea8ivedev/a11y#readme",
+	"description": "",
+	"devDependencies": {
+		"@eslint/js": "^9.29.0",
+		"@shopify/prettier-plugin-liquid": "^1.9.3",
+		"eslint": "^9.29.0",
+		"globals": "^16.2.0",
+		"husky": "^9.1.7",
+		"lint-staged": "^16.1.2",
+		"prettier": "^3.6.1"
+	},
+	"dependencies": {
+		"@tailwindcss/cli": "^4.1.10",
+		"tailwindcss": "^4.1.10"
+	}
+}

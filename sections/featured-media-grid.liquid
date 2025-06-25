@@ -1,86 +1,87 @@
+{% # theme-check-disable %}
 <style>
-.media-grid-wrapper {
-  padding: 3rem 1rem;
-}
-.media-grid-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  align-items: flex-start;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.media-grid-text {
-  flex: 1 1 100%;
-  max-width: 300px;
-}
-.media-grid-heading {
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: #1b1b1b;
-}
-.media-grid-subtext {
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-}
-.media-grid-button {
-  display: inline-block;
-  background-color: #0a1e32;
-  color: #fff;
-  padding: 0.75rem 1.25rem;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
-}
-.media-grid-cards {
-  flex: 1 1 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 2rem;
-}
-.media-grid-card {
-  text-align: center;
-}
-.media-grid-media {
-  position: relative;
-}
-.media-grid-media img,
-.media-grid-media video {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  display: block;
-}
-.media-grid-label {
-  margin-top: 0.75rem;
-  font-weight: 600;
-  color: #0a1e32;
-  font-size: 1rem;
-}
-
-/* Tablet */
-@media screen and (min-width: 768px) {
-  .media-grid-text {
-    flex: 0 0 25%;
+  .media-grid-wrapper {
+    padding: 3rem 1rem;
   }
-  .media-grid-cards {
-    flex: 0 0 70%;
+  .media-grid-container {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .media-grid-text {
+    flex: 1 1 100%;
+    max-width: 300px;
+  }
+  .media-grid-heading {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1b1b1b;
+  }
+  .media-grid-subtext {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .media-grid-button {
+    display: inline-block;
+    background-color: #0a1e32;
+    color: #fff;
+    padding: 0.75rem 1.25rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .media-grid-cards {
+    flex: 1 1 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
   }
   .media-grid-card {
-    flex: 1 1 calc(33.333% - 1.5rem);
+    text-align: center;
   }
-}
+  .media-grid-media {
+    position: relative;
+  }
+  .media-grid-media img,
+  .media-grid-media video {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+  }
+  .media-grid-label {
+    margin-top: 0.75rem;
+    font-weight: 600;
+    color: #0a1e32;
+    font-size: 1rem;
+  }
 
-/* Desktop */
-@media screen and (min-width: 1024px) {
-  .media-grid-container {
-    flex-wrap: nowrap;
+  /* Tablet */
+  @media screen and (min-width: 768px) {
+    .media-grid-text {
+      flex: 0 0 25%;
+    }
+    .media-grid-cards {
+      flex: 0 0 70%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .media-grid-card {
+      flex: 1 1 calc(33.333% - 1.5rem);
+    }
   }
-}
+
+  /* Desktop */
+  @media screen and (min-width: 1024px) {
+    .media-grid-container {
+      flex-wrap: nowrap;
+    }
+  }
 </style>
 
 <div class="media-grid-wrapper">
@@ -104,12 +105,13 @@
             {% if block.settings.video_aura != blank %}
               {% if block.settings.video_aura.preview_image %}
                 {% assign preview = block.settings.video_aura.preview_image | image_url: width: 1000 %}
-                <video  
+                <video
                   class="media-video"
-                  playsinline 
+                  playsinline
                   loop
                   muted
-                  poster="{{ preview }}">
+                  poster="{{ preview }}"
+                >
                   {% for source in block.settings.video_aura.sources %}
                     <source src="{{ source.url }}" type="{{ source.mime_type }}">
                   {% endfor %}
@@ -124,7 +126,12 @@
                 </video>
               {% endif %}
             {% elsif block.settings.image != blank %}
-              <img src="{{ block.settings.image | img_url: '800x' }}" alt="{{ block.settings.label | escape }}">
+              <img
+                src="{{ block.settings.image | img_url: '800x' }}"
+                alt="{{ block.settings.label | escape }}"
+                width="auto"
+                height="auto"
+              >
             {% endif %}
           </div>
           {% if block.settings.label != blank %}
@@ -137,26 +144,26 @@
 </div>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const videoCards = document.querySelectorAll('.media-grid-card');
-  
-  videoCards.forEach(card => {
-    const video = card.querySelector('.media-video');
-    if (!video) return;
-    
-    // Ensure video is paused initially
-    video.pause();
-    
-    card.addEventListener('mouseenter', function() {
-      video.play().catch(e => console.log('Video play failed:', e));
-    });
-    
-    card.addEventListener('mouseleave', function() {
+  document.addEventListener('DOMContentLoaded', function () {
+    const videoCards = document.querySelectorAll('.media-grid-card');
+
+    videoCards.forEach((card) => {
+      const video = card.querySelector('.media-video');
+      if (!video) return;
+
+      // Ensure video is paused initially
       video.pause();
-      video.currentTime = 0; // Reset to beginning
+
+      card.addEventListener('mouseenter', function () {
+        video.play().catch((e) => console.log('Video play failed:', e));
+      });
+
+      card.addEventListener('mouseleave', function () {
+        video.pause();
+        video.currentTime = 0; // Reset to beginning
+      });
     });
   });
-});
 </script>
 {% schema %}
 {

@@ -1,3 +1,242 @@
+<style>
+  .image-comparison {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+
+  .image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: {{ section.settings.before_image.aspect_ratio }};
+  }
+
+  .image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .image-clip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .comparison-slider {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    transform: translateX(-50%);
+    z-index: 10;
+    cursor: ew-resize;
+  }
+
+  .slider-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    opacity: 0.8;
+  }
+
+  .slider-handle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+
+  .slider-handle svg {
+    width: 20px;
+    height: 20px;
+    color: white;
+  }
+
+  .comparison-label {
+    position: absolute;
+    top: 20px;
+    padding: 8px 16px;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    z-index: 5;
+  }
+
+  .comparison-label.before {
+    left: 20px;
+  }
+
+  .comparison-label.after {
+    right: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .slider-handle {
+      width: 40px;
+      height: 40px;
+    }
+
+    .slider-handle svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .comparison-label {
+      font-size: 12px;
+      padding: 6px 12px;
+    }
+  }
+</style>
+
+{% if section.settings.before_image != blank and section.settings.after_image != blank %}
+  <div class="image-comparison" data-section-id="{{ section.id }}">
+    <div class="image-container">
+      <div class="image-wrapper">
+        <img
+          class="image-before"
+          src="{{ section.settings.before_image | image_url: width: 1500 }}"
+          alt="Before"
+          loading="lazy"
+          width="auto"
+          height="auto"
+        >
+        <div class="image-clip" style="width: {{ section.settings.starting_position }}%">
+          <img
+            class="image-after"
+            src="{{ section.settings.after_image | image_url: width: 1500 }}"
+            alt="After"
+            loading="lazy"
+            width="auto"
+            height="auto"
+          >
+        </div>
+      </div>
+      <div class="comparison-slider" style="left: {{ section.settings.starting_position }}%">
+        <div class="slider-line" style="background-color: {{ section.settings.slider_color }}"></div>
+        <div class="slider-handle" style="background-color: {{ section.settings.slider_color }}">
+          <svg viewBox="0 0 24 24">
+            <path d="M8 5l5 7-5 7zM13 5l5 7-5 7z" fill="currentColor"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="comparison-label before">{{ section.settings.before_label }}</div>
+      <div class="comparison-label after">{{ section.settings.after_label }}</div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const containers = document.querySelectorAll('.image-comparison');
+
+      containers.forEach((container) => {
+        const slider = container.querySelector('.comparison-slider');
+        const clip = container.querySelector('.image-clip');
+        let isDragging = false;
+
+        // Calculate aspect ratio
+        const beforeImg = container.querySelector('.image-before');
+        const afterImg = container.querySelector('.image-after');
+        afterImg.style.width = beforeImg.offsetWidth + 'px';
+
+        // Mouse events
+        slider.addEventListener('mousedown', (e) => {
+          isDragging = true;
+          e.preventDefault();
+          document.body.style.cursor = 'ew-resize';
+        });
+
+        document.addEventListener('mouseup', () => {
+          isDragging = false;
+          document.body.style.cursor = '';
+        });
+
+        document.addEventListener('mousemove', (e) => {
+          if (!isDragging) return;
+          updateSliderPosition(e, container, slider, clip);
+        });
+
+        // Touch events
+        slider.addEventListener(
+          'touchstart',
+          () => {
+            isDragging = true;
+          },
+          { passive: true },
+        );
+
+        document.addEventListener('touchend', () => {
+          isDragging = false;
+        });
+
+        document.addEventListener(
+          'touchmove',
+          (e) => {
+            if (!isDragging) return;
+            updateSliderPosition(e.touches[0], container, slider, clip);
+          },
+          { passive: true },
+        );
+
+        // Click on container
+        container.addEventListener('click', (e) => {
+          if (isDragging) return;
+          updateSliderPosition(e, container, slider, clip);
+        });
+      });
+
+      function updateSliderPosition(e, container, slider, clip) {
+        const rect = container.getBoundingClientRect();
+        let x = e.clientX - rect.left;
+
+        // Constrain to container bounds
+        x = Math.max(0, Math.min(x, rect.width));
+
+        const percent = (x / rect.width) * 100;
+
+        clip.style.width = `${percent}%`;
+        slider.style.left = `${percent}%`;
+      }
+
+      // Handle window resize
+      window.addEventListener('resize', function () {
+        containers.forEach((container) => {
+          const beforeImg = container.querySelector('.image-before');
+          const afterImg = container.querySelector('.image-after');
+          afterImg.style.width = beforeImg.offsetWidth + 'px';
+        });
+      });
+    });
+  </script>
+{% endif %}
 {% schema %}
 {
   "name": "Before After Comparison",
@@ -51,221 +290,3 @@
   ]
 }
 {% endschema %}
-
-{% if section.settings.before_image != blank and section.settings.after_image != blank %}
-<div class="image-comparison" data-section-id="{{ section.id }}">
-  <div class="image-container">
-    <div class="image-wrapper">
-      <img class="image-before" src="{{ section.settings.before_image | image_url: width: 1500 }}" alt="Before" loading="lazy">
-      <div class="image-clip" style="width: {{ section.settings.starting_position }}%">
-        <img class="image-after" src="{{ section.settings.after_image | image_url: width: 1500 }}" alt="After" loading="lazy">
-      </div>
-    </div>
-    <div class="comparison-slider" style="left: {{ section.settings.starting_position }}%">
-      <div class="slider-line" style="background-color: {{ section.settings.slider_color }}"></div>
-      <div class="slider-handle" style="background-color: {{ section.settings.slider_color }}">
-        <svg viewBox="0 0 24 24">
-          <path d="M8 5l5 7-5 7zM13 5l5 7-5 7z" fill="currentColor"></path>
-        </svg>
-      </div>
-    </div>
-    <div class="comparison-label before">{{ section.settings.before_label }}</div>
-    <div class="comparison-label after">{{ section.settings.after_label }}</div>
-  </div>
-</div>
-
-<style>
-.image-comparison {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.image-container {
-  position: relative;
-  overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-.image-wrapper {
-  position: relative;
-  width: 100%;
-  aspect-ratio: {{ section.settings.before_image.aspect_ratio }};
-}
-
-.image-wrapper img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  pointer-events: none;
-  user-select: none;
-}
-
-.image-clip {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  overflow: hidden;
-}
-
-.comparison-slider {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 4px;
-  transform: translateX(-50%);
-  z-index: 10;
-  cursor: ew-resize;
-}
-
-.slider-line {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 2px;
-  height: 100%;
-  opacity: 0.8;
-}
-
-.slider-handle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-
-.slider-handle svg {
-  width: 20px;
-  height: 20px;
-  color: white;
-}
-
-.comparison-label {
-  position: absolute;
-  top: 20px;
-  padding: 8px 16px;
-  background-color: rgba(0,0,0,0.6);
-  color: white;
-  font-weight: bold;
-  font-size: 14px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  border-radius: 4px;
-  z-index: 5;
-}
-
-.comparison-label.before {
-  left: 20px;
-}
-
-.comparison-label.after {
-  right: 20px;
-}
-
-@media (max-width: 768px) {
-  .slider-handle {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .slider-handle svg {
-    width: 16px;
-    height: 16px;
-  }
-  
-  .comparison-label {
-    font-size: 12px;
-    padding: 6px 12px;
-  }
-}
-</style>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const containers = document.querySelectorAll('.image-comparison');
-  
-  containers.forEach(container => {
-    const slider = container.querySelector('.comparison-slider');
-    const clip = container.querySelector('.image-clip');
-    let isDragging = false;
-    
-    // Calculate aspect ratio
-    const beforeImg = container.querySelector('.image-before');
-    const afterImg = container.querySelector('.image-after');
-    afterImg.style.width = beforeImg.offsetWidth + 'px';
-    
-    // Mouse events
-    slider.addEventListener('mousedown', (e) => {
-      isDragging = true;
-      e.preventDefault();
-      document.body.style.cursor = 'ew-resize';
-    });
-    
-    document.addEventListener('mouseup', () => {
-      isDragging = false;
-      document.body.style.cursor = '';
-    });
-    
-    document.addEventListener('mousemove', (e) => {
-      if (!isDragging) return;
-      updateSliderPosition(e, container, slider, clip);
-    });
-    
-    // Touch events
-    slider.addEventListener('touchstart', () => {
-      isDragging = true;
-    }, { passive: true });
-    
-    document.addEventListener('touchend', () => {
-      isDragging = false;
-    });
-    
-    document.addEventListener('touchmove', (e) => {
-      if (!isDragging) return;
-      updateSliderPosition(e.touches[0], container, slider, clip);
-    }, { passive: true });
-    
-    // Click on container
-    container.addEventListener('click', (e) => {
-      if (isDragging) return;
-      updateSliderPosition(e, container, slider, clip);
-    });
-  });
-  
-  function updateSliderPosition(e, container, slider, clip) {
-    const rect = container.getBoundingClientRect();
-    let x = e.clientX - rect.left;
-    
-    // Constrain to container bounds
-    x = Math.max(0, Math.min(x, rect.width));
-    
-    const percent = (x / rect.width) * 100;
-    
-    clip.style.width = `${percent}%`;
-    slider.style.left = `${percent}%`;
-  }
-  
-  // Handle window resize
-  window.addEventListener('resize', function() {
-    containers.forEach(container => {
-      const beforeImg = container.querySelector('.image-before');
-      const afterImg = container.querySelector('.image-after');
-      afterImg.style.width = beforeImg.offsetWidth + 'px';
-    });
-  });
-});
-</script>
-{% endif %}

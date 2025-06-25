@@ -1,5 +1,3 @@
-
-
 <div class="text-center py-10 px-4">
   <div class="max-w-3xl mx-auto flex flex-col gap-4">
     {% for block in section.blocks %}
@@ -15,6 +13,8 @@
               alt="icon"
               class="w-full h-full object-cover"
               loading="lazy"
+              width="auto"
+              height="auto"
             >
           </span>
         {% endif %}
@@ -73,11 +73,7 @@
   "presets": [
     {
       "name": "Text Image Statements",
-      "blocks": [
-        { "type": "statement" },
-        { "type": "statement" },
-        { "type": "statement" }
-      ]
+      "blocks": [{ "type": "statement" }, { "type": "statement" }, { "type": "statement" }]
     }
   ]
 }

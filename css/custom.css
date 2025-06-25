@@ -93,7 +93,7 @@
   .mega-menu__product-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-  
+
   .mega-menu__product-grid--6,
   .mega-menu__product-grid--5 {
     grid-template-columns: repeat(4, 1fr);
@@ -113,7 +113,7 @@
   .mega-menu__product-grid {
     grid-template-columns: repeat(2, 1fr) !important;
   }
-  
+
   /* Reset all column variations on mobile */
   .mega-menu__product-grid--3,
   .mega-menu__product-grid--4,
@@ -161,6 +161,6 @@
   transition: width 0.5s ease-in-out;
 }
 
-.inventory-display .inventory-bar-wrapper .inventory-bar-fill{
+.inventory-display .inventory-bar-wrapper .inventory-bar-fill {
   display: block;
 }

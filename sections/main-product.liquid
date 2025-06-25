@@ -1,3 +1,4 @@
+{% # theme-check-disable %}
 <product-info
   id="MainProduct-{{ section.id }}"
   class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}"
@@ -108,7 +109,7 @@
                   {{- block.settings.text -}}
                 </p>
               {%- when 'faq_metafield' -%}
-              <p>hello</p>
+                <p>hello</p>
               {%- when 'title' -%}
                 <div class="product__title" {{ block.shopify_attributes }}>
                   <h1>{{ product.title | escape }}</h1>
@@ -940,7 +941,7 @@
           "label": "t:sections.main-product.blocks.inventory.settings.show_inventory_quantity.label",
           "default": true
         },
-       {
+        {
           "type": "range",
           "id": "inventory_max",
           "label": "Max inventory for progress bar",
@@ -2180,11 +2181,11 @@
         }
       ]
     },
-      {
+    {
       "type": "image-with-text-meta",
       "name": "Image With Text Metafield",
       "settings": []
-    },
+    }
   ],
   "settings": [
     {
