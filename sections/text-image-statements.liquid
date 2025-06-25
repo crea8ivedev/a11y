@@ -1,0 +1,84 @@
+
+
+<div class="text-center py-10 px-4">
+  <div class="max-w-3xl mx-auto flex flex-col gap-4">
+    {% for block in section.blocks %}
+      <div class="flex flex-wrap justify-center items-center text-center text-[22px] md:text-[28px] lg:text-[32px] font-semibold text-[#1D314F] leading-snug">
+        {% if block.settings.pre_text %}
+          <span class="mr-2">{{ block.settings.pre_text }}</span>
+        {% endif %}
+
+        {% if block.settings.image %}
+          <span class="inline-block mx-1 rounded-full overflow-hidden w-16 h-10 md:w-20 md:h-12 lg:w-24 lg:h-14">
+            <img
+              src="{{ block.settings.image | image_url: width: 300 }}"
+              alt="icon"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            >
+          </span>
+        {% endif %}
+
+        {% if block.settings.post_text %}
+          <span class="ml-2">{{ block.settings.post_text }}</span>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  @media (max-width: 767px) {
+    .text-image-statements-section span {
+      display: block;
+      margin: 0.25rem 0;
+    }
+    .text-image-statements-section div.flex {
+      flex-direction: column;
+    }
+  }
+</style>
+{% schema %}
+{
+  "name": "Text Image Statements",
+  "tag": "section",
+  "class": "text-image-statements-section",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "statement",
+      "name": "Statement Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "pre_text",
+          "label": "Text Before Image",
+          "default": "Driven by"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "post_text",
+          "label": "Text After Image",
+          "default": "Wellness"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 3,
+  "presets": [
+    {
+      "name": "Text Image Statements",
+      "blocks": [
+        { "type": "statement" },
+        { "type": "statement" },
+        { "type": "statement" }
+      ]
+    }
+  ]
+}
+{% endschema %}

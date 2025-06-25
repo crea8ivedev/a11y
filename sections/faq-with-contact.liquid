@@ -1,0 +1,197 @@
+<style>
+.faq-contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 3rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.faq-left {
+  flex: 1 1 60%;
+}
+.faq-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.faq-subheading {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  color: #666;
+}
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0;
+}
+.faq-item summary {
+  cursor: pointer;
+  font-weight: 600;
+  position: relative;
+  padding-right: 20px;
+}
+.faq-item summary::after {
+  content: '⌄';
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 1rem;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+.faq-item[open] summary::after {
+  transform: rotate(180deg);
+}
+.faq-answer {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  color: #333;
+}
+.faq-right {
+  flex: 1 1 35%;
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.contact-heading {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.contact-text {
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+.contact-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #0d1d4b;
+  color: white;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+.contact-button:hover {
+  background: #0b1736;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .faq-contact-wrapper {
+    flex-direction: column;
+  }
+  .faq-left, .faq-right {
+    flex: 1 1 100%;
+  }
+  .faq-right {
+    margin-top: 2rem;
+  }
+}
+</style>
+
+<div class="faq-contact-wrapper">
+  <div class="faq-left">
+    {% if section.settings.faq_heading != blank %}
+      <h2 class="faq-heading">{{ section.settings.faq_heading }}</h2>
+    {% endif %}
+    {% if section.settings.faq_subheading != blank %}
+      <p class="faq-subheading">{{ section.settings.faq_subheading }}</p>
+    {% endif %}
+    <div class="faq-list">
+      {% for block in section.blocks %}
+        {% if block.settings.question != blank and block.settings.answer != blank %}
+          <details class="faq-item">
+            <summary>{{ block.settings.question }}</summary>
+            <div class="faq-answer">{{ block.settings.answer }}</div>
+          </details>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  <div class="faq-right">
+    {% if section.settings.contact_heading != blank %}
+      <h3 class="contact-heading">{{ section.settings.contact_heading }}</h3>
+    {% endif %}
+    {% if section.settings.contact_text != blank %}
+      <p class="contact-text">{{ section.settings.contact_text }}</p>
+    {% endif %}
+    {% if section.settings.contact_button_link != blank and section.settings.contact_button_label != blank %}
+      <a href="{{ section.settings.contact_button_link }}" class="contact-button">
+        {{ section.settings.contact_button_label }}
+      </a>
+    {% endif %}
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "FAQ With Contact Box",
+  "tag": "section",
+  "class": "faq-contact-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "faq_heading",
+      "label": "FAQ Heading",
+      "default": "FAQs"
+    },
+    {
+      "type": "text",
+      "id": "faq_subheading",
+      "label": "Subheading",
+      "default": "Shop Our Summer Trendy Collection."
+    },
+    {
+      "type": "text",
+      "id": "contact_heading",
+      "label": "Contact Heading",
+      "default": "Still Looking For an Answer?"
+    },
+    {
+      "type": "textarea",
+      "id": "contact_text",
+      "label": "Contact Text",
+      "default": "Shoot our team an email and we’ll get back to you ASAP (definitely within 24 hours)."
+    },
+    {
+      "type": "url",
+      "id": "contact_button_link",
+      "label": "Contact Button Link"
+    },
+    {
+      "type": "text",
+      "id": "contact_button_label",
+      "label": "Contact Button Label",
+      "default": "Contact Us"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq_item",
+      "name": "FAQ Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "textarea",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 8,
+  "presets": [
+    {
+      "name": "FAQ With Contact Box",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

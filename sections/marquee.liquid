@@ -1,0 +1,121 @@
+<section class="marquee-section">
+  <div class="marquee-wrapper">
+    <div class="marquee-track">
+      {% for block in section.blocks %}
+        <div class="marquee-item" {{ block.shopify_attributes }}>
+          {% if block.settings.image %}
+            <div class="marquee-image">
+              <img src="{{ block.settings.image | img_url: 'small' }}" alt="marquee image">
+            </div>
+          {% endif %}
+          <div class="marquee-text">{{ block.settings.text }}</div>
+        </div>
+      {% endfor %}
+
+      {%- comment -%} Duplicate for infinite loop {%- endcomment -%}
+      {% for block in section.blocks %}
+        <div class="marquee-item">
+          {% if block.settings.image %}
+            <div class="marquee-image">
+              <img src="{{ block.settings.image | img_url: 'small' }}" alt="marquee image duplicate">
+            </div>
+          {% endif %}
+          <div class="marquee-text">{{ block.settings.text }}</div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<style>
+.marquee-section {
+  background-color: #0c2a4d;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 1rem 0;
+}
+
+.marquee-wrapper {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 30s linear infinite;
+}
+
+.marquee-item {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+  color: white;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.marquee-image {
+  margin: 0 0.5rem;
+  border-radius: 0.5rem;
+  background: white;
+  padding: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marquee-image img {
+  max-height: 40px;
+  width: auto;
+  display: block;
+}
+
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+</style>
+
+
+{% schema %}
+{
+  "name": "Marquee",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Marquee Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Sample text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Marquee",
+      "category": "Custom",
+      "blocks": [
+        { "type": "item" },
+        { "type": "item" },
+        { "type": "item" }
+      ]
+    }
+  ]
+}
+{% endschema %}

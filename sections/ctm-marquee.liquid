@@ -1,0 +1,84 @@
+<div class="{{ section.settings.section_class }} py-10 min-990:py-18">
+  <div class="marquee">
+    <div class="track">
+      <div class="content">
+        <ul class="gap-x-40 min-990:gap-x-50 min-1600:gap-x-60">
+          {% for i in (1..10) %}
+            {% for block in section.blocks %}
+              <li class="font-body font-semibold text-40 min-990:text-50 min-1600:text-60 leading-128p text-black2 min-990:text-black1">
+                {{ block.settings.text_ctm }}
+              </li>
+            {% endfor %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .marquee {
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    height: 77px;
+    overflow-x: hidden;
+  }
+  .marquee .track {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 70s linear infinite;
+  }
+  .marquee .content {
+    height: 100%;
+  }
+  .marquee ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Repeat Text",
+  "class": "ctm_marquee",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Section Class",
+      "id": "section_class"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Text",
+      "settings": [
+        {
+          "type": "html",
+          "id": "text_ctm",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Repeat Text"
+    }
+  ]
+}
+{% endschema %}

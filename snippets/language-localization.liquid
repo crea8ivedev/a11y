@@ -1,0 +1,101 @@
+{%- comment -%}
+  Renders the language picker for the localization form
+
+  Accepts:
+    - localPosition: pass in the position in which the form is coming up to create specific IDs
+{%- endcomment -%}
+
+{%- assign lang_code = localization.language.iso_code -%}
+{%- case lang_code %}
+  {% when 'en' %}
+    {% assign flag_code = 'us' %}
+  {% when 'de' %}
+    {% assign flag_code = 'de' %}
+  {% when 'fr' %}
+    {% assign flag_code = 'fr' %}
+  {% when 'es' %}
+    {% assign flag_code = 'es' %}
+  {% when 'ja' %}
+    {% assign flag_code = 'jp' %}
+  {% else %}
+    {% assign flag_code = 'us' %}
+{% endcase %}
+
+<div class="disclosure">
+  <button
+    type="button"
+    class="disclosure__button localization-form__select localization-selector link link--text caption-large"
+    aria-expanded="false"
+    aria-controls="{{ localPosition }}List"
+    aria-describedby="{{ localPosition }}Label"
+  >
+    <span class="localization-flag-label">
+      <img
+        src="https://flagcdn.com/24x18/{{ flag_code }}.png"
+        alt="{{ flag_code | upcase }} flag"
+        width="24"
+        height="18"
+        loading="lazy"
+        style="margin-right: 8px; vertical-align: middle;"
+      />
+      {{ localization.language.endonym_name | capitalize }}
+    </span>
+    {{ 'icon-caret.svg' | inline_asset_content }}
+  </button>
+
+  <div class="disclosure__list-wrapper language-selector" hidden>
+    <ul id="{{ localPosition }}List" role="list" class="disclosure__list list-unstyled">
+      {%- for language in localization.available_languages -%}
+        {%- assign lang_code = language.iso_code -%}
+        {%- case lang_code %}
+          {% when 'en' %}
+            {% assign flag_code = 'us' %}
+          {% when 'de' %}
+            {% assign flag_code = 'de' %}
+          {% when 'fr' %}
+            {% assign flag_code = 'fr' %}
+          {% when 'es' %}
+            {% assign flag_code = 'es' %}
+          {% when 'ja' %}
+            {% assign flag_code = 'jp' %}
+          {% else %}
+            {% assign flag_code = 'us' %}
+        {% endcase %}
+
+        <li class="disclosure__item" tabindex="-1">
+          <a
+            class="link link--text disclosure__link caption-large focus-inset"
+            href="#"
+            hreflang="{{ language.iso_code }}"
+            lang="{{ language.iso_code }}"
+            {% if language.iso_code == localization.language.iso_code %}
+              aria-current="true"
+            {% endif %}
+            data-value="{{ language.iso_code }}"
+          >
+            <span
+              {% if language.iso_code != localization.language.iso_code %}
+                class="visibility-hidden"
+              {% endif %}
+            >
+              {{- 'icon-checkmark.svg' | inline_asset_content -}}
+            </span>
+
+            <span class="localization-flag-label" style="display: inline-flex; align-items: center; gap: 8px;">
+              <img
+                src="https://flagcdn.com/24x18/{{ flag_code }}.png"
+                alt="{{ flag_code | upcase }} flag"
+                width="24"
+                height="18"
+                loading="lazy"
+              />
+              {{ language.endonym_name | capitalize }}
+            </span>
+          </a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</div>
+
+<input type="hidden" name="locale_code" value="{{ localization.language.iso_code }}">
