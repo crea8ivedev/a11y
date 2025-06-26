@@ -17,7 +17,8 @@
     >
       <span>
         <span class="svg-wrapper">
-          {{- 'icon-search.svg' | inline_asset_content -}}
+          {% comment %} {{- 'icon-search.svg' | inline_asset_content -}} {% endcomment %}
+          {% render 'icon-search' %}
         </span>
         <span class="svg-wrapper header__icon-close">
           {{- 'icon-close.svg' | inline_asset_content -}}
@@ -81,7 +82,11 @@
           </div>
 
           {%- if settings.predictive_search_enabled -%}
-            <div class="ctm-search-bar-main predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
+            <div
+              class="ctm-search-bar-main predictive-search predictive-search--header"
+              tabindex="-1"
+              data-predictive-search
+            >
               {%- render 'loading-spinner', class: 'predictive-search__loading-state' -%}
             </div>
 

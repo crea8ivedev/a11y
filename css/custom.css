@@ -164,3 +164,145 @@
 .inventory-display .inventory-bar-wrapper .inventory-bar-fill {
   display: block;
 }
+/* FAQ PDP START */
+.pdp-accordion-header {
+  background: none;
+  border: none;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 15px 0;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+.pdp-accordion-item.active .arrow-icon {
+  transform: rotate(180deg);
+}
+
+.pdp-accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.pdp-accordion-item.active .pdp-accordion-content {
+  max-height: 500px; /* Adjust as needed */
+}
+
+/* FAQ PDP END */
+/* Sticky Add to cart Start */
+.sticky-cart {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  z-index: 9999;
+  overflow: hidden;
+  width: 90%;
+  max-width: 420px;
+}
+
+.sticky-cart.collapsed .sticky-cart-body {
+  display: none;
+}
+
+.sticky-cart:not(.collapsed) .sticky-cart-body {
+  display: block;
+}
+
+.sticky-cart-header {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  cursor: pointer;
+}
+
+.product-thumbnail img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 12px;
+}
+
+.product-info h4 {
+  margin: 0 0 4px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.product-info .price {
+  color: #000;
+  font-weight: bold;
+}
+
+.compare-price {
+  text-decoration: line-through;
+  color: gray;
+  margin-left: 6px;
+}
+
+.toggle-button {
+  margin-left: auto;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  background: #f5f5f5;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.sticky-cart-body {
+  padding: 16px;
+  border-top: 1px solid #eee;
+}
+
+.variant-options {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.variant-button {
+  padding: 8px 14px;
+  border: 2px solid #002244;
+  background: transparent;
+  border-radius: 999px;
+  color: #002244;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.variant-button.active {
+  background: #002244;
+  color: white;
+}
+
+.add-to-cart-btn {
+  padding: 12px;
+  width: 100%;
+  border: none;
+  background: #002244;
+  color: white;
+  font-weight: bold;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+/* Sticky Add to cart End */

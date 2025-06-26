@@ -1,1 +1,413 @@
-{"sections":{"hero_slider_ATaA3Y":{"type":"hero-slider","blocks":{"slide_Ewnax7":{"type":"slide","settings":{"background_image":"shopify:\/\/shop_images\/3a011dcdc0b4d20a2a6249321ec7d0eab270ec1a.png","tagline":"Skin Friendly","heading":"Unveil Your Radiance with Aura Beauty","subtext":"Elevating Your Natural Glow with Every Application. Dive into Luxurious Beauty, Redefined.","button_link":"#","button_text":"Shop Now"}},"slide_tCpNLx":{"type":"slide","settings":{"background_image":"shopify:\/\/shop_images\/Frame_91.jpg","tagline":"Skin Friendly","heading":"Unveil Your Radiance with Aura Beauty","subtext":"Elevating Your Natural Glow with Every Application. Dive into Luxurious Beauty, Redefined.","button_link":"#","button_text":"Shop Now"}}},"block_order":["slide_Ewnax7","slide_tCpNLx"],"settings":{}},"text_image_statements_zChfXR":{"type":"text-image-statements","blocks":{"statement_DyLPDV":{"type":"statement","settings":{"pre_text":"Driven by","image":"shopify:\/\/shop_images\/sdf.png","post_text":"Wellness Empowered by Relaxation"}},"statement_zaYXh7":{"type":"statement","settings":{"pre_text":"","image":"shopify:\/\/shop_images\/asd.jpg","post_text":""}}},"block_order":["statement_DyLPDV","statement_zaYXh7"],"settings":{}},"featured_media_grid_TnVYNk":{"type":"featured-media-grid","blocks":{"media_card_cgArVA":{"type":"media_card","settings":{"video_aura":"shopify:\/\/files\/videos\/file_example_MP4_640_3MG.mp4","label":"Serums","collection_url":""}},"media_card_7jTnTw":{"type":"media_card","settings":{"image":"shopify:\/\/shop_images\/dsa.png","label":"Creams","collection_url":""}},"media_card_XRNRA8":{"type":"media_card","settings":{"image":"shopify:\/\/shop_images\/4c55a79f5fe124b5b0bb225991d4ee213eb8ee03.png","label":"Moisturizer","collection_url":""}}},"block_order":["media_card_cgArVA","media_card_7jTnTw","media_card_XRNRA8"],"settings":{"heading":"Our Collections","subtext":"Cursus sit amet dictum sit amet. Cras adipiscing enim eu turpis egestas pretium aenean.","button_label":"Shop All","button_url":"#"}},"featured_collection":{"type":"featured-collection","settings":{"collection":"feature-products","products_to_show":8,"title":"Our Collections","heading_size":"h2","description":"<p>Cursus sit amet dictum sit amet. Cras adipiscing enim eu turpis egestas pretium aenean.<\/p>","show_description":false,"description_style":"body","button_txt":"Shop all collections","button_url":"#","columns_desktop":4,"enable_desktop_slider":false,"full_width":false,"show_view_all":false,"view_all_style":"solid","color_scheme":"scheme-1","image_ratio":"adapt","image_shape":"default","show_secondary_image":true,"show_vendor":false,"show_rating":false,"quick_add":"none","columns_mobile":"2","swipe_on_mobile":false,"padding_top":44,"padding_bottom":36}},"marquee_VyeKPi":{"type":"marquee","blocks":{"item_3TqKwY":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/251d6cc3e2965fa2e249450c90b287aa3f389922.png","text":"20% off everything for women"}},"item_DnQ4wM":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/dsa.png","text":"Summer sale 40% off everything"}},"item_3TTp8n":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/a3b512faba9796d6cd01ce3b57ccafbbe5cee44b.png","text":"First time free delivery in usa"}},"item_MhjQRD":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/251d6cc3e2965fa2e249450c90b287aa3f389922.png","text":"20% off everything for women"}},"item_kJhNJN":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/dsa.png","text":"Summer sale 40% off everything"}},"item_rVQyDm":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/a3b512faba9796d6cd01ce3b57ccafbbe5cee44b.png","text":"First time free delivery in usa"}},"item_ERUWbE":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/251d6cc3e2965fa2e249450c90b287aa3f389922.png","text":"20% off everything for women"}},"item_KiezYL":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/dsa.png","text":"Summer sale 40% off everything"}},"item_xrGxGY":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/a3b512faba9796d6cd01ce3b57ccafbbe5cee44b.png","text":"First time free delivery in usa"}}},"block_order":["item_3TqKwY","item_DnQ4wM","item_3TTp8n","item_MhjQRD","item_kJhNJN","item_rVQyDm","item_ERUWbE","item_KiezYL","item_xrGxGY"],"name":"Marquee","settings":{}},"image_with_text_diifcB":{"type":"image-with-text","blocks":{"caption_6CpLYf":{"type":"caption","settings":{"caption":"Radiant Skin, Timeless Beauty.","text_style":"caption-with-letter-spacing","text_size":"large"}},"heading_whMCfH":{"type":"heading","settings":{"heading":"Skin care","heading_size":"h1"}},"text_zWrBgm":{"type":"text","settings":{"text":"<p>Introducing Aura Beauty, where luxury meets skincare. Embrace your natural radiance with our premium products. Crafted with care, our formulas are designed to nourish and rejuvenate. Experience the essence of beauty in every drop. Enhance your routine with our effective, gentle skincare solutions. Unveil a smoother, more radiant complexion today. Elevate your skincare regimen with Aura Beauty. Discover the glow you've been searching for.<\/p>","text_style":"body"}},"button_XE4eHN":{"type":"button","settings":{"button_label":"About Us","button_link":"","button_style_secondary":false}}},"block_order":["caption_6CpLYf","heading_whMCfH","text_zWrBgm","button_XE4eHN"],"settings":{"image":"shopify:\/\/shop_images\/Frame_91.jpg","height":"adapt","desktop_image_width":"medium","layout":"image_first","image_behavior":"none","content_layout":"no-overlap","desktop_content_position":"top","desktop_content_alignment":"left","mobile_content_alignment":"left","section_color_scheme":"","color_scheme":"","padding_top":36,"padding_bottom":36}},"before_after_UKBk9c":{"type":"before-after","settings":{"before_image":"shopify:\/\/shop_images\/before.jpg","after_image":"shopify:\/\/shop_images\/after.jpg","before_label":"Before Moisturiser","after_label":"After Moisturiser","slider_color":"#ffffff","starting_position":50}},"featured_product_ky3fVE":{"type":"featured-product","blocks":{"title_ppqXzi":{"type":"title","settings":{"heading_size":"h1"}},"price_fp49qM":{"type":"price","settings":{}},"text_CxVwdF":{"type":"text","settings":{"text":"Cursus sit amet dictum sit amet. Cras adipiscing enim eu turpis egestas pretium aenean.","text_style":"body"}},"quantity_selector_qDEgEi":{"type":"quantity_selector","settings":{}},"buy_buttons_J7bXhV":{"type":"buy_buttons","settings":{"show_dynamic_checkout":false,"show_gift_card_recipient":false}}},"block_order":["title_ppqXzi","price_fp49qM","text_CxVwdF","quantity_selector_qDEgEi","buy_buttons_J7bXhV"],"settings":{"video_aura":"shopify:\/\/files\/videos\/file_example_MP4_640_3MG.mp4","product":"exfoliating-serum","color_scheme":"","secondary_background":false,"media_size":"medium","constrain_to_viewport":true,"media_fit":"contain","media_position":"left","image_zoom":"none","hide_variants":false,"enable_video_looping":false,"padding_top":36,"padding_bottom":36}},"faq_with_contact_F36F4t":{"type":"faq-with-contact","blocks":{"faq_item_WLwAi7":{"type":"faq_item","settings":{"question":"How can I track my order?","answer":"Shoot our team an email and we’ll get back to you ASAP (definitely within 24 hours)."}},"faq_item_kV83dX":{"type":"faq_item","settings":{"question":"What payment methods do you accept?","answer":"Shoot our team an email and we’ll get back to you ASAP (definitely within 24 hours)."}},"faq_item_WJmDqL":{"type":"faq_item","settings":{"question":"Can I return or exchange an item?","answer":"Shoot our team an email and we’ll get back to you ASAP (definitely within 24 hours)."}},"faq_item_HDfwJ4":{"type":"faq_item","settings":{"question":"Do you offer gift cards?","answer":"dfsdfsd"}}},"block_order":["faq_item_WLwAi7","faq_item_kV83dX","faq_item_WJmDqL","faq_item_HDfwJ4"],"settings":{"faq_heading":"FAQs","faq_subheading":"Shop Our Summer Trendy Collection.","contact_heading":"Still Looking For an Answer?","contact_text":"Shoot our team an email and we’ll get back to you ASAP (definitely within 24 hours).","contact_button_link":"#","contact_button_label":"Contact Us"}},"featured_blog_Ubn6wR":{"type":"featured-blog","name":"t:sections.featured-blog.presets.name","settings":{"blog":"blog-test","post_limit":3,"heading":"Blog posts","heading_size":"h1","columns_desktop":3,"show_view_all":true,"show_image":true,"show_date":true,"show_author":false,"color_scheme":"","padding_top":36,"padding_bottom":36}}},"order":["hero_slider_ATaA3Y","text_image_statements_zChfXR","featured_media_grid_TnVYNk","featured_collection","marquee_VyeKPi","image_with_text_diifcB","before_after_UKBk9c","featured_product_ky3fVE","faq_with_contact_F36F4t","featured_blog_Ubn6wR"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero_slider_ATaA3Y": {
+      "type": "hero-slider",
+      "blocks": {
+        "slide_Ewnax7": {
+          "type": "slide",
+          "settings": {
+            "background_image": "shopify://shop_images/3a011dcdc0b4d20a2a6249321ec7d0eab270ec1a.png",
+            "tagline": "Skin Friendly",
+            "heading": "Unveil Your Radiance with Aura Beauty",
+            "subtext": "Elevating Your Natural Glow with Every Application. Dive into Luxurious Beauty, Redefined.",
+            "button_link": "#",
+            "button_text": "Shop Now"
+          }
+        },
+        "slide_tCpNLx": {
+          "type": "slide",
+          "settings": {
+            "background_image": "shopify://shop_images/Frame_91.jpg",
+            "tagline": "Skin Friendly",
+            "heading": "Unveil Your Radiance with Aura Beauty",
+            "subtext": "Elevating Your Natural Glow with Every Application. Dive into Luxurious Beauty, Redefined.",
+            "button_link": "#",
+            "button_text": "Shop Now"
+          }
+        }
+      },
+      "block_order": [
+        "slide_Ewnax7",
+        "slide_tCpNLx"
+      ],
+      "settings": {}
+    },
+    "text_image_statements_zChfXR": {
+      "type": "text-image-statements",
+      "blocks": {
+        "statement_DyLPDV": {
+          "type": "statement",
+          "settings": {
+            "pre_text": "Driven by",
+            "image": "shopify://shop_images/sdf.png",
+            "post_text": "Wellness"
+          }
+        },
+        "statement_DrNhW7": {
+          "type": "statement",
+          "settings": {
+            "pre_text": "Empowered by Relaxation",
+            "post_text": ""
+          }
+        },
+        "statement_zaYXh7": {
+          "type": "statement",
+          "settings": {
+            "pre_text": "Revitalized",
+            "image": "shopify://shop_images/asd.jpg",
+            "post_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "statement_DyLPDV",
+        "statement_DrNhW7",
+        "statement_zaYXh7"
+      ],
+      "settings": {
+        "padding_top": 60,
+        "padding_bottom": 44
+      }
+    },
+    "featured_media_grid_TnVYNk": {
+      "type": "featured-media-grid",
+      "blocks": {
+        "media_card_cgArVA": {
+          "type": "media_card",
+          "settings": {
+            "video_aura": "shopify://files/videos/file_example_MP4_640_3MG.mp4",
+            "label": "Serums",
+            "collection_url": ""
+          }
+        },
+        "media_card_7jTnTw": {
+          "type": "media_card",
+          "settings": {
+            "image": "shopify://shop_images/dsa.png",
+            "label": "Creams",
+            "collection_url": ""
+          }
+        },
+        "media_card_XRNRA8": {
+          "type": "media_card",
+          "settings": {
+            "image": "shopify://shop_images/4c55a79f5fe124b5b0bb225991d4ee213eb8ee03.png",
+            "label": "Moisturizer",
+            "collection_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "media_card_cgArVA",
+        "media_card_7jTnTw",
+        "media_card_XRNRA8"
+      ],
+      "settings": {
+        "heading": "Our Collections",
+        "subtext": "Cursus sit amet dictum sit amet. Cras adipiscing enim eu turpis egestas pretium aenean.",
+        "button_label": "Shop All",
+        "button_url": "#"
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "feature-products",
+        "products_to_show": 8,
+        "title": "Our Collections",
+        "heading_size": "h2",
+        "description": "<p>Cursus sit amet dictum sit amet. Cras adipiscing enim eu turpis egestas pretium aenean.</p>",
+        "show_description": false,
+        "description_style": "body",
+        "button_txt": "Shop all collections",
+        "button_url": "#",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 44,
+        "padding_bottom": 36
+      }
+    },
+    "marquee_VyeKPi": {
+      "type": "marquee",
+      "blocks": {
+        "item_3TqKwY": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/251d6cc3e2965fa2e249450c90b287aa3f389922.png",
+            "text": "20% off everything for women"
+          }
+        },
+        "item_DnQ4wM": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/dsa.png",
+            "text": "Summer sale 40% off everything"
+          }
+        },
+        "item_3TTp8n": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/a3b512faba9796d6cd01ce3b57ccafbbe5cee44b.png",
+            "text": "First time free delivery in usa"
+          }
+        },
+        "item_MhjQRD": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/251d6cc3e2965fa2e249450c90b287aa3f389922.png",
+            "text": "20% off everything for women"
+          }
+        },
+        "item_kJhNJN": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/dsa.png",
+            "text": "Summer sale 40% off everything"
+          }
+        },
+        "item_rVQyDm": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/a3b512faba9796d6cd01ce3b57ccafbbe5cee44b.png",
+            "text": "First time free delivery in usa"
+          }
+        },
+        "item_ERUWbE": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/251d6cc3e2965fa2e249450c90b287aa3f389922.png",
+            "text": "20% off everything for women"
+          }
+        },
+        "item_KiezYL": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/dsa.png",
+            "text": "Summer sale 40% off everything"
+          }
+        },
+        "item_xrGxGY": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/a3b512faba9796d6cd01ce3b57ccafbbe5cee44b.png",
+            "text": "First time free delivery in usa"
+          }
+        }
+      },
+      "block_order": [
+        "item_3TqKwY",
+        "item_DnQ4wM",
+        "item_3TTp8n",
+        "item_MhjQRD",
+        "item_kJhNJN",
+        "item_rVQyDm",
+        "item_ERUWbE",
+        "item_KiezYL",
+        "item_xrGxGY"
+      ],
+      "name": "Marquee",
+      "settings": {}
+    },
+    "image_with_text_diifcB": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_6CpLYf": {
+          "type": "caption",
+          "settings": {
+            "caption": "Radiant Skin, Timeless Beauty.",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "large"
+          }
+        },
+        "heading_whMCfH": {
+          "type": "heading",
+          "settings": {
+            "heading": "Skin care",
+            "heading_size": "h1"
+          }
+        },
+        "text_zWrBgm": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Introducing Aura Beauty, where luxury meets skincare. Embrace your natural radiance with our premium products. Crafted with care, our formulas are designed to nourish and rejuvenate. Experience the essence of beauty in every drop. Enhance your routine with our effective, gentle skincare solutions. Unveil a smoother, more radiant complexion today. Elevate your skincare regimen with Aura Beauty. Discover the glow you've been searching for.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_XE4eHN": {
+          "type": "button",
+          "settings": {
+            "button_label": "About Us",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "caption_6CpLYf",
+        "heading_whMCfH",
+        "text_zWrBgm",
+        "button_XE4eHN"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Frame_91.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "before_after_UKBk9c": {
+      "type": "before-after",
+      "settings": {
+        "before_image": "shopify://shop_images/before.jpg",
+        "after_image": "shopify://shop_images/after.jpg",
+        "before_label": "Before Moisturiser",
+        "after_label": "After Moisturiser",
+        "slider_color": "#ffffff",
+        "starting_position": 50
+      }
+    },
+    "featured_product_ky3fVE": {
+      "type": "featured-product",
+      "blocks": {
+        "title_ppqXzi": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_fp49qM": {
+          "type": "price",
+          "settings": {}
+        },
+        "text_CxVwdF": {
+          "type": "text",
+          "settings": {
+            "text": "Cursus sit amet dictum sit amet. Cras adipiscing enim eu turpis egestas pretium aenean.",
+            "text_style": "body"
+          }
+        },
+        "quantity_selector_qDEgEi": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_J7bXhV": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        }
+      },
+      "block_order": [
+        "title_ppqXzi",
+        "price_fp49qM",
+        "text_CxVwdF",
+        "quantity_selector_qDEgEi",
+        "buy_buttons_J7bXhV"
+      ],
+      "settings": {
+        "video_aura": "shopify://files/videos/file_example_MP4_640_3MG.mp4",
+        "product": "exfoliating-serum",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "none",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "faq_with_contact_F36F4t": {
+      "type": "faq-with-contact",
+      "blocks": {
+        "faq_item_WLwAi7": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How can I track my order?",
+            "answer": "Shoot our team an email and we’ll get back to you ASAP (definitely within 24 hours)."
+          }
+        },
+        "faq_item_kV83dX": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What payment methods do you accept?",
+            "answer": "Shoot our team an email and we’ll get back to you ASAP (definitely within 24 hours)."
+          }
+        },
+        "faq_item_WJmDqL": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can I return or exchange an item?",
+            "answer": "Shoot our team an email and we’ll get back to you ASAP (definitely within 24 hours)."
+          }
+        },
+        "faq_item_HDfwJ4": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Do you offer gift cards?",
+            "answer": "dfsdfsd"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_WLwAi7",
+        "faq_item_kV83dX",
+        "faq_item_WJmDqL",
+        "faq_item_HDfwJ4"
+      ],
+      "settings": {
+        "faq_heading": "FAQs",
+        "faq_subheading": "Shop Our Summer Trendy Collection.",
+        "contact_heading": "Still Looking For an Answer?",
+        "contact_text": "Shoot our team an email and we’ll get back to you ASAP (definitely within 24 hours).",
+        "contact_button_link": "#",
+        "contact_button_label": "Contact Us"
+      }
+    }
+  },
+  "order": [
+    "hero_slider_ATaA3Y",
+    "text_image_statements_zChfXR",
+    "featured_media_grid_TnVYNk",
+    "featured_collection",
+    "marquee_VyeKPi",
+    "image_with_text_diifcB",
+    "before_after_UKBk9c",
+    "featured_product_ky3fVE",
+    "faq_with_contact_F36F4t"
+  ]
+}

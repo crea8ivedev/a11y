@@ -1,13 +1,28 @@
-<div class="text-center py-10 px-4">
-  <div class="max-w-3xl mx-auto flex flex-col gap-4">
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<div class="text-center section-{{ section.id }}-padding px-4">
+  <div class=" flex flex-col gap-4">
     {% for block in section.blocks %}
       <div class="flex flex-wrap justify-center items-center text-center text-[22px] md:text-[28px] lg:text-[32px] font-semibold text-[#1D314F] leading-snug">
         {% if block.settings.pre_text %}
-          <span class="mr-2">{{ block.settings.pre_text }}</span>
+          <h2 class="h1 normal-case text-primary-blue font-normal xl:leading-60 max-mdscreen6:text-24">
+            {{ block.settings.pre_text }}
+          </h2>
         {% endif %}
 
         {% if block.settings.image %}
-          <span class="inline-block mx-1 rounded-full overflow-hidden w-16 h-10 md:w-20 md:h-12 lg:w-24 lg:h-14">
+          <span class="inline-block mx-12 rounded-full overflow-hidden mdscreen6:min-w-[158px] min-w-[120px] h-40 mdscreen6:h-[47px]">
             <img
               src="{{ block.settings.image | image_url: width: 300 }}"
               alt="icon"
@@ -20,30 +35,42 @@
         {% endif %}
 
         {% if block.settings.post_text %}
-          <span class="ml-2">{{ block.settings.post_text }}</span>
+          <h2 class="h1 normal-case text-primary-blue font-normal xl:leading-52 max-mdscreen6:text-24">
+            {{ block.settings.post_text }}
+          </h2>
         {% endif %}
       </div>
     {% endfor %}
   </div>
 </div>
 
-<style>
-  @media (max-width: 767px) {
-    .text-image-statements-section span {
-      display: block;
-      margin: 0.25rem 0;
-    }
-    .text-image-statements-section div.flex {
-      flex-direction: column;
-    }
-  }
-</style>
 {% schema %}
 {
   "name": "Text Image Statements",
   "tag": "section",
   "class": "text-image-statements-section",
-  "settings": [],
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    }
+  ],
   "blocks": [
     {
       "type": "statement",

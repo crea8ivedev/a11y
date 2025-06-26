@@ -1,57 +1,127 @@
-{% # theme-check-disable %}
-{% schema %}
-{
-  "name": "Before After Comparison",
-  "settings": [
-    {
-      "type": "image_picker",
-      "id": "before_image",
-      "label": "Before Image",
-      "info": "Recommended size: 1500x1000px"
-    },
-    {
-      "type": "image_picker",
-      "id": "after_image",
-      "label": "After Image",
-      "info": "Should match dimensions of before image"
-    },
-    {
-      "type": "text",
-      "id": "before_label",
-      "label": "Before Label",
-      "default": "BEFORE"
-    },
-    {
-      "type": "text",
-      "id": "after_label",
-      "label": "After Label",
-      "default": "AFTER"
-    },
-    {
-      "type": "color",
-      "id": "slider_color",
-      "label": "Slider Color",
-      "default": "#ffffff"
-    },
-    {
-      "type": "range",
-      "id": "starting_position",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "%",
-      "label": "Starting Position",
-      "default": 50
+<style>
+  .image-comparison {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+
+  .image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: {{ section.settings.before_image.aspect_ratio }};
+  }
+
+  .image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    user-select: none;
+    max-width:unset;
+  }
+
+  .image-clip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .comparison-slider {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    transform: translateX(-50%);
+    z-index: 10;
+    cursor: ew-resize;
+  }
+
+  .slider-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    opacity: 1;
+    z-index:1;
+    width: 5px;
+    display: block !important;
+  }
+
+  .slider-handle {
+    position: absolute;
+    z-index:1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+
+  .slider-handle svg {
+    width: 20px;
+    height: 20px;
+    color: white;
+  }
+
+  .comparison-label {
+    position: absolute;
+    top: 20px;
+    padding: 8px 16px;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    z-index: 1;
+  }
+
+  .comparison-label.before {
+    left: 20px;
+  }
+
+  .comparison-label.after {
+    right: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .slider-handle {
+      width: 40px;
+      height: 40px;
     }
-  ],
-  "presets": [
-    {
-      "name": "Before After Comparison",
-      "category": "Image"
+
+    .slider-handle svg {
+      width: 16px;
+      height: 16px;
     }
-  ]
-}
-{% endschema %}
+
+    .comparison-label {
+      font-size: 12px;
+      padding: 6px 12px;
+    }
+  }
+</style>
 
 {% if section.settings.before_image != blank and section.settings.after_image != blank %}
   <div class="image-comparison" data-section-id="{{ section.id }}">
@@ -62,6 +132,8 @@
           src="{{ section.settings.before_image | image_url: width: 1500 }}"
           alt="Before"
           loading="lazy"
+          height="auto"
+          width="auto"
         >
         <div class="image-clip" style="width: {{ section.settings.starting_position }}%">
           <img
@@ -69,140 +141,21 @@
             src="{{ section.settings.after_image | image_url: width: 1500 }}"
             alt="After"
             loading="lazy"
+            height="auto"
+            width="auto"
           >
         </div>
       </div>
       <div class="comparison-slider" style="left: {{ section.settings.starting_position }}%">
         <div class="slider-line" style="background-color: {{ section.settings.slider_color }}"></div>
         <div class="slider-handle" style="background-color: {{ section.settings.slider_color }}">
-          <svg viewBox="0 0 24 24">
-            <path d="M8 5l5 7-5 7zM13 5l5 7-5 7z" fill="currentColor"></path>
-          </svg>
+          <span class="uppercase font-karla font-regular text-14 leading-100p tracking-[5%]">drag</span>
         </div>
       </div>
       <div class="comparison-label before">{{ section.settings.before_label }}</div>
       <div class="comparison-label after">{{ section.settings.after_label }}</div>
     </div>
   </div>
-
-  <style>
-    .image-comparison {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    .image-container {
-      position: relative;
-      overflow: hidden;
-      border-radius: 8px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    }
-
-    .image-wrapper {
-      position: relative;
-      width: 100%;
-      aspect-ratio: {{ section.settings.before_image.aspect_ratio }};
-    }
-
-    .image-wrapper img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      pointer-events: none;
-      user-select: none;
-    }
-
-    .image-clip {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      overflow: hidden;
-    }
-
-    .comparison-slider {
-      position: absolute;
-      top: 0;
-      height: 100%;
-      width: 4px;
-      transform: translateX(-50%);
-      z-index: 10;
-      cursor: ew-resize;
-    }
-
-    .slider-line {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 2px;
-      height: 100%;
-      opacity: 0.8;
-    }
-
-    .slider-handle {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    }
-
-    .slider-handle svg {
-      width: 20px;
-      height: 20px;
-      color: white;
-    }
-
-    .comparison-label {
-      position: absolute;
-      top: 20px;
-      padding: 8px 16px;
-      background-color: rgba(0,0,0,0.6);
-      color: white;
-      font-weight: bold;
-      font-size: 14px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      border-radius: 4px;
-      z-index: 5;
-    }
-
-    .comparison-label.before {
-      left: 20px;
-    }
-
-    .comparison-label.after {
-      right: 20px;
-    }
-
-    @media (max-width: 768px) {
-      .slider-handle {
-        width: 40px;
-        height: 40px;
-      }
-
-      .slider-handle svg {
-        width: 16px;
-        height: 16px;
-      }
-
-      .comparison-label {
-        font-size: 12px;
-        padding: 6px 12px;
-      }
-    }
-  </style>
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -288,3 +241,56 @@
     });
   </script>
 {% endif %}
+{% schema %}
+{
+  "name": "Before After Comparison",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "before_image",
+      "label": "Before Image",
+      "info": "Recommended size: 1500x1000px"
+    },
+    {
+      "type": "image_picker",
+      "id": "after_image",
+      "label": "After Image",
+      "info": "Should match dimensions of before image"
+    },
+    {
+      "type": "text",
+      "id": "before_label",
+      "label": "Before Label",
+      "default": "BEFORE"
+    },
+    {
+      "type": "text",
+      "id": "after_label",
+      "label": "After Label",
+      "default": "AFTER"
+    },
+    {
+      "type": "color",
+      "id": "slider_color",
+      "label": "Slider Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "starting_position",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Starting Position",
+      "default": 50
+    }
+  ],
+  "presets": [
+    {
+      "name": "Before After Comparison",
+      "category": "Image"
+    }
+  ]
+}
+{% endschema %}

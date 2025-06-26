@@ -41,7 +41,9 @@
       >
       {{ localization.language.endonym_name | capitalize }}
     </span>
-    {{ 'icon-caret.svg' | inline_asset_content }}
+    <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M4.93285 6.12075L8.8751 1.76022C9.09111 1.50635 9.09111 1.11808 8.8751 0.879151C8.65909 0.640218 8.30806 0.640218 8.07855 0.879151L4.52782 4.80662L0.977096 0.879151C0.761083 0.640218 0.396559 0.640218 0.180545 0.879151C-0.0354681 1.11808 -0.0354681 1.50635 0.180545 1.76022L4.1363 6.12075C4.35231 6.35968 4.70333 6.35968 4.93285 6.12075Z" fill="#112D4E"/>
+    </svg>
   </button>
 
   <div class="disclosure__list-wrapper language-selector" hidden>
@@ -74,20 +76,22 @@
             {% endif %}
             data-value="{{ language.iso_code }}"
           >
-            <span
-              {% if language.iso_code != localization.language.iso_code %}
-                class="visibility-hidden"
-              {% endif %}
-            >
-              {{- 'icon-checkmark.svg' | inline_asset_content -}}
-            </span>
+            {% comment %}
+              <span
+                {% if language.iso_code != localization.language.iso_code %}
+                  class="visibility-hidden"
+                {% endif %}
+              >
+                {{- 'icon-checkmark.svg' | inline_asset_content -}}
+              </span>
+            {% endcomment %}
 
-            <span class="localization-flag-label" style="display: inline-flex; align-items: center; gap: 8px;">
+            <span class="localization-flag-label">
               <img
                 src="https://flagcdn.com/24x18/{{ flag_code }}.png"
                 alt="{{ flag_code | upcase }} flag"
-                width="24"
-                height="18"
+                width="auto"
+                height="auto"
                 loading="lazy"
               >
               {{ language.endonym_name | capitalize }}

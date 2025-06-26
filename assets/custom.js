@@ -27,3 +27,67 @@ document.addEventListener("DOMContentLoaded", function () {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
+
+// FAQ PDP
+document.addEventListener("DOMContentLoaded", function () {
+  const items = document.querySelectorAll(".pdp-accordion-item");
+
+  items.forEach((item) => {
+    const header = item.querySelector(".pdp-accordion-header");
+
+    header.addEventListener("click", () => {
+      const isActive = item.classList.contains("active");
+
+      items.forEach((i) => i.classList.remove("active"));
+
+      if (!isActive) {
+        item.classList.add("active");
+      }
+    });
+  });
+});
+
+//Sticy Add to cart
+
+document.addEventListener("DOMContentLoaded", function () {
+  const drawer = document.getElementById("sticky-cart-drawer");
+  const toggleBtn = document.getElementById("toggle-cart-drawer");
+  const variantButtons = document.querySelectorAll(".variant-button");
+  const variantInput = document.getElementById("variant-id-input");
+
+  // Set first variant as active by default
+  if (variantButtons.length > 0) {
+    variantButtons[0].classList.add("active");
+  }
+
+  // Toggle drawer function
+  function toggleDrawer() {
+    const isCollapsed = drawer.classList.contains("collapsed");
+    drawer.classList.toggle("collapsed");
+    toggleBtn.textContent = isCollapsed ? "–" : "+";
+    toggleBtn.setAttribute("aria-expanded", isCollapsed ? "true" : "false");
+  }
+
+  // Toggle when clicking button
+  toggleBtn.addEventListener("click", function (e) {
+    e.stopPropagation();
+    toggleDrawer();
+  });
+
+  // Toggle when clicking header (optional)
+  document
+    .querySelector(".sticky-cart-header")
+    .addEventListener("click", function () {
+      toggleDrawer();
+    });
+
+  // Variant selection
+  variantButtons.forEach((button) => {
+    button.addEventListener("click", function (e) {
+      e.stopPropagation();
+      variantButtons.forEach((btn) => btn.classList.remove("active"));
+      this.classList.add("active");
+      variantInput.value = this.dataset.variantId;
+    });
+  });
+});

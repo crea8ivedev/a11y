@@ -1,0 +1,142 @@
+{% comment %}
+  Key Ingredients Section with Swiper.js
+{% endcomment %}
+{% # theme-check-disable %}
+<style>
+  .key-ingredients-section {
+    padding: 50px 0;
+    background: #fff;
+  }
+  .section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .ingredient-card {
+    text-align: center;
+  }
+  .ingredient-image {
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  .ingredient-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .ingredient-description {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+  }
+</style>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+<section class="key-ingredients-section">
+  <div class="page-width">
+    {% if section.settings.heading != blank %}
+      <h2 class="section-title">{{ section.settings.heading }}</h2>
+    {% endif %}
+
+    <div class="swiper key-ingredients-swiper">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          <div class="swiper-slide">
+            <div class="ingredient-card">
+              {% if block.settings.image %}
+                <img
+                  src="{{ block.settings.image | image_url: width: 400 }}"
+                  alt="{{ block.settings.title }}"
+                  class="ingredient-image"
+                  height="auto"
+                  width="auto"
+                >
+              {% endif %}
+              <h3 class="ingredient-title">{{ block.settings.title }}</h3>
+              <p class="ingredient-description">{{ block.settings.description }}</p>
+              {% if block.settings.description2 != blank %}
+                <p class="ingredient-description">{{ block.settings.description2 }}</p>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  new Swiper('.key-ingredients-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 4,
+      },
+    },
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Key Ingredients",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Key Ingredients"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "ingredient",
+      "name": "Ingredient",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Ingredient Name"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description Line 1",
+          "default": "Short description"
+        },
+        {
+          "type": "text",
+          "id": "description2",
+          "label": "Description Line 2"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "Key Ingredients",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

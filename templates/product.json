@@ -1,1 +1,406 @@
-{"sections":{"main":{"type":"main-product","blocks":{"vendor":{"type":"text","settings":{"text":"{{ product.vendor }}","text_style":"body"}},"title":{"type":"title","settings":{}},"price":{"type":"price","settings":{}},"inventory_UQ7AWP":{"type":"inventory","disabled":true,"settings":{"text_style":"body","inventory_threshold":10,"show_inventory_quantity":true,"inventory_max":100}},"description":{"type":"description","settings":{}},"variant_picker":{"type":"variant_picker","settings":{"picker_type":"button","swatch_shape":"circle"}},"quantity_selector":{"type":"quantity_selector","settings":{}},"buy_buttons":{"type":"buy_buttons","settings":{"show_dynamic_checkout":true,"show_gift_card_recipient":true}},"image_with_text_meta_P73DnC":{"type":"image-with-text-meta","settings":{}},"faq_metafield_CpTmK7":{"type":"faq_metafield","settings":{}}},"block_order":["vendor","title","price","inventory_UQ7AWP","description","variant_picker","quantity_selector","buy_buttons","image_with_text_meta_P73DnC","faq_metafield_CpTmK7"],"settings":{"enable_sticky_info":true,"color_scheme":"scheme-1","media_size":"large","constrain_to_viewport":true,"media_fit":"contain","gallery_layout":"stacked","mobile_thumbnails":"hide","media_position":"left","image_zoom":"none","hide_variants":true,"enable_video_looping":false,"padding_top":36,"padding_bottom":12}},"related-products":{"type":"related-products","settings":{"heading":"You may also like","heading_size":"h2","products_to_show":4,"columns_desktop":4,"columns_mobile":"2","color_scheme":"scheme-1","image_ratio":"square","image_shape":"default","show_secondary_image":true,"show_vendor":false,"show_rating":false,"padding_top":36,"padding_bottom":28}}},"order":["main","related-products"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "body"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "inventory_UQ7AWP": {
+          "type": "inventory",
+          "settings": {
+            "text_style": "body",
+            "inventory_threshold": 10,
+            "show_inventory_quantity": true,
+            "inventory_max": 100
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "image_with_text_meta_P73DnC": {
+          "type": "image-with-text-meta",
+          "settings": {}
+        },
+        "faq_metafield_CpTmK7": {
+          "type": "faq_metafield",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "price",
+        "inventory_UQ7AWP",
+        "description",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "image_with_text_meta_P73DnC",
+        "faq_metafield_CpTmK7"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "mobile_thumbnails": "hide",
+        "media_position": "left",
+        "image_zoom": "none",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "marquee_pgxcFC": {
+      "type": "marquee",
+      "blocks": {
+        "item_BVqFHF": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/251d6cc3e2965fa2e249450c90b287aa3f389922.png",
+            "text": "20% off everything for women"
+          }
+        },
+        "item_Cex9Xh": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/dsa.png",
+            "text": "Summer sale 40% off everything"
+          }
+        },
+        "item_WXrLW4": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/a3b512faba9796d6cd01ce3b57ccafbbe5cee44b.png",
+            "text": "First time free delivery in usa"
+          }
+        },
+        "item_tt6Meq": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/251d6cc3e2965fa2e249450c90b287aa3f389922.png",
+            "text": "20% off everything for women"
+          }
+        },
+        "item_9VJkUX": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/dsa.png",
+            "text": "Summer sale 40% off everything"
+          }
+        },
+        "item_ebyaCF": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/a3b512faba9796d6cd01ce3b57ccafbbe5cee44b.png",
+            "text": "First time free delivery in usa"
+          }
+        },
+        "item_kW9Gt3": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/251d6cc3e2965fa2e249450c90b287aa3f389922.png",
+            "text": "20% off everything for women"
+          }
+        },
+        "item_qhq9hk": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/dsa.png",
+            "text": "Summer sale 40% off everything"
+          }
+        },
+        "item_Qi9pfm": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/a3b512faba9796d6cd01ce3b57ccafbbe5cee44b.png",
+            "text": "First time free delivery in usa"
+          }
+        }
+      },
+      "block_order": [
+        "item_BVqFHF",
+        "item_Cex9Xh",
+        "item_WXrLW4",
+        "item_tt6Meq",
+        "item_9VJkUX",
+        "item_ebyaCF",
+        "item_kW9Gt3",
+        "item_qhq9hk",
+        "item_Qi9pfm"
+      ],
+      "name": "Marquee",
+      "settings": {}
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "featured_collection_69PtLL": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "feature-products",
+        "products_to_show": 8,
+        "title": "Our Collections",
+        "heading_size": "h2",
+        "description": "<p>Cursus sit amet dictum sit amet. Cras adipiscing enim eu turpis egestas pretium aenean.</p>",
+        "show_description": false,
+        "description_style": "body",
+        "button_txt": "Shop all collections",
+        "button_url": "#",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 44,
+        "padding_bottom": 36
+      }
+    },
+    "faq_with_contact_mAzcmN": {
+      "type": "faq-with-contact",
+      "blocks": {
+        "faq_item_XCeVaz": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How can I track my order?",
+            "answer": "Shoot our team an email and we’ll get back to you ASAP (definitely within 24 hours)."
+          }
+        },
+        "faq_item_XKwYtM": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What payment methods do you accept?",
+            "answer": "Shoot our team an email and we’ll get back to you ASAP (definitely within 24 hours)."
+          }
+        },
+        "faq_item_XVQHkT": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can I return or exchange an item?",
+            "answer": "Shoot our team an email and we’ll get back to you ASAP (definitely within 24 hours)."
+          }
+        },
+        "faq_item_HcedxH": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Do you offer gift cards?",
+            "answer": "dfsdfsd"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_XCeVaz",
+        "faq_item_XKwYtM",
+        "faq_item_XVQHkT",
+        "faq_item_HcedxH"
+      ],
+      "settings": {
+        "faq_heading": "FAQs",
+        "faq_subheading": "Shop Our Summer Trendy Collection.",
+        "contact_heading": "Still Looking For an Answer?",
+        "contact_text": "Shoot our team an email and we’ll get back to you ASAP (definitely within 24 hours).",
+        "contact_button_link": "#",
+        "contact_button_label": "Contact Us"
+      }
+    },
+    "featured_media_grid_QJbhY8": {
+      "type": "featured-media-grid",
+      "blocks": {
+        "media_card_tUtYL7": {
+          "type": "media_card",
+          "settings": {
+            "video_aura": "shopify://files/videos/file_example_MP4_640_3MG.mp4",
+            "label": "Serums",
+            "collection_url": ""
+          }
+        },
+        "media_card_PCR74Y": {
+          "type": "media_card",
+          "settings": {
+            "image": "shopify://shop_images/dsa.png",
+            "label": "Creams",
+            "collection_url": ""
+          }
+        },
+        "media_card_D9exKb": {
+          "type": "media_card",
+          "settings": {
+            "image": "shopify://shop_images/4c55a79f5fe124b5b0bb225991d4ee213eb8ee03.png",
+            "label": "Moisturizer",
+            "collection_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "media_card_tUtYL7",
+        "media_card_PCR74Y",
+        "media_card_D9exKb"
+      ],
+      "settings": {
+        "heading": "Our Collections",
+        "subtext": "Cursus sit amet dictum sit amet. Cras adipiscing enim eu turpis egestas pretium aenean.",
+        "button_label": "Shop All",
+        "button_url": "#"
+      }
+    },
+    "key_ingredients_rhFCbi": {
+      "type": "key-ingredients",
+      "blocks": {
+        "ingredient_JzYWea": {
+          "type": "ingredient",
+          "settings": {
+            "image": "shopify://shop_images/olive.png",
+            "title": "Olive oil",
+            "description": "Moisturize and soften skin",
+            "description2": ""
+          }
+        },
+        "ingredient_dfVwR7": {
+          "type": "ingredient",
+          "settings": {
+            "image": "shopify://shop_images/almond.png",
+            "title": "Sweet Almond",
+            "description": "Helps in deep cleansing",
+            "description2": ""
+          }
+        },
+        "ingredient_BDjUz9": {
+          "type": "ingredient",
+          "settings": {
+            "image": "shopify://shop_images/lemon.png",
+            "title": "Citrus Lemon",
+            "description": "Increases collagen in the skinFades dark spots and blemishes",
+            "description2": ""
+          }
+        },
+        "ingredient_wpcBMV": {
+          "type": "ingredient",
+          "settings": {
+            "image": "shopify://shop_images/alovera.png",
+            "title": "Aloe Vera",
+            "description": "Keep the skin hydratedHeals wounds & injuries",
+            "description2": ""
+          }
+        },
+        "ingredient_eH7BRp": {
+          "type": "ingredient",
+          "settings": {
+            "image": "shopify://shop_images/olive.png",
+            "title": "Olive oil",
+            "description": "Moisturize and soften skin",
+            "description2": ""
+          }
+        },
+        "ingredient_LGrhia": {
+          "type": "ingredient",
+          "settings": {
+            "image": "shopify://shop_images/almond.png",
+            "title": "Sweet Almond",
+            "description": "Helps in deep cleansing",
+            "description2": ""
+          }
+        },
+        "ingredient_6edpbH": {
+          "type": "ingredient",
+          "settings": {
+            "image": "shopify://shop_images/alovera.png",
+            "title": "Aloe Vera",
+            "description": "Keep the skin hydratedHeals wounds & injuries",
+            "description2": ""
+          }
+        }
+      },
+      "block_order": [
+        "ingredient_JzYWea",
+        "ingredient_dfVwR7",
+        "ingredient_BDjUz9",
+        "ingredient_wpcBMV",
+        "ingredient_eH7BRp",
+        "ingredient_LGrhia",
+        "ingredient_6edpbH"
+      ],
+      "name": "Key Ingredients",
+      "settings": {
+        "heading": "Key Ingredients"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "marquee_pgxcFC",
+    "related-products",
+    "featured_collection_69PtLL",
+    "faq_with_contact_mAzcmN",
+    "featured_media_grid_QJbhY8",
+    "key_ingredients_rhFCbi"
+  ]
+}
