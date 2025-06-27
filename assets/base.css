@@ -2848,11 +2848,6 @@ details[open] > .header__submenu {
 
 details[open] > .header__menu-item {
   text-decoration: underline;
-  text-decoration-thickness: 1.5px;
-}
-
-details[open]:hover > .header__menu-item {
-  text-decoration-thickness: 1.5px;
 }
 
 details[open] > .header__menu-item .icon-caret {

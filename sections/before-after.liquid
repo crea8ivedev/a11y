@@ -1,8 +1,5 @@
 <style>
   .image-comparison {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
     position: relative;
     z-index: 1;
   }
@@ -30,6 +27,7 @@
     pointer-events: none;
     user-select: none;
     max-width:unset;
+    object-position: 0px -88px;
   }
 
   .image-clip {
@@ -82,29 +80,6 @@
     height: 20px;
     color: white;
   }
-
-  .comparison-label {
-    position: absolute;
-    top: 20px;
-    padding: 8px 16px;
-    background-color: rgba(0,0,0,0.6);
-    color: white;
-    font-weight: bold;
-    font-size: 14px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    border-radius: 4px;
-    z-index: 1;
-  }
-
-  .comparison-label.before {
-    left: 20px;
-  }
-
-  .comparison-label.after {
-    right: 20px;
-  }
-
   @media (max-width: 768px) {
     .slider-handle {
       width: 40px;
@@ -124,9 +99,9 @@
 </style>
 
 {% if section.settings.before_image != blank and section.settings.after_image != blank %}
-  <div class="image-comparison" data-section-id="{{ section.id }}">
-    <div class="image-container">
-      <div class="image-wrapper">
+  <div class="image-comparison container_fluid" data-section-id="{{ section.id }}">
+    <div class="image-container ">
+      <div class="image-wrapper max-midlarge_desktop:h-[522px] h-[700px]">
         <img
           class="image-before"
           src="{{ section.settings.before_image | image_url: width: 1500 }}"
@@ -152,8 +127,12 @@
           <span class="uppercase font-karla font-regular text-14 leading-100p tracking-[5%]">drag</span>
         </div>
       </div>
-      <div class="comparison-label before">{{ section.settings.before_label }}</div>
-      <div class="comparison-label after">{{ section.settings.after_label }}</div>
+      <div class="comparison-label before absolute top-26 left-26 z-[1] text-24 leading-100p text-primary-blue font-semibold">
+        {{ section.settings.before_label }}
+      </div>
+      <div class="comparison-label after absolute bottom-26 right-26 z-[1] text-24 leading-100p text-primary-blue font-semibold">
+        {{ section.settings.after_label }}
+      </div>
     </div>
   </div>
 

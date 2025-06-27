@@ -80,6 +80,7 @@
         "faq_metafield_CpTmK7"
       ],
       "settings": {
+        "section_id": "ctm-product-info",
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
         "media_size": "large",

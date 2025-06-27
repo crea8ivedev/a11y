@@ -90,4 +90,25 @@ document.addEventListener("DOMContentLoaded", function () {
       variantInput.value = this.dataset.variantId;
     });
   });
+
+  // --- Intersection Observer to show/hide drawer based on #ctm-product-info visibility ---
+  const productInfo = document.querySelector("#ctm-product-info");
+  if (productInfo && drawer) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            drawer.classList.add("hidden"); // Hide when in view
+          } else {
+            drawer.classList.remove("hidden"); // Show when out of view
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+      },
+    );
+
+    observer.observe(productInfo);
+  }
 });

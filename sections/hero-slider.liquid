@@ -1,121 +1,65 @@
-
 <style>
-.custom-slider-wrapper {
-  position: relative;
-  overflow: hidden;
-}
-
-.customSwiper .swiper-slide {
-  height: 85vh;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-}
-
-.slide-content {
-  background: rgba(0, 0, 0, 0.4);
-  padding: 2rem;
-  color: #fff;
-  max-width: 500px;
-  margin-left: 2rem;
-}
-
-.tagline {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-}
-.heading {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-.subtext {
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-}
-.btn {
-  background: #0b1f38;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 30px;
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
-.btn:hover {
-  background: #183b63;
-}
-
-.custom-pagination {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  padding: 0 1rem;
-  gap: 10px;
-  z-index: 5;
-}
-
-.bar {
-  width: 100px;
-  height: 4px;
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 2px;
-  overflow: hidden;
-  flex-shrink: 0;
-}
-.bar .fill {
-  height: 100%;
-  width: 0%;
-  background: #fff;
-  transition: width 0s;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .slide-content {
-    margin-left: 1rem;
-    padding: 1rem;
+  .custom-slider-wrapper {
+    position: relative;
+    overflow: hidden;
   }
 
-  .heading {
-    font-size: 1.5rem;
+  .customSwiper .swiper-slide {
+    height: 85vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: end;
+  }
+  .swiper-pagination {
+    display: flex;
+    justify-content: flex-start;
+    bottom: 52px !important;
+  }
+  .swiper-pagination-bullet {
+    width: 150px;
+    height: 6px;
+    border-radius: 100px;
+    position: relative;
+    overflow: hidden;
+    background: #ffffff4d !important;
+    margin: 0px 10px 0px 0px !important;
   }
 
-  .custom-pagination {
-    bottom: 15px;
+  .swiper-pagination-bullet::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
 
-  .bar {
-    width: 70px;
+  .swiper-pagination-bullet-active {
+    background: #ffffff4d;
   }
-}
-  .scroll-down-btn {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  background: rgba(255, 255, 255, 0.15);
-  color: #fff;
-  padding: 8px 14px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 30px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
-  font-size: 14px;
-  z-index: 10;
-  transition: background 0.3s ease, color 0.3s ease;
-}
 
-.scroll-down-btn:hover {
-  background: rgba(255, 255, 255, 0.3);
-  color: #000;
-}
+  .swiper-pagination-bullet-active::before {
+    background-color: #fff;
+    animation: slide-progress 5s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+  }
 
+  /* Optional: Handle paused state manually using a class toggle in JS */
+  .swiper-paused .swiper-pagination-bullet-active::before {
+    animation-play-state: paused;
+  }
+
+  @keyframes slide-progress {
+    0% {
+      transform: translateX(-100%);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
 </style>
-
 
 <div class="custom-slider-wrapper">
   <div class="swiper customSwiper">
@@ -123,92 +67,98 @@
       {% for block in section.blocks %}
         {% assign image = block.settings.background_image %}
         {% if image != blank %}
-          <div class="swiper-slide" style="background-image: url('{{ image | image_url: width: 1500 }}');">
-            <div class="slide-content">
-              {% if block.settings.tagline != blank %}
-                <p class="tagline">{{ block.settings.tagline }}</p>
-              {% endif %}
-              {% if block.settings.heading != blank %}
-                <h2 class="heading">{{ block.settings.heading }}</h2>
-              {% endif %}
-              {% if block.settings.subtext != blank %}
-                <p class="subtext">{{ block.settings.subtext }}</p>
-              {% endif %}
-              {% if block.settings.button_link != blank and block.settings.button_text != blank %}
-                <a href="{{ block.settings.button_link }}" class="btn">{{ block.settings.button_text }}</a>
-              {% endif %}
+          <div class="swiper-slide" style="background-image: url('{{ image | image_url }}');">
+            <div class="container_fluid">
+              <div class="slide-content max-w-[481px]">
+                {% if block.settings.tagline != blank %}
+                  <p class="text-20 leading-[22.4px] text-white mb-20">{{ block.settings.tagline }}</p>
+                {% endif %}
+                {% if block.settings.heading != blank %}
+                  <h2 class="text-white mb-10 normal-case leading-[49px]">{{ block.settings.heading }}</h2>
+                {% endif %}
+                {% if block.settings.subtext != blank %}
+                  <p class="subtext text-16 leading-24 text-white">{{ block.settings.subtext }}</p>
+                {% endif %}
+                {% if block.settings.button_link != blank and block.settings.button_text != blank %}
+                  <a href="{{ block.settings.button_link }}" class="ctm-button mt-30 mb-[88px] button-with-arrow">
+                    {{ block.settings.button_text }}
+                    {{- 'ctm-button-arrow.svg' | inline_asset_content -}}
+                  </a>
+                {% endif %}
+              </div>
             </div>
           </div>
         {% endif %}
       {% endfor %}
     </div>
   </div>
-
-  <div class="custom-pagination">
-    {% for block in section.blocks %}
-      <div class="bar"><div class="fill"></div></div>
-    {% endfor %}
+  <div class="swiper-pagination pl-20 small_desktop:pl-50 desktop:pl-80"></div>
+  <div
+    class="scroll-down-btn absolute bottom-52 right-80 z-[1] cursor-pointer flex items-center gap-x-8 group"
+    onclick="scrollDownByBanner()"
+  >
+    <span class="text-16 leading-24 text-white">Scroll</span>
+    <div class="w-30 h-30 rounded-full bg-white flex justify-center items-center border border-white group-hover:bg-transparent">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0.246094 5.99792L5.8444 11.6899C7.24465 10.2622 10.0425 7.4256 11.4428 5.99786L10.7477 5.27954C9.48837 6.56384 7.81036 8.2626 6.33853 9.76138L6.33862 0.49328L5.35019 0.493281L5.35013 9.7614L0.948723 5.27959L0.246094 5.99792Z" fill="#112D4E"/>
+      </svg>
+    </div>
   </div>
 </div>
-<div class="scroll-down-btn" onclick="scrollDownByBanner()">
-  <span>Scroll</span>
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="12" cy="12" r="12" fill="white" opacity="0.2"/>
-    <path d="M8 10l4 4 4-4" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
-</div>
 
-
- <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const swiper = new Swiper('.customSwiper', {
-      loop: true,
-      autoplay: false
-    });
-
-    const bars = document.querySelectorAll('.custom-pagination .bar');
-    const fills = document.querySelectorAll('.custom-pagination .bar .fill');
-    let timer;
-    let duration = 5000;
-
-    function startProgress(index) {
-      // Reset all
-      fills.forEach((fill, i) => {
-        fill.style.transition = 'none';
-        fill.style.width = '0%';
-        if (i === index) {
-          void fill.offsetWidth; // trigger reflow
-          fill.style.transition = `width ${duration}ms linear`;
-          fill.style.width = '100%';
-        }
-      });
-
-      clearTimeout(timer);
-      timer = setTimeout(() => {
-        swiper.slideNext();
-      }, duration);
-    }
-
-    // Click to go to slide
-    bars.forEach((bar, i) => {
-      bar.addEventListener('click', () => {
-        swiper.slideToLoop(i);
-      });
-    });
-
-    // Sync on slide change
-    swiper.on('slideChange', () => {
-      const index = swiper.realIndex;
-      startProgress(index);
-    });
-
-    // Start on first
-    startProgress(swiper.realIndex);
+<script>
+  var swiper = new Swiper('.customSwiper', {
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    loop: true,
+    watchSlidesProgress: true,
   });
 
+  document.addEventListener(
+    'mouseenter',
+    (event) => {
+      const el = event.target;
+      if (el && el.matches && el.matches('.swiper-container')) {
+        el.swiper.autoplay.stop();
+        el.classList.add('swiper-paused');
 
+        const activeNavItem = el.querySelector('.swiper-pagination-bullet-active');
+        activeNavItem.style.animationPlayState = 'paused';
+      }
+    },
+    true,
+  );
+
+  document.addEventListener(
+    'mouseleave',
+    (event) => {
+      const el = event.target;
+      if (el && el.matches && el.matches('.swiper-container')) {
+        el.swiper.autoplay.start();
+        el.classList.remove('swiper-paused');
+
+        const activeNavItem = el.querySelector('.swiper-pagination-bullet-active');
+
+        activeNavItem.classList.remove('swiper-pagination-bullet-active');
+
+        setTimeout(() => {
+          activeNavItem.classList.add('swiper-pagination-bullet-active');
+        }, 10);
+      }
+    },
+    true,
+  );
 </script>
-
 
 {% schema %}
 {

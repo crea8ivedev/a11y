@@ -74,7 +74,7 @@
   {%- endif -%}
 
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
-  <div class="page-width">
+  <div class="page-width" id="{{ section.settings.section_id }}">
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="grid__item product__media-wrapper">
         {% render 'product-media-gallery', variant_images: variant_images %}
@@ -848,13 +848,16 @@
   </div>
 
   <div class="sticky-cart-body">
-    <div class="variant-options">
-      {% for variant in product.variants %}
-        <button class="variant-button" data-variant-id="{{ variant.id }}">
-          {{ variant.title }}
-        </button>
-      {% endfor %}
-    </div>
+    {% if product.variants.size > 1 %}
+      <div class="variant-options">
+        {% for variant in product.variants %}
+          <button class="variant-button" data-variant-id="{{ variant.id }}">
+            {{ variant.title }}
+          </button>
+        {% endfor %}
+      </div>
+    {% endif %}
+
     <form method="post" action="/cart/add">
       <input type="hidden" name="id" id="variant-id-input" value="{{ product.variants.first.id }}">
       <button type="submit" class="add-to-cart-btn">Add to cart</button>
@@ -2237,6 +2240,11 @@
     }
   ],
   "settings": [
+    {
+      "type": "text",
+      "label": "Section ID",
+      "id": "section_id"
+    },
     {
       "type": "checkbox",
       "id": "enable_sticky_info",
