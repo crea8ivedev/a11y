@@ -65,6 +65,13 @@
         "faq_metafield_CpTmK7": {
           "type": "faq_metafield",
           "settings": {}
+        },
+        "swishlist_simple_wishlist_wishlist_product_button_ia4LJb": {
+          "type": "shopify://apps/swishlist-simple-wishlist/blocks/wishlist_product_button/bfcb80f2-f00d-42ae-909a-9f00c726327b",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": ""
+          }
         }
       },
       "block_order": [
@@ -77,7 +84,8 @@
         "quantity_selector",
         "buy_buttons",
         "image_with_text_meta_P73DnC",
-        "faq_metafield_CpTmK7"
+        "faq_metafield_CpTmK7",
+        "swishlist_simple_wishlist_wishlist_product_button_ia4LJb"
       ],
       "settings": {
         "section_id": "ctm-product-info",
