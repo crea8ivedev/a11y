@@ -40,42 +40,45 @@
                 -%}
 
                 <div class="mega-menu__inner page-width">
-                 {%- if mega_menu_block -%}
-  <div class="mega-menu__product-section">
-    {%- if mega_menu_block.settings.heading != blank -%}
-      <h3 class="mega-menu__heading">{{ mega_menu_block.settings.heading }}</h3>
-    {%- endif -%}
-    
-    <div class="mega-menu__product-grid mega-menu__product-grid--{{ mega_menu_block.settings.grid_columns }}">
-      {%- for product in mega_menu_block.settings.product_list -%}
-        <div class="mega-menu__product-item">
-          <a href="{{ product.url }}" class="mega-menu__product-link">
-            <div class="mega-menu__product-image-wrapper">
-              {%- if product.featured_image -%}
-                {{ product.featured_image | image_url: width: 200 | image_tag:
-                  loading: 'lazy',
-                  widths: '200, 300, 400',
-                  class: 'mega-menu__product-image'
-                }}
-              {%- endif -%}
-            </div>
-            <div class="mega-menu__product-info">
-              <h4 class="mega-menu__product-title">{{ product.title }}</h4>
-              <div class="mega-menu__product-price">
-                {%- if product.compare_at_price > product.price -%}
-                  <span class="mega-menu__product-price--sale">{{ product.price | money }}</span>
-                  <span class="mega-menu__product-price--compare">{{ product.compare_at_price | money }}</span>
-                {%- else -%}
-                  {{ product.price | money }}
-                {%- endif -%}
-              </div>
-            </div>
-          </a>
-        </div>
-      {%- endfor -%}
-    </div>
-  </div>
-{%- endif -%}
+                  {%- if mega_menu_block -%}
+                    <div class="mega-menu__product-section">
+                      {%- if mega_menu_block.settings.heading != blank -%}
+                        <h3 class="mega-menu__heading">{{ mega_menu_block.settings.heading }}</h3>
+                      {%- endif -%}
+
+                      <div class="mega-menu__product-grid mega-menu__product-grid--{{ mega_menu_block.settings.grid_columns }}">
+                        {%- for product in mega_menu_block.settings.product_list -%}
+                          <div class="mega-menu__product-item">
+                            <a href="{{ product.url }}" class="mega-menu__product-link">
+                              <div class="mega-menu__product-image-wrapper">
+                                {%- if product.featured_image -%}
+                                  <img
+                                    src="{{ product.featured_image | image_url }}"
+                                    height="auto"
+                                    width="auto"
+                                    loading="lazy"
+                                  >
+                                {%- endif -%}
+                              </div>
+                              <div class="mega-menu__product-info">
+                                <h4 class="mega-menu__product-title">{{ product.title }}</h4>
+                                <div class="mega-menu__product-price">
+                                  {%- if product.compare_at_price > product.price -%}
+                                    <span class="mega-menu__product-price--sale">{{ product.price | money }}</span>
+                                    <span class="mega-menu__product-price--compare">
+                                      {{- product.compare_at_price | money -}}
+                                    </span>
+                                  {%- else -%}
+                                    {{ product.price | money }}
+                                  {%- endif -%}
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                        {%- endfor -%}
+                      </div>
+                    </div>
+                  {%- endif -%}
 
                   <ul
                     class="mega-menu__list{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"

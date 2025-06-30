@@ -1,31 +1,48 @@
-<section class="marquee-section">
-  <div class="marquee-wrapper">
+<section class="marquee-section bg-primary-blue py-40 max-mdscreen6:py-20 overflow-hidden whitespace-nowrap">
+  <div class="marquee-wrapper relative flex overflow-hidden">
     <div class="marquee-track">
       {% for block in section.blocks %}
-        <div class="marquee-item" {{ block.shopify_attributes }}>
+        <div
+          class="marquee-item flex mdscreen6:gap-x-40 gap-x-20 items-center mdscreen6:mr-40 mr-20"
+          {{ block.shopify_attributes }}
+        >
           {% if block.settings.image %}
-            <div class="marquee-image">
-              <img src="{{ block.settings.image | image_url }}" alt="marquee image" height="auto" width="auto">
+            <div class="marquee-image mdscreen6:w-60 mdscreen6:h-60 w-60 h-60 shrink-0 rounded-10">
+              <img
+                src="{{ block.settings.image | image_url }}"
+                alt="marquee image"
+                height="auto"
+                width="auto"
+                class="w-full h-full rounded-10"
+              >
             </div>
           {% endif %}
-          <div class="marquee-text">{{ block.settings.text }}</div>
+          <div class="marquee-text text-white font-heading mdscreen6:text-24 text-18 mdscreen6:leading-30 leading-24">
+            {{ block.settings.text }}
+          </div>
         </div>
       {% endfor %}
 
       {%- comment -%} Duplicate for infinite loop {%- endcomment -%}
       {% for block in section.blocks %}
-        <div class="marquee-item">
+        <div
+          class="marquee-item flex mdscreen6:gap-x-40 gap-x-20 items-center mdscreen6:mr-40 mr-20"
+          {{ block.shopify_attributes }}
+        >
           {% if block.settings.image %}
-            <div class="marquee-image">
+            <div class="marquee-image mdscreen6:w-60 mdscreen6:h-60 w-60 h-60 shrink-0 rounded-10">
               <img
                 src="{{ block.settings.image | image_url }}"
-                alt="marquee image duplicate"
+                alt="marquee image"
                 height="auto"
                 width="auto"
+                class="w-full h-full rounded-10"
               >
             </div>
           {% endif %}
-          <div class="marquee-text">{{ block.settings.text }}</div>
+          <div class="marquee-text text-white font-heading mdscreen6:text-24 text-18 mdscreen6:leading-30 leading-24">
+            {{ block.settings.text }}
+          </div>
         </div>
       {% endfor %}
     </div>
@@ -33,48 +50,10 @@
 </section>
 
 <style>
-  .marquee-section {
-    background-color: #0c2a4d;
-    overflow: hidden;
-    white-space: nowrap;
-    padding: 1rem 0;
-  }
-
-  .marquee-wrapper {
-    position: relative;
-    display: flex;
-    overflow: hidden;
-  }
-
   .marquee-track {
     display: flex;
     width: max-content;
     animation: marqueeScroll 30s linear infinite;
-  }
-
-  .marquee-item {
-    display: flex;
-    align-items: center;
-    margin-right: 2rem;
-    color: white;
-    font-weight: bold;
-    flex-shrink: 0;
-  }
-
-  .marquee-image {
-    margin: 0 0.5rem;
-    border-radius: 0.5rem;
-    background: white;
-    padding: 0.3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .marquee-image img {
-    max-height: 40px;
-    width: auto;
-    display: block;
   }
 
   @keyframes marqueeScroll {

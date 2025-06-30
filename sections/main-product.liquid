@@ -91,6 +91,15 @@
               {%- when '@app' -%}
                 {% render block %}
 
+              {%- when 'icons_text_custom' -%}
+                <div class="ctm-icon-text-main">
+                  {% for pdpicontxt in product.metafields.custom.pdp_icon_and_text.value %}
+                    <div class="ctm-icon-image">
+                      <img src="{{ pdpicontxt.icon | image_url }}" height="" width="" alt="">
+                      <p>{{ pdpicontxt.text }}</p>
+                    </div>
+                  {% endfor %}
+                </div>
               {%- when 'image-with-text-meta' -%}
                 <div class="img-txt-meta-main">
                   {% for featureicon in product.metafields.custom.pdp_icon_with_text.value %}
@@ -108,10 +117,16 @@
                 >
                   {{- block.settings.text -}}
                 </p>
+              {%- when 'social_icons' -%}
+                {%- if block.settings.show_social -%}
+                  <div class="product-social-icons" {{ block.shopify_attributes }}>
+                    {%- render 'social-icons', class: 'product-social-icons-list' -%}
+                  </div>
+                {%- endif -%}
               {%- when 'faq_metafield' -%}
-                <div class="pdp-accordion-main">
+                <div class="pdp-accordion-main  {{ block.shopify_attributes }}">
                   {% for faq in product.metafields.custom.pdp_faq.value %}
-                    <div class="pdp-accordion-item">
+                    <div class="pdp-accordion-item  {{ block.shopify_attributes }}">
                       <button class="pdp-accordion-header">
                         {{ faq.question }}
                         <span class="arrow-icon">
@@ -2230,6 +2245,25 @@
           "default": "t:sections.main-product.blocks.icon_with_text.settings.heading_3.default",
           "label": "t:sections.main-product.blocks.icon_with_text.settings.heading_3.label",
           "info": "t:sections.main-product.blocks.icon_with_text.settings.heading.info"
+        }
+      ]
+    },
+    {
+      "type": "icons_text_custom",
+      "name": "Icon and Text",
+      "settings": []
+    },
+    {
+      "type": "social_icons",
+      "name": "Social Icons",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_social",
+          "default": true,
+          "label": "Show Social Icons",
+          "info": "Display social media sharing icons"
         }
       ]
     },

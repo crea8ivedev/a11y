@@ -40,6 +40,15 @@
           "type": "description",
           "settings": {}
         },
+        "icons_text_custom_GqeBGY": {
+          "type": "icons_text_custom",
+          "settings": {
+            "image_icon1": "shopify://shop_images/vegan.svg",
+            "text_icon1": "Vegan",
+            "image_icon2": "shopify://shop_images/vegan.svg",
+            "text_icon2": "Vegan"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -65,6 +74,12 @@
         "faq_metafield_CpTmK7": {
           "type": "faq_metafield",
           "settings": {}
+        },
+        "social_icons_qRnYJe": {
+          "type": "social_icons",
+          "settings": {
+            "show_social": true
+          }
         }
       },
       "block_order": [
@@ -73,11 +88,13 @@
         "price",
         "inventory_UQ7AWP",
         "description",
+        "icons_text_custom_GqeBGY",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
         "image_with_text_meta_P73DnC",
-        "faq_metafield_CpTmK7"
+        "faq_metafield_CpTmK7",
+        "social_icons_qRnYJe"
       ],
       "settings": {
         "section_id": "ctm-product-info",
@@ -86,10 +103,10 @@
         "media_size": "large",
         "constrain_to_viewport": true,
         "media_fit": "contain",
-        "gallery_layout": "stacked",
+        "gallery_layout": "thumbnail_slider",
         "mobile_thumbnails": "hide",
         "media_position": "left",
-        "image_zoom": "none",
+        "image_zoom": "lightbox",
         "hide_variants": true,
         "enable_video_looping": false,
         "padding_top": 36,
@@ -177,6 +194,87 @@
       "name": "Marquee",
       "settings": {}
     },
+    "key_ingredients_rhFCbi": {
+      "type": "key-ingredients",
+      "blocks": {
+        "ingredient_JzYWea": {
+          "type": "ingredient",
+          "settings": {
+            "image": "shopify://shop_images/olive.png",
+            "title": "Olive oil",
+            "description": "Moisturize and soften skin",
+            "description2": ""
+          }
+        },
+        "ingredient_dfVwR7": {
+          "type": "ingredient",
+          "settings": {
+            "image": "shopify://shop_images/almond.png",
+            "title": "Sweet Almond",
+            "description": "Helps in deep cleansing",
+            "description2": ""
+          }
+        },
+        "ingredient_BDjUz9": {
+          "type": "ingredient",
+          "settings": {
+            "image": "shopify://shop_images/lemon.png",
+            "title": "Citrus Lemon",
+            "description": "Increases collagen in the skinFades dark spots and blemishes",
+            "description2": ""
+          }
+        },
+        "ingredient_wpcBMV": {
+          "type": "ingredient",
+          "settings": {
+            "image": "shopify://shop_images/alovera.png",
+            "title": "Aloe Vera",
+            "description": "Keep the skin hydratedHeals wounds & injuries",
+            "description2": ""
+          }
+        },
+        "ingredient_eH7BRp": {
+          "type": "ingredient",
+          "settings": {
+            "image": "shopify://shop_images/olive.png",
+            "title": "Olive oil",
+            "description": "Moisturize and soften skin",
+            "description2": ""
+          }
+        },
+        "ingredient_LGrhia": {
+          "type": "ingredient",
+          "settings": {
+            "image": "shopify://shop_images/almond.png",
+            "title": "Sweet Almond",
+            "description": "Helps in deep cleansing",
+            "description2": ""
+          }
+        },
+        "ingredient_6edpbH": {
+          "type": "ingredient",
+          "settings": {
+            "image": "shopify://shop_images/alovera.png",
+            "title": "Aloe Vera",
+            "description": "Keep the skin hydratedHeals wounds & injuries",
+            "description2": ""
+          }
+        }
+      },
+      "block_order": [
+        "ingredient_JzYWea",
+        "ingredient_dfVwR7",
+        "ingredient_BDjUz9",
+        "ingredient_wpcBMV",
+        "ingredient_eH7BRp",
+        "ingredient_LGrhia",
+        "ingredient_6edpbH"
+      ],
+      "name": "Key Ingredients",
+      "settings": {
+        "heading": "Key Ingredients"
+      }
+    },
     "related-products": {
       "type": "related-products",
       "disabled": true,
@@ -201,9 +299,9 @@
       "settings": {
         "collection": "feature-products",
         "products_to_show": 8,
-        "title": "Our Collections",
+        "title": "Feature Products",
         "heading_size": "h2",
-        "description": "<p>Cursus sit amet dictum sit amet. Cras adipiscing enim eu turpis egestas pretium aenean.</p>",
+        "description": "<p>Shop our summer trendy collection.</p>",
         "show_description": false,
         "description_style": "body",
         "button_txt": "Shop all collections",
@@ -312,96 +410,15 @@
         "button_label": "Shop All",
         "button_url": "#"
       }
-    },
-    "key_ingredients_rhFCbi": {
-      "type": "key-ingredients",
-      "blocks": {
-        "ingredient_JzYWea": {
-          "type": "ingredient",
-          "settings": {
-            "image": "shopify://shop_images/olive.png",
-            "title": "Olive oil",
-            "description": "Moisturize and soften skin",
-            "description2": ""
-          }
-        },
-        "ingredient_dfVwR7": {
-          "type": "ingredient",
-          "settings": {
-            "image": "shopify://shop_images/almond.png",
-            "title": "Sweet Almond",
-            "description": "Helps in deep cleansing",
-            "description2": ""
-          }
-        },
-        "ingredient_BDjUz9": {
-          "type": "ingredient",
-          "settings": {
-            "image": "shopify://shop_images/lemon.png",
-            "title": "Citrus Lemon",
-            "description": "Increases collagen in the skinFades dark spots and blemishes",
-            "description2": ""
-          }
-        },
-        "ingredient_wpcBMV": {
-          "type": "ingredient",
-          "settings": {
-            "image": "shopify://shop_images/alovera.png",
-            "title": "Aloe Vera",
-            "description": "Keep the skin hydratedHeals wounds & injuries",
-            "description2": ""
-          }
-        },
-        "ingredient_eH7BRp": {
-          "type": "ingredient",
-          "settings": {
-            "image": "shopify://shop_images/olive.png",
-            "title": "Olive oil",
-            "description": "Moisturize and soften skin",
-            "description2": ""
-          }
-        },
-        "ingredient_LGrhia": {
-          "type": "ingredient",
-          "settings": {
-            "image": "shopify://shop_images/almond.png",
-            "title": "Sweet Almond",
-            "description": "Helps in deep cleansing",
-            "description2": ""
-          }
-        },
-        "ingredient_6edpbH": {
-          "type": "ingredient",
-          "settings": {
-            "image": "shopify://shop_images/alovera.png",
-            "title": "Aloe Vera",
-            "description": "Keep the skin hydratedHeals wounds & injuries",
-            "description2": ""
-          }
-        }
-      },
-      "block_order": [
-        "ingredient_JzYWea",
-        "ingredient_dfVwR7",
-        "ingredient_BDjUz9",
-        "ingredient_wpcBMV",
-        "ingredient_eH7BRp",
-        "ingredient_LGrhia",
-        "ingredient_6edpbH"
-      ],
-      "name": "Key Ingredients",
-      "settings": {
-        "heading": "Key Ingredients"
-      }
     }
   },
   "order": [
     "main",
     "marquee_pgxcFC",
+    "key_ingredients_rhFCbi",
     "related-products",
     "featured_collection_69PtLL",
     "faq_with_contact_mAzcmN",
-    "featured_media_grid_QJbhY8",
-    "key_ingredients_rhFCbi"
+    "featured_media_grid_QJbhY8"
   ]
 }

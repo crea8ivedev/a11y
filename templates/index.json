@@ -123,9 +123,9 @@
       "settings": {
         "collection": "feature-products",
         "products_to_show": 8,
-        "title": "Our Collections",
+        "title": "Feature Products",
         "heading_size": "h2",
-        "description": "<p>Cursus sit amet dictum sit amet. Cras adipiscing enim eu turpis egestas pretium aenean.</p>",
+        "description": "<p>Shop our summer trendy collection.</p>",
         "show_description": false,
         "description_style": "body",
         "button_txt": "Shop all collections",
@@ -135,7 +135,7 @@
         "full_width": false,
         "show_view_all": false,
         "view_all_style": "solid",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-e8ed460d-f63f-4071-acf9-6effb87b4538",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": true,
@@ -144,8 +144,8 @@
         "quick_add": "none",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "padding_top": 44,
-        "padding_bottom": 36
+        "padding_top": 60,
+        "padding_bottom": 76
       }
     },
     "marquee_VyeKPi": {
@@ -244,7 +244,7 @@
           "type": "heading",
           "settings": {
             "heading": "Skin care",
-            "heading_size": "h1"
+            "heading_size": "h2"
           }
         },
         "text_zWrBgm": {
@@ -271,7 +271,8 @@
       ],
       "settings": {
         "image": "shopify://shop_images/Frame_91.jpg",
-        "height": "adapt",
+        "extra_class": "ctm-img-txt-main",
+        "height": "small",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "image_behavior": "none",

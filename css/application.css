@@ -222,7 +222,7 @@
   h4,
   h5,
   h6 {
-    @apply m-0 !outline-[0] text-primary-black uppercase;
+    @apply m-0 !outline-[0] text-primary-blue;
   }
   h1,
   .h1,
@@ -277,7 +277,7 @@
   .button,
   .ctm-button,
   .ctm-login-modal .customer button {
-    @apply cursor-pointer transition-all duration-300 ease-in-out w-fit font-body font-semibold text-white normal-case min-w-[147px] min-h-45 text-16 leading-100p tracking-normal flex justify-center items-center gap-x-10 bg-primary-blue border border-primary-blue rounded-[100px] hover:bg-transparent hover:text-primary-blue;
+    @apply cursor-pointer transition-all duration-300 ease-in-out w-fit font-body font-semibold text-white min-h-45 px-25 text-16 leading-100p tracking-normal flex justify-center items-center gap-x-10 bg-primary-blue border border-primary-blue rounded-[100px] hover:bg-transparent hover:text-primary-blue capitalize;
   }
 }
 .button-with-arrow:hover svg path {
@@ -400,4 +400,88 @@ localization-form .disclosure__list-wrapper .country-filter {
 .header .mega-menu .mega-menu__product-section {
   @apply ml-40 pl-40 border-l border-pale-grey;
 }
+.mega-menu .mega-menu__product-image-wrapper {
+  @apply mb-20;
+}
+.mega-menu .mega-menu__product-image-wrapper,
+.mega-menu .mega-menu__product-image-wrapper img {
+  @apply rounded-[25px] aspect-[13/15];
+}
+.mega-menu .mega-menu__product-image-wrapper img {
+  @apply object-cover;
+}
+.mega-menu .mega-menu__product-price .mega-menu__product-price--compare {
+  @apply ml-16;
+}
+.mega-menu .mega-menu__product-price {
+  @apply mt-10;
+}
+.mega-menu .mega-menu__content {
+  @apply py-40;
+}
+.mega-menu .mega-menu__product-title {
+  @apply mb-10;
+}
 /* header css ends */
+.product-card-wrapper .card .card__inner,
+.product-card-wrapper .card .card__inner .card__media {
+  @apply aspect-[13/15];
+}
+.product-card-wrapper .card .card__inner *,
+.product-card-wrapper .card .card__inner {
+  @apply !rounded-[25px];
+}
+.product-card-wrapper .card .card__badge {
+  @apply hidden;
+}
+.product-card-wrapper .card .card__heading a {
+  @apply no-underline;
+}
+.product-card-wrapper .card .card__heading,
+.mega-menu .mega-menu__product-title {
+  @apply text-18 leading-[22.4px] font-body font-medium text-primary-black normal-case;
+}
+.product-card-wrapper .card .card__information {
+  @apply pb-0 pt-20 text-center;
+}
+.product-card-wrapper .card .price .price__container .price-item,
+.mega-menu .mega-menu__product-price span,
+.mega-menu .mega-menu__product-price {
+  @apply text-16 leading-20 font-body opacity-[1] text-primary-black font-medium;
+}
+.mega-menu .mega-menu__product-price span.mega-menu__product-price--sale,
+.product-card-wrapper .card .card__information .price .price-item--regular {
+  @apply text-[#112D4E4D];
+}
+.product-card-wrapper .card .card__information .price {
+  @apply mt-10 text-center text-primary-black;
+}
+.ctm-collection-grid-section .collection__title.title-wrapper {
+  @apply flex items-center justify-between mb-44;
+}
+.ctm-collection-grid-section .collection_title-wrapper .title {
+  @apply text-[34px] leading-40 mt-0 mb-10;
+}
+.ctm-img-txt-main .image-with-text__grid {
+  @apply items-center;
+}
+.ctm-img-txt-main .ctm-button {
+  @apply mt-40;
+}
+.ctm-img-txt-main .image-with-text__media,
+.ctm-img-txt-main .image-with-text__media img {
+  @apply rounded-25 !border-none;
+}
+.ctm-img-txt-main .image-with-text__media {
+  @apply max-extlarge_desktop_1:h-[560px];
+}
+.ctm-img-txt-main .image-with-text__text p {
+  @apply leading-25 max-extlarge_desktop_1:max-w-[470px] max-mdscreen2:max-w-full capitalize;
+}
+.ctm-img-txt-main .image-with-text__text--caption {
+  @apply text-16 leading-[22px] text-primary-black normal-case tracking-normal mb-10;
+}
+.ctm-img-txt-main .image-with-text__content {
+  @apply p-0 pl-90;
+}
+/* .ctm-img-txt-main .image-with-text__text */
