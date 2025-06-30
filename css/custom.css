@@ -306,3 +306,15 @@
 }
 
 /* Sticky Add to cart End */
+
+/* common */
+
+.main-section-title {
+  @apply font-heading font-regular text-34 leading-153p text-primary-blue tracking-normal;
+}
+
+/* common */
+
+/* key-ingredients */
+
+/* key-ingredients */

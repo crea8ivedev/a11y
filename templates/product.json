@@ -42,12 +42,7 @@
         },
         "icons_text_custom_GqeBGY": {
           "type": "icons_text_custom",
-          "settings": {
-            "image_icon1": "shopify://shop_images/vegan.svg",
-            "text_icon1": "Vegan",
-            "image_icon2": "shopify://shop_images/vegan.svg",
-            "text_icon2": "Vegan"
-          }
+          "settings": {}
         },
         "variant_picker": {
           "type": "variant_picker",

@@ -37,7 +37,9 @@
 <section class="key-ingredients-section">
   <div class="page-width">
     {% if section.settings.heading != blank %}
-      <h2 class="section-title">{{ section.settings.heading }}</h2>
+      <div class="key-ingredient-title-start text-left">
+        <h2 class="main-section-title">{{ section.settings.heading }}</h2>
+      </div>
     {% endif %}
 
     <div class="swiper key-ingredients-swiper">

@@ -115,7 +115,9 @@
         "heading": "Our Collections",
         "subtext": "Cursus sit amet dictum sit amet. Cras adipiscing enim eu turpis egestas pretium aenean.",
         "button_label": "Shop All",
-        "button_url": "#"
+        "button_url": "#",
+        "padding_top": 0,
+        "padding_bottom": 60
       }
     },
     "featured_collection": {
@@ -297,9 +299,48 @@
         "starting_position": 50
       }
     },
+    "rich_text_BKf7e7": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_bLEqBq": {
+          "type": "heading",
+          "settings": {
+            "heading": "Item of the week",
+            "heading_size": "h2"
+          }
+        },
+        "text_7yXt44": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Shop our summer trendy collection.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_bLEqBq",
+        "text_7yXt44"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "extra_class": "ctm-featured-products-head",
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "scheme-e8ed460d-f63f-4071-acf9-6effb87b4538",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_bottom": 44
+      }
+    },
     "featured_product_ky3fVE": {
       "type": "featured-product",
       "blocks": {
+        "text_6tQUdw": {
+          "type": "text",
+          "settings": {
+            "text": "Serum",
+            "text_style": "body"
+          }
+        },
         "title_ppqXzi": {
           "type": "title",
           "settings": {
@@ -330,6 +371,7 @@
         }
       },
       "block_order": [
+        "text_6tQUdw",
         "title_ppqXzi",
         "price_fp49qM",
         "text_CxVwdF",
@@ -339,7 +381,7 @@
       "settings": {
         "video_aura": "shopify://files/videos/file_example_MP4_640_3MG.mp4",
         "product": "exfoliating-serum",
-        "color_scheme": "",
+        "color_scheme": "scheme-e8ed460d-f63f-4071-acf9-6effb87b4538",
         "secondary_background": false,
         "media_size": "medium",
         "constrain_to_viewport": true,
@@ -348,8 +390,8 @@
         "image_zoom": "none",
         "hide_variants": false,
         "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 60
       }
     },
     "faq_with_contact_F36F4t": {
@@ -408,6 +450,7 @@
     "marquee_VyeKPi",
     "image_with_text_diifcB",
     "before_after_UKBk9c",
+    "rich_text_BKf7e7",
     "featured_product_ky3fVE",
     "faq_with_contact_F36F4t"
   ]

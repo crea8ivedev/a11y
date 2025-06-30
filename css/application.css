@@ -75,12 +75,19 @@
   --spacing-100p: 100%;
   --spacing-90p: 90%;
   --spacing-101p: 101%;
+  --spacing-110p: 110%;
   --spacing-120p: 120%;
   --spacing-125p: 125%;
   --spacing-130p: 130%;
+  --spacing-133p: 133%;
   --spacing-135p: 135%;
-  --spacing-110p: 110%;
+  --spacing-136p: 136%;
+  --spacing-137p: 137%;
+  --spacing-138p: 138%;
   --spacing-140p: 140%;
+  --spacing-150p: 150%;
+  --spacing-153p: 153%;
+  --spacing-160p: 160%;
   --spacing-170p: 170%;
   --spacing-114p: 114.99%;
 
@@ -97,6 +104,7 @@
   --text-28: 28px;
   --text-30: 30px;
   --text-32: 32px;
+  --text-34: 34px;
   --text-35: 35px;
   --text-36: 36px;
   --text-40: 40px;
@@ -278,6 +286,9 @@
   .ctm-button,
   .ctm-login-modal .customer button {
     @apply cursor-pointer transition-all duration-300 ease-in-out w-fit font-body font-semibold text-white min-h-45 px-25 text-16 leading-100p tracking-normal flex justify-center items-center gap-x-10 bg-primary-blue border border-primary-blue rounded-[100px] hover:bg-transparent hover:text-primary-blue capitalize;
+  }
+  .button-outline {
+    @apply bg-transparent border-primary-blue text-primary-blue hover:!text-white hover:!bg-primary-blue;
   }
 }
 .button-with-arrow:hover svg path {
@@ -483,5 +494,8 @@ localization-form .disclosure__list-wrapper .country-filter {
 }
 .ctm-img-txt-main .image-with-text__content {
   @apply p-0 pl-90;
+}
+.ctm-featured-products-head h2.rich-text__heading {
+  @apply xl:text-34 xl:leading-52 mdscreen6:text-30 mdscreen:leading-32 text-24 leading-100p;
 }
 /* .ctm-img-txt-main .image-with-text__text */
