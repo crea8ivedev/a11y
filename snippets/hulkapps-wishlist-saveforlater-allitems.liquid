@@ -1,0 +1,57 @@
+{% assign save_for_later_type = 'individual_button' %}
+{% assign display = 'none' %}
+{% assign background_color = '#5c6ac4' %}
+{% assign border = 0 %}
+{% assign border_color = '#5c6ac4' %}
+{% assign border_radius = 0 %}
+{% assign color = '#ffffff' %}
+{% assign font_size = 16 %}
+{% assign font_weight = 500 %}
+{% assign vertical_space = 7 %}
+{% assign horizontal_space = 10 %}
+{% assign save_all_for_later_position = 'global_button_manual' %}
+{% if shop.metafields.hulkapps_wishlist.hulkapps_wishlist_buttonstyle.save_for_later_type != null %}
+  {% assign save_for_later_type = shop.metafields.hulkapps_wishlist.hulkapps_wishlist_buttonstyle.save_for_later_type %}
+{% endif %}
+{% if shop.metafields.hulkapps_wishlist.hulkapps_wishlist_buttonstyle.global_button_position != null %}
+  {% assign save_all_for_later_position = shop.metafields.hulkapps_wishlist.hulkapps_wishlist_buttonstyle.global_button_position %}
+{% endif %}
+{% if save_for_later_type != 'individual_button' and save_all_for_later_position == 'global_button_manual' %}
+  {% assign display = 'inline-flex' %}
+{% endif %}
+{% if shop.metafields.hulkapps_wishlist.hulkapps_wishlist_buttonstyle.global_button_bg_color != null %}
+  {% assign background_color = shop.metafields.hulkapps_wishlist.hulkapps_wishlist_buttonstyle.global_button_bg_color %}
+{% endif %}
+{% if shop.metafields.hulkapps_wishlist.hulkapps_wishlist_buttonstyle.global_button_border_color != null %}
+  {% assign border_color = shop.metafields.hulkapps_wishlist.hulkapps_wishlist_buttonstyle.global_button_border_color %}
+{% endif %}
+{% if shop.metafields.hulkapps_wishlist.hulkapps_wishlist_buttonstyle.global_button_border_width != null %}
+  {% assign border = shop.metafields.hulkapps_wishlist.hulkapps_wishlist_buttonstyle.global_button_border_width %}
+{% endif %}
+{% if shop.metafields.hulkapps_wishlist.hulkapps_wishlist_buttonstyle.global_button_border_radius != null %}
+  {% assign border_radius = shop.metafields.hulkapps_wishlist.hulkapps_wishlist_buttonstyle.global_button_border_radius %}
+{% endif %}
+{% if shop.metafields.hulkapps_wishlist.hulkapps_wishlist_buttonstyle.global_button_text_color != null %}
+  {% assign color = shop.metafields.hulkapps_wishlist.hulkapps_wishlist_buttonstyle.global_button_text_color %}
+{% endif %}
+{% if shop.metafields.hulkapps_wishlist.hulkapps_wishlist_buttonstyle.global_button_font_size != null %}
+  {% assign font_size = shop.metafields.hulkapps_wishlist.hulkapps_wishlist_buttonstyle.global_button_font_size %}
+{% endif %}
+{% if shop.metafields.hulkapps_wishlist.hulkapps_wishlist_buttonstyle.global_button_font_thickness != null %}
+  {% assign font_weight = shop.metafields.hulkapps_wishlist.hulkapps_wishlist_buttonstyle.global_button_font_thickness %}
+{% endif %}
+{% if shop.metafields.hulkapps_wishlist.hulkapps_wishlist_buttonstyle.global_button_vertical_space != null %}
+  {% assign vertical_space = shop.metafields.hulkapps_wishlist.hulkapps_wishlist_buttonstyle.global_button_vertical_space %}
+{% endif %}
+{% if shop.metafields.hulkapps_wishlist.hulkapps_wishlist_buttonstyle.global_button_horizontal_space != null %}
+  {% assign horizontal_space = shop.metafields.hulkapps_wishlist.hulkapps_wishlist_buttonstyle.global_button_horizontal_space %}
+{% endif %}
+
+<a
+  href="#"
+  style="display: {{ display }}; padding: {{ vertical_space }}px {{ horizontal_space }}px; font-size: {{ font_size }}px; font-weight: {{ font_weight }}; background-color: {{ background_color }}; color: {{ color }}; border: {{ border }}px solid {{ border_color }}; border-radius: {{ border_radius }}px"
+  class="addtoWishlist"
+  data-hulkSaveForLaterallItems
+>
+  Save all for later
+</a>
