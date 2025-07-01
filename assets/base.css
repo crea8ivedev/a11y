@@ -3712,3 +3712,15 @@ details-disclosure > details {
   height: auto;
   display: block;
 }
+modal-opener.product__modal-opener .wishlist-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 3;
+}
+
+modal-opener.product__modal-opener .wishlist-btn .heart-hulk-animation {
+    padding: 8px;
+    background-color: #cccccc;
+    border-radius:50%;
+}
