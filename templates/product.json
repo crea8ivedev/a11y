@@ -15,7 +15,7 @@
         "vendor": {
           "type": "text",
           "settings": {
-            "text": "{{ product.vendor }}",
+            "text": "{{ product.metafields.custom.pdp_caption.value }}",
             "text_style": "body"
           }
         },
@@ -75,13 +75,6 @@
           "settings": {
             "show_social": true
           }
-        },
-        "swishlist_simple_wishlist_wishlist_product_button_ia4LJb": {
-          "type": "shopify://apps/swishlist-simple-wishlist/blocks/wishlist_product_button/bfcb80f2-f00d-42ae-909a-9f00c726327b",
-          "disabled": true,
-          "settings": {
-            "custom_liquid": ""
-          }
         }
       },
       "block_order": [
@@ -96,8 +89,7 @@
         "buy_buttons",
         "image_with_text_meta_P73DnC",
         "faq_metafield_CpTmK7",
-        "social_icons_qRnYJe",
-        "swishlist_simple_wishlist_wishlist_product_button_ia4LJb"
+        "social_icons_qRnYJe"
       ],
       "settings": {
         "section_id": "ctm-product-info",
@@ -112,8 +104,8 @@
         "image_zoom": "lightbox",
         "hide_variants": true,
         "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 12
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "marquee_pgxcFC": {
@@ -275,6 +267,7 @@
       ],
       "name": "Key Ingredients",
       "settings": {
+        "extra_class": "",
         "heading": "Key Ingredients"
       }
     },
@@ -411,7 +404,9 @@
         "heading": "Our Collections",
         "subtext": "Cursus sit amet dictum sit amet. Cras adipiscing enim eu turpis egestas pretium aenean.",
         "button_label": "Shop All",
-        "button_url": "#"
+        "button_url": "#",
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },

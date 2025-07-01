@@ -192,7 +192,7 @@
         "id": "spacing_grid_vertical",
         "min": 4,
         "max": 40,
-        "step": 4,
+        "step": 1,
         "default": 8,
         "unit": "px",
         "label": "t:settings_schema.layout.settings.spacing_grid_vertical.label"

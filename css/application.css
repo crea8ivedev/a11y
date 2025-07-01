@@ -190,6 +190,7 @@
   --breakpoint-768: 768px;
   --breakpoint-769: 769px;
   --breakpoint-780: 780px;
+  --breakpoint-750: 750px;
   --breakpoint-990: 990px;
   --breakpoint-992: 992px;
   --breakpoint-1024: 1024px;
@@ -300,6 +301,12 @@
 .container_fluid,
 .page-width {
   @apply px-20 small_desktop:px-50 desktop:px-80 !max-w-full;
+}
+.custom-container {
+  @apply px-20 !max-w-[1320px] mx-auto;
+}
+.product-form__buttons .loading__spinner {
+  @apply hidden;
 }
 .announcement-bar-section .utility-bar {
   @apply bg-primary-blue;
@@ -460,10 +467,10 @@ localization-form .disclosure__list-wrapper .country-filter {
 .mega-menu .mega-menu__product-price {
   @apply text-16 leading-20 font-body opacity-[1] text-primary-black font-medium;
 }
-.mega-menu .mega-menu__product-price span.mega-menu__product-price--sale,
+/* .mega-menu .mega-menu__product-price span.mega-menu__product-price--sale,
 .product-card-wrapper .card .card__information .price .price-item--regular {
   @apply text-[#112D4E4D];
-}
+} */
 .product-card-wrapper .card .card__information .price {
   @apply mt-10 text-center text-primary-black;
 }
@@ -536,3 +543,110 @@ localization-form .disclosure__list-wrapper .country-filter {
 .featured-product .product__info-wrapper {
   @apply bg-white rounded-25 !px-40 !py-[67.5px];
 }
+.featured-product .grid__item.product__media-wrapper {
+  @apply !w-auto !max-w-[52.3%];
+}
+.featured-product .product__info-wrapper.grid__item {
+  @apply !w-min !max-w-[unset];
+}
+.featured-product .product__info-container .product-form {
+  @apply !m-0;
+}
+.featured-product .price--large.price {
+  @apply text-20 leading-[22px] font-body text-primary-black tracking-normal mb-28;
+}
+.featured-product.product .price__container {
+  @apply mb-0;
+}
+.featured-product.product.grid {
+  @apply gap-x-60;
+}
+/* quantity css */
+.product .product-form__quantity .form__label {
+  @apply hidden;
+}
+.product .product-form__quantity .quantity {
+  @apply rounded-[100px] border border-primary-blue bg-transparent px-12 min-h-[45px] max-w-[114px];
+}
+.product .product-form__quantity {
+  @apply max-w-fit mb-0 flex-[unset];
+}
+.quantity .quantity__button .svg-wrapper {
+  @apply w-12 h-[13px];
+}
+.quantity .quantity__button {
+  @apply cursor-pointer;
+}
+.quantity .quantity__input {
+  @apply font-body text-primary-blue text-16 leading-[21px] font-semibold;
+}
+/* quantity css */
+/* footer css */
+.ctm-footer .footer-block__heading,
+.ctm-footer .footer-block__heading h2 {
+  @apply mdscreen2:text-22 mdscreen2:leading-36 text-18 leading-24 text-white font-heading mb-24;
+}
+.ctm-footer .footer-block__details-content .list-menu__item {
+  @apply p-0 font-body text-16 leading-28 capitalize text-white mr-0 !decoration-1;
+}
+.ctm-footer .footer-block__details-content > li {
+  @apply !mr-0 mb-5 last-of-type:mb-0;
+}
+.ctm-footer .footer-block__details-content p a:last-child {
+  @apply mb-10;
+}
+.ctm-footer .footer-block__details-content a {
+  @apply text-16 leading-26 font-normal text-white !decoration-1 hover:underline inline-block;
+}
+.ctm-footer .footer-block__details-content p {
+  @apply text-16 leading-28 font-bold text-white;
+}
+.ctm-footer .footer__content-top {
+  @apply flex items-center gap-x-80;
+}
+.ctm-footer .footer__blocks-wrapper {
+  @apply gap-x-80;
+}
+.ctm-footer .footer-block__newsletter,
+.ctm-footer .footer-block__newsletter .newsletter-form__field-wrapper,
+.ctm-footer .footer-block__newsletter .newsletter-form {
+  @apply w-full max-w-full;
+}
+.ctm-footer .footer-block--newsletter .newsletter-form__button {
+  @apply w-[13px] right-[15px];
+}
+.ctm-footer .footer-block--newsletter .field__button > .svg-wrapper {
+  @apply h-full w-full;
+}
+.ctm-footer .footer-block--newsletter {
+  @apply flex-col gap-14 mt-0 grow items-start pl-80 border-l border-pale-grey;
+}
+.ctm-footer .footer__blocks-wrapper .grid__item {
+  @apply !w-auto;
+}
+.ctm-footer .footer-payment-details p,
+.ctm-footer .footer-block--newsletter p {
+  @apply font-karla text-16 leading-28 text-white capitalize mb-14;
+}
+.ctm-footer .newsletter-form__field-wrapper .field .field__input:focus {
+  @apply shadow-none;
+}
+.ctm-footer .newsletter-form__field-wrapper .field .field__input {
+  @apply !pl-[15px] !py-6 h-40;
+}
+.ctm-footer .newsletter-form__field-wrapper .field .field__label {
+  @apply hidden;
+}
+.ctm-footer .newsletter-form__field-wrapper .field__input::placeholder {
+  @apply opacity-[1] text-[#FFFFFF4D] text-14 leading-28 font-karla;
+}
+.ctm-footer .newsletter-form__field-wrapper .field {
+  @apply border border-[#FFFFFF4D] rounded-5;
+}
+.ctm-footer .footer__content-bottom .footer__copyright {
+  @apply w-full flex justify-between items-center;
+}
+.ctm-footer .footer__content-bottom {
+  @apply pt-0 border-none;
+}
+/* footer css */

@@ -1,1 +1,65 @@
-{"name":"t:sections.footer.name","type":"footer","sections":{"footer":{"type":"footer","blocks":{"link_list_fatPjB":{"type":"link_list","settings":{"heading":"Quick links","menu":"quick-links"}},"link_list_LrHfA9":{"type":"link_list","settings":{"heading":"Information","menu":"information"}},"text_Vh9XcN":{"type":"text","settings":{"heading":"<p>Contact<\/p>","subtext":"<p>Regarding your order<\/p><p>+01 2345 6789<br\/>aurabeauty@example.com+<\/p><p>Other inquiries<\/p><p>+01 2345 6789<br\/>aurabeauty@example.com<\/p>"}}},"block_order":["link_list_fatPjB","link_list_LrHfA9","text_Vh9XcN"],"settings":{"color_scheme":"scheme-1","newsletter_enable":true,"payment_heading":"<p>Payment Available:<\/p>","payment_image":"shopify:\/\/shop_images\/payment.png","newsletter_heading":"Subscribe to our emails","enable_follow_on_shop":false,"show_social":true,"enable_country_selector":false,"enable_language_selector":false,"payment_enable":false,"show_policy":false,"margin_top":0,"padding_top":36,"padding_bottom":36}}},"order":["footer"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "link_list_fatPjB": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "quick-links"
+          }
+        },
+        "link_list_LrHfA9": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Information",
+            "menu": "information"
+          }
+        },
+        "text_Vh9XcN": {
+          "type": "text",
+          "settings": {
+            "heading": "Contact",
+            "subtext": "<p>Regarding your order</p><p><a href=\"tel:+01 2345 6789\" title=\"tel:+01 2345 6789\">+01 2345 6789</a><br/><a href=\"mailto:aurabeauty@example.com\\\" title=\"mailto:aurabeauty@example.com\">aurabeauty@example.com</a></p><p>Other inquiries</p><p><a href=\"tel:+01 2345 6789\" title=\"tel:+01 2345 6789\">+01 2345 6789</a><br/><a href=\"mailto:aurabeauty@example.com\\\" title=\"mailto:aurabeauty@example.com\">aurabeauty@example.com</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "link_list_fatPjB",
+        "link_list_LrHfA9",
+        "text_Vh9XcN"
+      ],
+      "settings": {
+        "color_scheme": "scheme-3",
+        "newsletter_enable": true,
+        "payment_heading": "<p>Payment Available:</p>",
+        "payment_image": "shopify://shop_images/payment.png",
+        "newsletter_heading": "<h2>Email That's you Get Offers</h2>\n\n<p>Sign up and enjoy 10% off your first order.</p>",
+        "enable_follow_on_shop": false,
+        "show_social": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": false,
+        "show_policy": false,
+        "margin_top": 0,
+        "padding_top": 60,
+        "padding_bottom": 40
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

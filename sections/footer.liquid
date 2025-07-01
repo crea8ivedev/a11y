@@ -22,12 +22,11 @@
 
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
+      padding-bottom: {{ section.settings.padding_bottom }}px;    }
   }
 {%- endstyle -%}
 
-<footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+<footer class="footer ctm-footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
   {%- liquid
     assign has_social_icons = true
     if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank
@@ -49,7 +48,7 @@
     or section.settings.enable_follow_on_shop
   -%}
     {%- unless only_empty_brand -%}
-      <div class="footer__content-top page-width">
+      <div class="footer__content-top container_fluid">
         {%- if section.blocks.size > 0 -%}
           {%- liquid
             if section.blocks.size == 9
@@ -76,7 +75,7 @@
                 {% endif %}
               >
                 {%- if block.settings.heading != blank -%}
-                  <h2 class="footer-block__heading inline-richtext">{{- block.settings.heading -}}</h2>
+                  <div class="footer-block__heading inline-richtext">{{- block.settings.heading -}}</div>
                 {%- endif -%}
 
                 {%- case block.type -%}
@@ -168,7 +167,9 @@
           {%- if section.settings.newsletter_enable -%}
             <div class="footer-block__newsletter">
               {%- if section.settings.newsletter_heading != blank -%}
-                <h2 class="footer-block__heading inline-richtext">{{ section.settings.newsletter_heading }}</h2>
+                <div class="footer-block__heading inline-richtext">
+                  {{ section.settings.newsletter_heading }}
+                </div>
               {%- endif -%}
               {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
                 <input type="hidden" name="contact[tags]" value="newsletter">
@@ -205,7 +206,9 @@
                       aria-label="{{ 'newsletter.button_label' | t }}"
                     >
                       <span class="svg-wrapper">
-                        {{- 'icon-arrow.svg' | inline_asset_content -}}
+                        <svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M2.0625 1.75C1.84766 1.75 1.67188 1.9375 1.67188 2.16667V2.74219L5.8833 6.42969C6.38867 6.8724 7.11377 6.8724 7.61914 6.42969L11.8281 2.74219V2.16667C11.8281 1.9375 11.6523 1.75 11.4375 1.75H2.0625ZM1.67188 4.35938V8.83333C1.67188 9.0625 1.84766 9.25 2.0625 9.25H11.4375C11.6523 9.25 11.8281 9.0625 11.8281 8.83333V4.35938L8.36133 7.39583C7.42383 8.21615 6.07373 8.21615 5.13867 7.39583L1.67188 4.35938ZM0.5 2.16667C0.5 1.2474 1.20068 0.5 2.0625 0.5H11.4375C12.2993 0.5 13 1.2474 13 2.16667V8.83333C13 9.7526 12.2993 10.5 11.4375 10.5H2.0625C1.20068 10.5 0.5 9.7526 0.5 8.83333V2.16667Z" fill="white"/>
+                        </svg>
                       </span>
                     </button>
                   </div>
@@ -236,34 +239,46 @@
             </div>
           {%- endif -%}
           {% if section.settings.payment_heading != blank %}
-                  <div class="footer-payment-details">
-                  {{ section.settings.payment_heading }}
-            {% if section.settings.payment_image != blank %}
-                  <img src="{{ section.settings.payment_image | image_url }}" width="auto" height="auto" alt="payment icons">
+            <div class="footer-payment-details">
+              {{ section.settings.payment_heading }}
+              {% if section.settings.payment_image != blank %}
+                <img
+                  src="{{ section.settings.payment_image | image_url }}"
+                  width="auto"
+                  height="auto"
+                  alt="payment icons"
+                >
               {% endif %}
-                  </div>
-                    {% endif %}
+            </div>
+          {% endif %}
           {%- if shop.features.follow_on_shop? and section.settings.enable_follow_on_shop -%}
             <div class="footer__follow-on-shop">
               {{ shop | login_button: action: 'follow' }}
             </div>
           {%- endif -%}
-
-          {%- if section.settings.show_social and has_social_icons -%}
-            {%- render 'social-icons', class: 'footer__list-social' -%}
-          {%- endif -%}
         </div>
       </div>
     {%- endunless -%}
   {%- endif -%}
-
+  <!-- Back to Top Button -->
+  <div class="back-to-top-wrapper pb-40 w-full flex items-end justify-end container_fluid">
+    <button
+      type="button"
+      class="cursor-pointer back-to-top-button group bg-white border border-white hover:bg-transparent mdscreen2:w-60 w-40 mdscreen2:h-60 h-40 rounded-full flex justify-center items-center"
+      aria-label="Back to top"
+    >
+      <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22.151 11.2041L11.5094 -3.14713e-05C8.75146 2.71553 3.24126 8.11039 0.483214 10.826L1.80411 12.2396C4.28452 9.79677 7.58918 6.56603 10.4881 3.71533L10.1748 21.6508L12.0876 21.6842L12.4008 3.74868L20.767 12.5705L22.151 11.2041Z" fill="#112D4E" class="group-hover:fill-white"/>
+      </svg>
+    </button>
+  </div>
   <div
-    class="footer__content-bottom{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+    class="footer__content-bottom{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} container_fluid"
     {% if settings.animations_reveal_on_scroll %}
       data-cascade
     {% endif %}
   >
-    <div class="footer__content-bottom-wrapper page-width">
+    <div class="footer__content-bottom-wrapper ">
       <div class="footer__column footer__localization isolate">
         {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
           <localization-form>
@@ -304,40 +319,35 @@
         {%- endif -%}
       </div>
     </div>
-    <div class="footer__content-bottom-wrapper page-width{% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} footer__content-bottom-wrapper--center{% endif %}">
+    <div class="footer__content-bottom-wrapper pt-30 border-t border-pale-grey {% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} footer__content-bottom-wrapper--center{% endif %}">
       <div class="footer__copyright caption">
         <small class="copyright__content"
           >&copy; {{ 'now' | date: '%Y' }} Aura Beauty is proudly powered by |<b> Encircle Technologies</b>
         </small>
         {% comment %}
-        <small class="copyright__content">{{ powered_by_link }}</small> 
-        {% endcomment %} 
+          <small class="copyright__content">{{ powered_by_link }}</small>
+        {% endcomment %}
         {%- if section.settings.show_policy -%}
           <ul class="policies list-unstyled">
             {%- for policy in shop.policies -%}
-             
-             {%- if policy != blank -%}
+              {%- if policy != blank -%}
                 <li>
                   <small class="copyright__content"
                     ><a href="{{ policy.url }}">{{ policy.title | escape }}</a></small
                   >
                 </li>
               {%- endif -%}
-             
             {%- endfor -%}
           </ul>
         {%- endif -%}
+        <div class="ctm-footer-copywrite">
+          {%- if section.settings.show_social and has_social_icons -%}
+            {%- render 'social-icons', class: 'footer__list-social' -%}
+          {%- endif -%}
+        </div>
       </div>
     </div>
   </div>
-<!-- Back to Top Button -->
-<div class="back-to-top-wrapper">
-  <button type="button" class="back-to-top-button" aria-label="Back to top">
-    ↑ Back to Top
-  </button>
-</div>
-
-
 </footer>
 
 {% schema %}
@@ -387,7 +397,7 @@
       "name": "t:sections.footer.blocks.text.name",
       "settings": [
         {
-          "type": "richtext",
+          "type": "html",
           "id": "heading",
           "default": "t:sections.footer.blocks.text.settings.heading.default",
           "label": "t:sections.footer.blocks.text.settings.heading.label"
@@ -471,7 +481,7 @@
       "label": "Payment Image"
     },
     {
-      "type": "inline_richtext",
+      "type": "html",
       "id": "newsletter_heading",
       "default": "t:sections.footer.settings.newsletter_heading.default",
       "label": "t:sections.footer.settings.newsletter_heading.label"

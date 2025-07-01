@@ -107,7 +107,9 @@
                       aria-label="{{ 'newsletter.button_label' | t }}"
                     >
                       <span class="svg-wrapper">
-                        {{- 'icon-arrow.svg' | inline_asset_content -}}
+                        <svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M2.0625 1.75C1.84766 1.75 1.67188 1.9375 1.67188 2.16667V2.74219L5.8833 6.42969C6.38867 6.8724 7.11377 6.8724 7.61914 6.42969L11.8281 2.74219V2.16667C11.8281 1.9375 11.6523 1.75 11.4375 1.75H2.0625ZM1.67188 4.35938V8.83333C1.67188 9.0625 1.84766 9.25 2.0625 9.25H11.4375C11.6523 9.25 11.8281 9.0625 11.8281 8.83333V4.35938L8.36133 7.39583C7.42383 8.21615 6.07373 8.21615 5.13867 7.39583L1.67188 4.35938ZM0.5 2.16667C0.5 1.2474 1.20068 0.5 2.0625 0.5H11.4375C12.2993 0.5 13 1.2474 13 2.16667V8.83333C13 9.7526 12.2993 10.5 11.4375 10.5H2.0625C1.20068 10.5 0.5 9.7526 0.5 8.83333V2.16667Z" fill="white"/>
+                        </svg>
                       </span>
                     </button>
                   </div>
@@ -160,7 +162,7 @@
       "id": "show_background_image",
       "label": "t:sections.email-signup-banner.settings.show_background_image.label",
       "default": true
-    },    
+    },
     {
       "type": "image_picker",
       "id": "image",
@@ -203,7 +205,7 @@
     {
       "type": "header",
       "content": "t:sections.email-signup-banner.settings.content_header.content"
-    },    
+    },
     {
       "type": "select",
       "id": "desktop_content_position",
@@ -267,7 +269,7 @@
       ],
       "default": "center",
       "label": "t:sections.email-signup-banner.settings.desktop_content_alignment.label"
-    },    
+    },
     {
       "type": "checkbox",
       "id": "show_text_box",

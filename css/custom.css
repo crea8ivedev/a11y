@@ -123,26 +123,6 @@
   }
 }
 
-.back-to-top-wrapper {
-  text-align: center;
-  margin-top: 2rem;
-}
-
-.back-to-top-button {
-  padding: 10px 20px;
-  background-color: #000;
-  color: #fff;
-  border: none;
-  border-radius: 9999px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.3s ease;
-}
-
-.back-to-top-button:hover {
-  background-color: #333;
-}
-
 .inventory-bar-wrapper {
   margin-top: 0.5rem;
 }
@@ -406,4 +386,178 @@
   @apply font-heading font-normal text-30 min-576:text-32 min-990:text-34 min-1400:text-36 leading-[144%] text-primary-blue tracking-normal m-0;
 }
 
+.ctm-product-page .product .product__media-wrapper .product__column-sticky {
+  @apply flex flex-col min-750:flex-row-reverse gap-[20px];
+}
+
+.ctm-product-page
+  .product
+  .product__media-wrapper
+  .product__column-sticky
+  .slider-mobile-gutter {
+  @apply min-750:flex-[0_0_calc(100%_-_150px)];
+}
+
+.ctm-product-page
+  .product
+  .product__media-wrapper
+  .product__column-sticky
+  .thumbnail-slider {
+  @apply min-750:flex-[0_0_130px] items-start;
+}
+
+.ctm-product-page
+  .product
+  .product__media-wrapper
+  .product__column-sticky
+  .slider-mobile-gutter
+  .product__media-list {
+  @apply m-0 p-0;
+}
+
+.ctm-product-page
+  .product
+  .product__media-wrapper
+  .product__column-sticky
+  .slider-mobile-gutter
+  .product__media-list
+  .product-media-container {
+  @apply w-full rounded-[0px] border-0 aspect-[unset];
+}
+
+.ctm-product-page
+  .product
+  .product__media-wrapper
+  .product__column-sticky
+  .slider-mobile-gutter
+  .product__media-list
+  .product-media-container
+  .product__media {
+  @apply p-0;
+}
+
+.ctm-product-page
+  .product
+  .product__media-wrapper
+  .product__column-sticky
+  .slider-mobile-gutter
+  .product__media-list
+  .product-media-container
+  .product__media
+  img {
+  @apply relative rounded-[25px] aspect-[0.79/1] object-cover;
+}
+
+.ctm-product-page
+  .product
+  .product__media-wrapper
+  .product__column-sticky
+  .slider-mobile-gutter
+  .product__media-list
+  .product-media-container
+  .product__modal-opener
+  .product__media-icon {
+  @apply opacity-100 w-[60px] h-auto aspect-square left-[unset] right-[20px] top-[20px] border-0;
+}
+
+.ctm-product-page
+  .product
+  .product__media-wrapper
+  .product__column-sticky
+  .slider-mobile-gutter
+  .product__media-list
+  .product-media-container
+  .product__modal-opener
+  .product__media-icon
+  .svg-wrapper {
+  @apply w-[60px] h-auto aspect-square;
+}
+
+.ctm-product-page
+  .product
+  .product__media-wrapper
+  .product__column-sticky
+  .thumbnail-slider
+  .thumbnail-list {
+  @apply flex-col p-0 gap-[10px];
+}
+
+.ctm-product-page
+  .product
+  .product__media-wrapper
+  .product__column-sticky
+  .thumbnail-slider
+  .thumbnail-list
+  .thumbnail-list__item {
+  @apply w-full;
+}
+
+.ctm-product-page
+  .product
+  .product__media-wrapper
+  .product__column-sticky
+  .thumbnail-slider
+  .thumbnail-list
+  .thumbnail-list__item:before {
+  @apply p-0;
+}
+
+.ctm-product-page
+  .product
+  .product__media-wrapper
+  .product__column-sticky
+  .thumbnail-slider
+  .thumbnail-list
+  .thumbnail-list__item
+  .thumbnail {
+  @apply relative h-auto aspect-[0.81/1] rounded-[12px] !border-0 !shadow-none !opacity-50;
+}
+
+.ctm-product-page
+  .product
+  .product__media-wrapper
+  .product__column-sticky
+  .thumbnail-slider
+  .thumbnail-list
+  .thumbnail-list__item
+  .thumbnail[aria-current] {
+  @apply !opacity-100;
+}
+
+.ctm-product-page
+  .product
+  .product__media-wrapper
+  .product__column-sticky
+  .thumbnail-slider
+  .thumbnail-list
+  .thumbnail-list__item
+  .thumbnail
+  img {
+  @apply rounded-[12px] object-cover;
+}
+
+.ctm-product-page product-modal .product-media-modal__content img {
+  @apply object-cover rounded-[25px] !overflow-hidden;
+}
+
 /* pdp-main-section */
+
+/* footer */
+
+.footer .product-social-icons-list .list-social__item a {
+  @apply border-white;
+}
+
+.footer .product-social-icons-list .list-social__item a:hover {
+  @apply bg-white;
+}
+
+.footer .product-social-icons-list .list-social__item a .svg-wrapper svg {
+  @apply text-white;
+}
+
+.footer .product-social-icons-list .list-social__item a:hover .svg-wrapper svg {
+  @apply text-primary-blue;
+}
+
+/* footer */
