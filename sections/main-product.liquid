@@ -239,7 +239,7 @@
                             class="svg-wrapper"
                             style="color: {% if inventory_percentage <= inventory_threshold %}#ee9441{% else %}#3ed660{% endif %};"
                           >
-                            {{ 'icon-inventory-status.svg' | inline_asset_content }}
+                            {{ 'icon-inventory-status-copy.svg' | inline_asset_content }}
                           </span>
                           <span>
                             {%- if inventory_percentage <= inventory_threshold -%}
@@ -265,7 +265,7 @@
                         <!-- Out of Stock Message -->
                         <div class="inventory-status" style="display: flex; align-items: center; gap: 6px;">
                           <span class="svg-wrapper" style="color: #c8c8c8;">
-                            {{ 'icon-inventory-status.svg' | inline_asset_content }}
+                            {{ 'icon-inventory-status-copy-out-of-stock.svg' | inline_asset_content }}
                           </span>
                           <span>
                             {%- if variant.inventory_policy == 'continue' -%}
@@ -311,7 +311,7 @@
                 </p>
               {%- when 'description' -%}
                 {%- if product.description != blank -%}
-                  <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
+                  <div class="product__description rte" {{ block.shopify_attributes }}>
                     {{ product.description }}
                   </div>
                 {%- endif -%}
@@ -345,6 +345,7 @@
                     </div>
                   </details>
                 </div>
+                <div class="ctm-buy-quantity-main">
               {%- when 'quantity_selector' -%}
                 <div
                   id="Quantity-Form-{{ section.id }}"
@@ -561,6 +562,15 @@
                     </volume-pricing>
                   {%- endif -%}
                 </div>
+              {%- when 'buy_buttons' -%}
+                {%- render 'buy-buttons',
+                  block: block,
+                  product: product,
+                  product_form_id: product_form_id,
+                  section_id: section.id,
+                  show_pickup_availability: true
+                -%}
+                </div>
               {%- when 'popup' -%}
                 <modal-opener
                   class="product-popup-modal__opener quick-add-hidden"
@@ -584,14 +594,7 @@
 
               {%- when 'variant_picker' -%}
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
-              {%- when 'buy_buttons' -%}
-                {%- render 'buy-buttons',
-                  block: block,
-                  product: product,
-                  product_form_id: product_form_id,
-                  section_id: section.id,
-                  show_pickup_availability: true
-                -%}
+
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
                   <div class="rating-wrapper">

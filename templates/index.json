@@ -126,7 +126,7 @@
       "type": "featured-collection",
       "settings": {
         "collection": "feature-products",
-        "products_to_show": 8,
+        "products_to_show": 4,
         "title": "Feature Products",
         "heading_size": "h2",
         "description": "<p>Shop our summer trendy collection.</p>",

@@ -322,7 +322,9 @@
     <div class="footer__content-bottom-wrapper pt-30 border-t border-pale-grey {% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} footer__content-bottom-wrapper--center{% endif %}">
       <div class="footer__copyright caption">
         <small class="copyright__content"
-          >&copy; {{ 'now' | date: '%Y' }} Aura Beauty is proudly powered by |<b> Encircle Technologies</b>
+          >&copy; {{ 'now' | date: '%Y' }} Aura Beauty is proudly powered by |<span class="font-bold">
+            Encircle Technologies</span
+          >
         </small>
         {% comment %}
           <small class="copyright__content">{{ powered_by_link }}</small>

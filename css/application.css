@@ -216,14 +216,14 @@
     @apply scroll-smooth;
   }
   body {
-    @apply p-0 m-0 font-body text-16 leading-24 text-primary-black antialiased !bg-white;
+    @apply p-0 m-0 font-body text-16 mdscreen6:leading-24 leading-20 text-primary-black antialiased !bg-white;
     -webkit-font-smoothing: antialiased;
   }
   a {
     @apply transition-all duration-300 ease-in-out cursor-pointer font-body;
   }
   p {
-    @apply font-body text-16 leading-24 text-primary-black m-0 tracking-normal;
+    @apply font-body text-16 mdscreen6:leading-24 leading-20 text-primary-black m-0 tracking-normal;
   }
   h1,
   h2,
@@ -241,7 +241,7 @@
 
   h2,
   .h2 {
-    @apply font-heading font-regular xl:text-36 xl:leading-52 mdscreen6:text-30 mdscreen:leading-32 text-24 leading-100p tracking-normal;
+    @apply font-heading font-regular xl:text-36 xl:leading-52 mdscreen6:text-30 mdscreen6:leading-32 text-28 leading-[35.2px] tracking-normal;
   }
   h3,
   .h3 {
@@ -249,7 +249,7 @@
   }
   h4,
   .h4 {
-    @apply font-heading font-regular xl:text-28 xl:leading-[35.2px] mdscreen6:text-24 text-20 leading-100p tracking-normal;
+    @apply font-heading font-regular text-28 leading-[35.2px] tracking-normal;
   }
   h5,
   .h5 {
@@ -286,7 +286,7 @@
   .button,
   .ctm-button,
   .ctm-login-modal .customer button {
-    @apply cursor-pointer transition-all duration-300 ease-in-out w-fit font-body font-semibold text-white min-h-45 px-25 text-16 leading-100p tracking-normal flex justify-center items-center gap-x-10 bg-primary-blue border border-primary-blue rounded-[100px] hover:bg-transparent hover:text-primary-blue capitalize;
+    @apply cursor-pointer transition-all duration-300 ease-in-out w-fit font-body font-semibold text-white mdscreen6:min-h-45 min-h-40 mdscreen6:px-25 px-16 text-16 leading-100p tracking-normal flex justify-center items-center gap-x-10 bg-primary-blue border border-primary-blue rounded-[100px] hover:bg-transparent hover:text-primary-blue capitalize;
   }
   .button-outline {
     @apply bg-transparent border-primary-blue text-primary-blue hover:!text-white hover:!bg-primary-blue;
@@ -356,12 +356,24 @@ localization-form .language-selector .disclosure__list {
 header localization-form {
   @apply leading-[21px];
 }
+.header .header__icons .hulk-wishlist-icon {
+  @apply hidden;
+}
+.header .header__icon--menu .icon {
+  @apply ml-20 h-30 w-30;
+}
+.header .menu-drawer__utility-links {
+  @apply hidden;
+}
 .header .header__icons,
 .header .desktop-localization-wrapper {
   @apply gap-x-24;
 }
 .header .desktop-localization-wrapper {
   @apply justify-start items-center;
+}
+.header .desktop-localization-wrapper localization-form:last-child {
+  @apply mt-4;
 }
 .header .header__icons .header__icon .svg-wrapper,
 .header .header__icons .header__icon .svg {
@@ -371,10 +383,13 @@ header localization-form {
   @apply w-full h-full;
 }
 .header .header__heading-logo-wrapper {
-  @apply w-[99px];
+  @apply mdscreen6:w-[99px] w-80;
 }
 header.header {
-  @apply py-20 !bg-[#F9F7F7] relative after:absolute after:bottom-[61px] after:left-0 after:w-full after:h-[1px] after:bg-pale-grey max-mdscreen2:after:hidden;
+  @apply mdscreen6:py-20 py-12 !bg-[#F9F7F7] relative after:absolute after:bottom-[61px] after:left-0 after:w-full after:h-[1px] after:bg-pale-grey max-mdscreen2:after:hidden;
+}
+header.header .header__heading-link {
+  @apply p-0;
 }
 .header-wrapper {
   @apply !border-transparent;
@@ -387,6 +402,13 @@ localization-form .disclosure__list-wrapper .country-filter {
 }
 .header nav.header__inline-menu .header__menu-item {
   @apply p-0 font-body text-16 leading-[21px] font-medium tracking-normal text-primary-black hover:underline;
+}
+.header .menu-drawer .menu-drawer__menu-item,
+.header .menu-drawer .menu-drawer__close-button {
+  @apply font-body text-16 leading-[21px] font-medium tracking-normal text-primary-black hover:text-primary-blue;
+}
+.header .menu-drawer .menu-drawer__menu-item {
+  @apply px-20;
 }
 .header nav.header__inline-menu .list-menu {
   @apply gap-x-40;
@@ -407,10 +429,10 @@ localization-form .disclosure__list-wrapper .country-filter {
   @apply px-0 flex items-start flex-row-reverse;
 }
 .header .mega-menu .mega-menu__list {
-  @apply min-w-[227px];
+  @apply xl:min-w-[227px] min-w-[180px];
 }
 .header .mega-menu__content .mega-menu__list > li .mega-menu__link {
-  @apply text-24 leading-28 p-10 font-semibold text-primary-black font-body !no-underline hover:text-primary-blue;
+  @apply xl:text-24 xl:leading-28 text-20 leading-24 p-10 font-semibold text-primary-black font-body !no-underline hover:text-primary-blue;
 }
 .header .mega-menu__content .mega-menu__list > li {
   @apply w-auto pr-0;
@@ -457,10 +479,10 @@ localization-form .disclosure__list-wrapper .country-filter {
 }
 .product-card-wrapper .card .card__heading,
 .mega-menu .mega-menu__product-title {
-  @apply text-18 leading-[22.4px] font-body font-medium text-primary-black normal-case;
+  @apply mdscreen6:text-18 mdscreen6:leading-[22.4px] text-16 leading-20 font-body font-medium text-primary-black normal-case;
 }
 .product-card-wrapper .card .card__information {
-  @apply pb-0 pt-20 text-center;
+  @apply pb-0 mdscreen6:pt-20 pt-10 text-center;
 }
 .product-card-wrapper .card .price .price__container .price-item,
 .mega-menu .mega-menu__product-price span,
@@ -472,26 +494,26 @@ localization-form .disclosure__list-wrapper .country-filter {
   @apply text-[#112D4E4D];
 } */
 .product-card-wrapper .card .card__information .price {
-  @apply mt-10 text-center text-primary-black;
+  @apply mdscreen6:mt-10 !mt-4 text-center text-primary-black;
 }
 .ctm-collection-grid-section .collection__title.title-wrapper {
-  @apply flex items-center justify-between mb-44;
+  @apply flex items-center justify-between mb-44 max-mdscreen6:flex-col max-mdscreen6:items-start max-mdscreen6:gap-20;
 }
 .ctm-collection-grid-section .collection_title-wrapper .title {
-  @apply text-[34px] leading-40 mt-0 mb-10;
+  @apply mdscreen6:text-[34px] mdscreen6:leading-40 text-28 leading-[35.2px] mt-0 mdscreen6:mb-10 !mb-6;
 }
 .ctm-img-txt-main .image-with-text__grid {
   @apply items-center;
 }
 .ctm-img-txt-main .ctm-button {
-  @apply mt-40;
+  @apply lgscreen1:mt-40 mt-20;
 }
 .ctm-img-txt-main .image-with-text__media,
 .ctm-img-txt-main .image-with-text__media img {
   @apply rounded-25 !border-none;
 }
 .ctm-img-txt-main .image-with-text__media {
-  @apply max-extlarge_desktop_1:h-[560px];
+  @apply max-extlarge_desktop_1:h-[560px] max-lgscreen1:h-[470px] max-mdscreen4:h-[300px];
 }
 .ctm-img-txt-main .image-with-text__text p {
   @apply leading-25 max-extlarge_desktop_1:max-w-[470px] max-mdscreen2:max-w-full capitalize;
@@ -500,7 +522,7 @@ localization-form .disclosure__list-wrapper .country-filter {
   @apply text-16 leading-[22px] text-primary-black normal-case tracking-normal mb-10;
 }
 .ctm-img-txt-main .image-with-text__content {
-  @apply p-0 pl-90;
+  @apply p-0 xl:pl-90 mdscreen4:pl-40 max-mdscreen4:pt-20;
 }
 .ctm-featured-products-head h2.rich-text__heading {
   @apply xl:text-34 xl:leading-40 mdscreen6:text-30 mdscreen:leading-32 text-24 leading-100p;
@@ -644,9 +666,27 @@ localization-form .disclosure__list-wrapper .country-filter {
   @apply border border-[#FFFFFF4D] rounded-5;
 }
 .ctm-footer .footer__content-bottom .footer__copyright {
-  @apply w-full flex justify-between items-center;
+  @apply w-full flex justify-between items-center mt-0;
+}
+.ctm-footer .footer__content-bottom .copyright__content {
+  @apply text-16 font-body leading-[39px] text-white tracking-normal;
 }
 .ctm-footer .footer__content-bottom {
   @apply pt-0 border-none;
+}
+.ctm-footer .ctm-footer-copywrite ul .list-social__link .svg-wrapper {
+  @apply h-16 w-auto;
+}
+.ctm-footer .ctm-footer-copywrite ul .list-social__item .icon {
+  @apply h-full w-auto;
+}
+.ctm-footer .ctm-footer-copywrite ul .list-social__link:hover .icon path {
+  @apply fill-primary-blue;
+}
+.ctm-footer .ctm-footer-copywrite ul .list-social__link {
+  @apply p-0 bg-transparent rounded-full w-30 h-30 border border-white flex items-center justify-center hover:bg-white;
+}
+.ctm-footer .ctm-footer-copywrite ul {
+  @apply gap-x-10;
 }
 /* footer css */

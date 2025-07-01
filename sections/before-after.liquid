@@ -79,21 +79,14 @@
     height: 20px;
     color: white;
   }
-  @media (max-width: 768px) {
-    .slider-handle {
-      width: 40px;
-      height: 40px;
-    }
-
-    .slider-handle svg {
-      width: 16px;
-      height: 16px;
-    }
-
-    .comparison-label {
-      font-size: 12px;
-      padding: 6px 12px;
-    }
+  @media (max-width: 1024px) {
+      .image-wrapper img {
+        object-position: center;
+      }
+      .slider-handle {
+        width:50px;
+        height:50px;
+      }
   }
 </style>
 
@@ -123,7 +116,9 @@
       <div class="comparison-slider" style="left: {{ section.settings.starting_position }}%">
         <div class="slider-line" style="background-color: {{ section.settings.slider_color }}"></div>
         <div class="slider-handle" style="background-color: {{ section.settings.slider_color }}">
-          <span class="uppercase font-karla font-regular text-14 leading-100p tracking-[5%]">drag</span>
+          <span class="uppercase font-karla font-regular mdscreen6:text-14 text-12 leading-100p tracking-[5%]"
+            >drag</span
+          >
         </div>
       </div>
       <div class="comparison-label before absolute top-26 left-26 z-[1] mdscreen2:text-24 mdscreen6:text-20 text-18 leading-100p text-primary-blue font-semibold">

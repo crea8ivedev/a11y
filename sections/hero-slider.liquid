@@ -1,21 +1,4 @@
 <style>
-  .custom-slider-wrapper {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .customSwiper .swiper-slide {
-    height: 85vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: end;
-  }
-  .hero-section-slider .swiper-pagination {
-    display: flex;
-    justify-content: flex-start;
-    bottom: 52px !important;
-  }
   .hero-section-slider .swiper-pagination-bullet {
     width: 150px;
     height: 6px;
@@ -50,6 +33,11 @@
   .swiper-paused .swiper-pagination-bullet-active::before {
     animation-play-state: paused;
   }
+  @media only screen and (max-width: 767px) {
+    .hero-section-slider .swiper-pagination-bullet {
+      width: 80px;
+    }
+  }
 
   @keyframes slide-progress {
     0% {
@@ -62,26 +50,34 @@
   }
 </style>
 
-<div class="custom-slider-wrapper hero-section-slider {{ section.settings.extra_class }}">
+<div class="custom-slider-wrapper relative overflow-hidden hero-section-slider {{ section.settings.extra_class }}">
   <div class="swiper customSwiper">
     <div class="swiper-wrapper">
       {% for block in section.blocks %}
         {% assign image = block.settings.background_image %}
         {% if image != blank %}
-          <div class="swiper-slide" style="background-image: url('{{ image | image_url }}');">
+          <div
+            class="swiper-slide mdscreen2:!h-[70vh] mdscreen6:!h-[40vh] !h-[90dvh] bg-cover mdscreen2:bg-center bg-[20%] !flex items-end before:absolute before:top-0 before:left-0 mdscreen2:before:hidden before:block before:w-full before:h-full before:bg-black before:opacity-[0.3] before:-z-[1]"
+            style="background-image: url('{{ image | image_url }}');"
+          >
             <div class="container_fluid">
-              <div class="slide-content max-w-[481px]">
+              <div class="slide-content mdscreen2:max-w-[481px] mdscreen6:max-w-[400px] max-w-[290px]">
                 {% if block.settings.tagline != blank %}
-                  <p class="text-20 leading-[22.4px] text-white mb-20">{{ block.settings.tagline }}</p>
+                  <p class="mdscreen2:text-20 text-18 leading-24 mdscreen2:leading-[22.4px] text-white mdscreen2:mb-20 mb-10">
+                    {{ block.settings.tagline }}
+                  </p>
                 {% endif %}
                 {% if block.settings.heading != blank %}
-                  <h2 class="text-white mb-10 normal-case leading-[49px]">{{ block.settings.heading }}</h2>
+                  <h2 class="text-white mb-10 normal-case xl:leading-[49px]">{{ block.settings.heading }}</h2>
                 {% endif %}
                 {% if block.settings.subtext != blank %}
                   <p class="subtext text-16 leading-24 text-white">{{ block.settings.subtext }}</p>
                 {% endif %}
                 {% if block.settings.button_link != blank and block.settings.button_text != blank %}
-                  <a href="{{ block.settings.button_link }}" class="ctm-button mt-30 mb-[88px] button-with-arrow">
+                  <a
+                    href="{{ block.settings.button_link }}"
+                    class="ctm-button mdscreen2:mt-30 mt-20 mb-[88px] button-with-arrow"
+                  >
                     {{ block.settings.button_text }}
                     {{- 'ctm-button-arrow.svg' | inline_asset_content -}}
                   </a>
@@ -93,13 +89,15 @@
       {% endfor %}
     </div>
   </div>
-  <div class="swiper-pagination pl-20 small_desktop:pl-50 desktop:pl-80"></div>
   <div
-    class="scroll-down-btn absolute bottom-52 right-80 z-[1] cursor-pointer flex items-center gap-x-8 group"
+    class="swiper-pagination pl-20 small_desktop:pl-50 desktop:pl-80 flex justify-start mdscreen2:!bottom-[52px] !bottom-40"
+  ></div>
+  <div
+    class="scroll-down-btn absolute mdscreen2:bottom-52 bottom-30 right-20 small_desktop:right-50 desktop:right-80 z-[1] cursor-pointer flex items-center gap-x-8 group"
     onclick="scrollDownByBanner()"
   >
     <span class="text-16 leading-24 text-white">Scroll</span>
-    <div class="w-30 h-30 rounded-full bg-white flex justify-center items-center border border-white group-hover:bg-transparent">
+    <div class="mdscreen6:w-30 mdscreen6:h-30 w-24 h-24 rounded-full bg-white flex justify-center items-center border border-white group-hover:bg-transparent">
       <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0.246094 5.99792L5.8444 11.6899C7.24465 10.2622 10.0425 7.4256 11.4428 5.99786L10.7477 5.27954C9.48837 6.56384 7.81036 8.2626 6.33853 9.76138L6.33862 0.49328L5.35019 0.493281L5.35013 9.7614L0.948723 5.27959L0.246094 5.99792Z" fill="#112D4E"/>
       </svg>

@@ -1,9 +1,77 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
+    "hero_slider_46K8AC": {
+      "type": "hero-slider",
+      "blocks": {
+        "slide_8PVmyV": {
+          "type": "slide",
+          "settings": {
+            "background_image": "shopify://shop_images/Frame_92.png",
+            "tagline": "Serum",
+            "heading": "Products to get your glow back",
+            "subtext": "June 17, 2025 <br>Elevating Your Natural Glow with Every Application. Dive into Luxurious Beauty, Redefined.",
+            "button_link": "shopify://blogs/news/products-to-get-your-glow-back",
+            "button_text": "Read more"
+          }
+        },
+        "slide_PHGLg9": {
+          "type": "slide",
+          "settings": {
+            "background_image": "shopify://shop_images/Frame_92.png",
+            "tagline": "Serum",
+            "heading": "Products to get your glow back",
+            "subtext": "June 17, 2025 Elevating Your Natural Glow with Every Application. Dive into Luxurious Beauty, Redefined.",
+            "button_link": "shopify://blogs/news/products-to-get-your-glow-back",
+            "button_text": "Read more"
+          }
+        },
+        "slide_wH4Hxj": {
+          "type": "slide",
+          "settings": {
+            "background_image": "shopify://shop_images/Frame_92.png",
+            "tagline": "Serum",
+            "heading": "Products to get your glow back",
+            "subtext": "June 17, 2025 Elevating Your Natural Glow with Every Application. Dive into Luxurious Beauty, Redefined.",
+            "button_link": "shopify://blogs/news/products-to-get-your-glow-back",
+            "button_text": "Read more"
+          }
+        },
+        "slide_VX7qVL": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "tagline": "",
+            "heading": "",
+            "subtext": "",
+            "button_link": "",
+            "button_text": "Shop Now"
+          }
+        }
+      },
+      "block_order": [
+        "slide_8PVmyV",
+        "slide_PHGLg9",
+        "slide_wH4Hxj",
+        "slide_VX7qVL"
+      ],
+      "name": "Hero Slider",
+      "settings": {
+        "extra_class": ""
+      }
+    },
     "main": {
       "type": "main-blog",
       "settings": {
-        "layout": "collage",
+        "layout": "grid",
         "show_image": true,
         "image_height": "medium",
         "show_date": true,
@@ -14,6 +82,7 @@
     }
   },
   "order": [
+    "hero_slider_46K8AC",
     "main"
   ]
 }

@@ -195,7 +195,7 @@
         "ingredient_JzYWea": {
           "type": "ingredient",
           "settings": {
-            "image": "shopify://shop_images/olive.png",
+            "image": "shopify://shop_images/key-ing-img-1.jpg",
             "title": "Olive oil",
             "description": "Moisturize and soften skin",
             "description2": ""
@@ -204,7 +204,7 @@
         "ingredient_dfVwR7": {
           "type": "ingredient",
           "settings": {
-            "image": "shopify://shop_images/almond.png",
+            "image": "shopify://shop_images/key-ing-img-2.jpg",
             "title": "Sweet Almond",
             "description": "Helps in deep cleansing",
             "description2": ""
@@ -213,7 +213,7 @@
         "ingredient_BDjUz9": {
           "type": "ingredient",
           "settings": {
-            "image": "shopify://shop_images/lemon.png",
+            "image": "shopify://shop_images/key-ing-img-3.jpg",
             "title": "Citrus Lemon",
             "description": "Increases collagen in the skinFades dark spots and blemishes",
             "description2": ""
@@ -222,7 +222,7 @@
         "ingredient_wpcBMV": {
           "type": "ingredient",
           "settings": {
-            "image": "shopify://shop_images/alovera.png",
+            "image": "shopify://shop_images/key-ing-img-4.jpg",
             "title": "Aloe Vera",
             "description": "Keep the skin hydratedHeals wounds & injuries",
             "description2": ""
@@ -231,7 +231,7 @@
         "ingredient_eH7BRp": {
           "type": "ingredient",
           "settings": {
-            "image": "shopify://shop_images/olive.png",
+            "image": "shopify://shop_images/key-ing-img-1.jpg",
             "title": "Olive oil",
             "description": "Moisturize and soften skin",
             "description2": ""
@@ -240,7 +240,7 @@
         "ingredient_LGrhia": {
           "type": "ingredient",
           "settings": {
-            "image": "shopify://shop_images/almond.png",
+            "image": "shopify://shop_images/key-ing-img-2.jpg",
             "title": "Sweet Almond",
             "description": "Helps in deep cleansing",
             "description2": ""
@@ -249,7 +249,7 @@
         "ingredient_6edpbH": {
           "type": "ingredient",
           "settings": {
-            "image": "shopify://shop_images/alovera.png",
+            "image": "shopify://shop_images/key-ing-img-4.jpg",
             "title": "Aloe Vera",
             "description": "Keep the skin hydratedHeals wounds & injuries",
             "description2": ""
@@ -294,7 +294,7 @@
       "type": "featured-collection",
       "settings": {
         "collection": "feature-products",
-        "products_to_show": 8,
+        "products_to_show": 4,
         "title": "Feature Products",
         "heading_size": "h2",
         "description": "<p>Shop our summer trendy collection.</p>",
