@@ -93,7 +93,7 @@
 {% if section.settings.before_image != blank and section.settings.after_image != blank %}
   <div class="image-comparison container_fluid pb-60" data-section-id="{{ section.id }}">
     <div class="image-container ">
-      <div class="image-wrapper max-midlarge_desktop:h-[522px] h-[700px]">
+      <div class="image-wrapper max-midlarge_desktop:h-[522px] max-mdscreen6:h-[400px] h-[700px]">
         <img
           class="image-before"
           src="{{ section.settings.before_image | image_url }}"
@@ -121,10 +121,10 @@
           >
         </div>
       </div>
-      <div class="comparison-label before absolute top-26 left-26 z-[1] mdscreen2:text-24 mdscreen6:text-20 text-18 leading-100p text-primary-blue font-semibold">
+      <div class="comparison-label max-mdscreen6:p-6 max-mdscreen6:bg-white max-mdscreen6:rounded-[6px] before absolute top-26 mdscreen6:left-26 left-10 z-[1] mdscreen2:text-24 mdscreen6:text-20 text-16 leading-100p text-primary-blue font-semibold">
         {{ section.settings.before_label }}
       </div>
-      <div class="comparison-label after absolute bottom-26 right-26 z-[1] mdscreen2:text-24 mdscreen6:text-20 text-18 leading-100p text-primary-blue font-semibold">
+      <div class="comparison-label max-mdscreen6:p-6 max-mdscreen6:bg-white max-mdscreen6:rounded-[6px] after absolute bottom-26 mdscreen6:right-26 right-10 z-[1] mdscreen2:text-24 mdscreen6:text-20 text-16 leading-100p text-primary-blue font-semibold">
         {{ section.settings.after_label }}
       </div>
     </div>

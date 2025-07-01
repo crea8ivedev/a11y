@@ -84,7 +84,6 @@
               {%- if show_date -%}
                 <span class="circle-divider">{{ article.published_at | time_tag: format: 'date' }}</span>
               {%- endif -%}
-              <span>{{ article.tags }}</span>
               {%- if show_author -%}
                 <span>{{ article.author }}</span>
               {%- endif -%}
@@ -105,6 +104,7 @@
                 {%- endif -%}
               </div>
             {%- endif -%}
+            <a href="{{ article.url }}" class="full-unstyled-link">Read more</a>
           </div>
           {%- if show_badge -%}
             <div class="card__badge {{ settings.badge_position }}">
@@ -128,6 +128,11 @@
               <span>{{ article.author }}</span>
             {%- endif -%}
           </div>
+          <div class="artical_tag_custom">
+            {% for tag in article.tags %}
+              <span>| {{ tag }}</span>
+            {% endfor %}
+          </div>
           {%- if show_excerpt -%}
             {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
               <p class="article-card__excerpt rte-width">
@@ -144,6 +149,7 @@
               {%- endif -%}
             </div>
           {%- endif -%}
+          <a href="{{ article.url }}" class="full-unstyled-link">{{ button_txt }}</a>
         </div>
         {%- if show_badge -%}
           <div class="card__badge {{ settings.badge_position }}">

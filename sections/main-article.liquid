@@ -57,6 +57,11 @@
               {{- article.published_at | time_tag: format: 'date' -}}
             </span>
           {%- endif -%}
+          <div class="artical_tag_blog">
+            {% for tag in article.tags %}
+              <span>| {{ tag }}</span>
+            {% endfor %}
+          </div>
           {%- if block.settings.blog_show_author -%}
             <span class="caption-with-letter-spacing">
               <span>{{ article.author }}</span>

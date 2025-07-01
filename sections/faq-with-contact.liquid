@@ -1,5 +1,5 @@
 <style>
-.faq-contact-wrapper {
+  /* .faq-contact-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -7,11 +7,11 @@
   padding: 3rem 1rem;
   max-width: 1200px;
   margin: 0 auto;
-}
-.faq-left {
+} */
+  /* .faq-left {
   flex: 1 1 60%;
-}
-.faq-heading {
+} */
+  /* .faq-heading {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 0.25rem;
@@ -24,8 +24,8 @@
 .faq-item {
   border-bottom: 1px solid #ddd;
   padding: 1rem 0;
-}
-.faq-item summary {
+} */
+  /* .faq-item summary {
   cursor: pointer;
   font-weight: 600;
   position: relative;
@@ -42,8 +42,8 @@
 }
 .faq-item[open] summary::after {
   transform: rotate(180deg);
-}
-.faq-answer {
+} */
+  /* .faq-answer {
   margin-top: 0.75rem;
   font-size: 0.95rem;
   color: #333;
@@ -75,10 +75,10 @@
 }
 .contact-button:hover {
   background: #0b1736;
-}
+} */
 
-/* Responsive */
-@media (max-width: 768px) {
+  /* Responsive */
+  /* @media (max-width: 768px) {
   .faq-contact-wrapper {
     flex-direction: column;
   }
@@ -88,43 +88,60 @@
   .faq-right {
     margin-top: 2rem;
   }
-}
+} */
 </style>
 
-<div class="faq-contact-wrapper">
-  <div class="faq-left">
-    {% if section.settings.faq_heading != blank %}
-      <h2 class="faq-heading">{{ section.settings.faq_heading }}</h2>
-    {% endif %}
-    {% if section.settings.faq_subheading != blank %}
-      <p class="faq-subheading">{{ section.settings.faq_subheading }}</p>
-    {% endif %}
-    <div class="faq-list">
-      {% for block in section.blocks %}
-        {% if block.settings.question != blank and block.settings.answer != blank %}
-          <details class="faq-item">
-            <summary>{{ block.settings.question }}</summary>
-            <div class="faq-answer">{{ block.settings.answer }}</div>
-          </details>
-        {% endif %}
-      {% endfor %}
+<div class="faq-contact-wrapper py-[40px] min-990:py-[60px]">
+  <div class="container_fluid">
+    <div class="faq-contact-section">
+      <div class="faq-contact-start flex flex-col min-990:flex-row min-990:items-end gap-x-[30px] min-1400:gap-x-[60px] gap-y-[30px]">
+        <div class="faq-left min-990:flex-[0_0_calc(100%_-_551px)] min-1400:flex-[0_0_calc(100%_-_581px)]">
+          <div class="pb-[30px] min-990:pb-[44px]">
+            {% if section.settings.faq_heading != blank %}
+              <h2 class="main-section-title">{{ section.settings.faq_heading }}</h2>
+            {% endif %}
+            {% if section.settings.faq_subheading != blank %}
+              <div class="mt-10">
+                <p class="faq-subheading font-body font-normal text-16 leading-[137.5%] text-primary-black capitalize tracking-normal">
+                  {{ section.settings.faq_subheading }}
+                </p>
+              </div>
+            {% endif %}
+          </div>
+          <div class="faq-list">
+            {% for block in section.blocks %}
+              {% if block.settings.question != blank and block.settings.answer != blank %}
+                <details class="faq-item py-[20px] min-990:py-[28px] border-0 border-b-[1px] border-solid border-pale-grey first:border-t-[1px] relative">
+                  <summary class="relative font-body font-medium text-18 leading-[140%] text-primary-black capitalize tracking-normal">
+                    {{ block.settings.question }}
+                  </summary>
+                  <div class="faq-answer font-body font-normal text-16 leading-125p text-primary-black tracking-normal pt-[16px]">
+                    {{ block.settings.answer }}
+                  </div>
+                </details>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+        <div class="faq-right min-990:flex-[0_0_521px]">
+          <div class="faq-right-inside">
+            {% if section.settings.contact_heading != blank %}
+              <h3 class="contact-heading">{{ section.settings.contact_heading }}</h3>
+            {% endif %}
+            {% if section.settings.contact_text != blank %}
+              <p class="contact-text">{{ section.settings.contact_text }}</p>
+            {% endif %}
+            {% if section.settings.contact_button_link != blank and section.settings.contact_button_label != blank %}
+              <a href="{{ section.settings.contact_button_link }}" class="contact-button">
+                {{ section.settings.contact_button_label }}
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="faq-right">
-    {% if section.settings.contact_heading != blank %}
-      <h3 class="contact-heading">{{ section.settings.contact_heading }}</h3>
-    {% endif %}
-    {% if section.settings.contact_text != blank %}
-      <p class="contact-text">{{ section.settings.contact_text }}</p>
-    {% endif %}
-    {% if section.settings.contact_button_link != blank and section.settings.contact_button_label != blank %}
-      <a href="{{ section.settings.contact_button_link }}" class="contact-button">
-        {{ section.settings.contact_button_label }}
-      </a>
-    {% endif %}
-  </div>
 </div>
-
 
 {% schema %}
 {

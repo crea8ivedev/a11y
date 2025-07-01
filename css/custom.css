@@ -378,6 +378,13 @@
   @apply flex-[0_0_100%] min-990:flex-[0_0_calc(50%_-_15px)] min-1400:flex-[0_0_calc(50%_-_45px)] !w-full min-990:!w-[calc(50%_-_15px)] min-1400:!w-[calc(50%_-_45px)] !max-w-[unset] !p-0;
 }
 
+.ctm-product-page
+  .product.grid
+  .product__info-wrapper
+  .product__info-container {
+  @apply max-w-full;
+}
+
 .ctm-product-page .product .product__text {
   @apply font-body font-normal text-16 leading-137p text-[#252525] capitalize tracking-normal mb-10;
 }
@@ -597,6 +604,30 @@
   @apply text-white;
 }
 
+.ctm-product-page .product .product__info-wrapper .ctm-buy-quantity-main {
+  @apply flex flex-wrap items-center gap-[26px] my-[26px] pt-[26px] border-t-[1px] border-solid border-pale-grey;
+}
+
+.ctm-product-page .product .product__info-wrapper product-form {
+  @apply m-0;
+}
+
+.ctm-product-page
+  .product
+  .product__info-wrapper
+  product-form
+  .product-form__buttons {
+  @apply flex flex-wrap items-center gap-[26px];
+}
+
+.ctm-product-page
+  .product
+  .product__info-wrapper
+  shopify-buy-it-now-button
+  .shopify-payment-button__button:after {
+  @apply hidden;
+}
+
 .ctm-product-page .product .product__media-wrapper .product__column-sticky {
   @apply flex flex-col min-750:flex-row-reverse gap-[20px];
 }
@@ -772,3 +803,15 @@
 }
 
 /* footer */
+
+/* faq */
+
+.faq-item summary:after {
+  @apply content-[''] absolute top-[50%] right-0 translate-y-[-50%] w-[15px] h-[14px] bg-[url('https://cdn.shopify.com/s/files/1/0853/9370/3189/files/faq-arrow-down.svg?v=1751377418')] bg-[length:100%_100%] bg-no-repeat transition-all duration-300 ease-in-out;
+}
+
+.faq-item[open] summary:after {
+  @apply rotate-[180deg];
+}
+
+/* faq */

@@ -18,10 +18,20 @@
 
 {%- paginate blog.articles by 6 -%}
   <div class="main-blog page-width section-{{ section.id }}-padding">
-    <h1 class="title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-      {{ blog.title | escape }}
-    </h1>
-
+    <div class="blog_title_bradcumb">
+      <h1 class="title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+        {{ blog.title | escape }}
+      </h1>
+    </div>
+    <div class="page_sorting-tag">
+      {%- for article in blog.articles -%}
+        {% for tag in article.tags %}
+          <span
+            ><a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a></span
+          >
+        {% endfor %}
+      {% endfor %}
+    </div>
     <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
       {%- for article in blog.articles -%}
         <div
@@ -38,6 +48,7 @@
             show_image: section.settings.show_image,
             show_date: section.settings.show_date,
             show_author: section.settings.show_author,
+            button_txt: section.settings.btn_text_blog,
             show_excerpt: true
           -%}
         </div>
@@ -113,6 +124,11 @@
       "id": "show_author",
       "default": false,
       "label": "t:sections.main-blog.settings.show_author.label"
+    },
+    {
+      "type": "text",
+      "id": "btn_text_blog",
+      "label": "Button Text"
     },
     {
       "type": "header",

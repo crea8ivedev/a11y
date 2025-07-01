@@ -1,0 +1,46 @@
+<div class="main_ctm_blog_sorting">
+  <div class="blog_title_bradcumb">
+    <h1 class="title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+      {{ blog.title | escape }}
+    </h1>
+  </div>
+  <div class="page_sorting-tag">
+    {% for block in section.blocks %}
+      {%- for article in blog.articles -%}
+        {% for tag in article.tags %}
+          <span
+            ><a href="{{ blog.url }}/tagged/{{ block.settings.tag_name | handle }}">
+              {{- block.settings.tag_name -}}
+            </a></span
+          >
+        {% endfor %}
+      {% endfor %}
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Blog Sorting with Title",
+  "class": "blog_sorting_and_title",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "blog_sorting",
+      "name": "Sorting",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Tag Name",
+          "id": "tag_name"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Blog Sorting"
+    }
+  ]
+}
+{% endschema %}

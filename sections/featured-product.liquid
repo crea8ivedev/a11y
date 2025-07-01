@@ -73,8 +73,8 @@
     <div class="container_fluid section-{{ section.id }}-padding{% if section.settings.secondary_background %} isolate{% endif %}">
       <div class="featured-product product product--{{ section.settings.media_size }} grid grid--1-col gradient color-{{ section.settings.color_scheme }} product--{{ section.settings.media_position }}{% if section.settings.secondary_background == false %} isolate{% endif %} {% if product.media.size > 0 or section.settings.product == blank %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
         <div class="grid__item product__media-wrapper">
-          <div class="flex gap-x-20 items-start product-media-inner">
-            <div class="ctm-featured-video media-grid-card rounded-25 aspect-[0.64]">
+          <div class="flex gap-20 items-start product-media-inner h-full max-mdscreen6:flex-col">
+            <div class="ctm-featured-video media-grid-card rounded-25 mdscreen6:aspect-[0.64] aspect-square">
               {% if section.settings.video_aura != blank %}
                 {% if section.settings.video_aura.preview_image %}
                   {% assign preview = section.settings.video_aura.preview_image | image_url: width: 1000 %}
@@ -193,7 +193,7 @@
                     {{- product.selected_or_first_available_variant.sku -}}
                   </p>
                 {%- when 'quantity_selector' -%}
-                  <div class="py-40 my-40 border-y border-pale-grey flex items-center gap-x-40">
+                  <div class=" small_desktop:py-40 py-20 small_desktop:my-40 my-20 border-y border-pale-grey flex items-center gap-x-40">
                     <div
                       id="Quantity-Form-{{ section.id }}"
                       class="product-form__input dsfkjdsgyweiruyewiurgfdsjhg product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"

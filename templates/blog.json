@@ -76,13 +76,38 @@
         "image_height": "medium",
         "show_date": true,
         "show_author": false,
+        "btn_text_blog": "Read more",
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "blog_sorting_with_title_mnQWBm": {
+      "type": "blog-sorting-with-title",
+      "blocks": {
+        "blog_sorting_WYzPLz": {
+          "type": "blog_sorting",
+          "settings": {
+            "tag_name": "serum"
+          }
+        },
+        "blog_sorting_Cw4Ya4": {
+          "type": "blog_sorting",
+          "settings": {
+            "tag_name": "all"
+          }
+        }
+      },
+      "block_order": [
+        "blog_sorting_WYzPLz",
+        "blog_sorting_Cw4Ya4"
+      ],
+      "name": "Blog Sorting",
+      "settings": {}
     }
   },
   "order": [
     "hero_slider_46K8AC",
-    "main"
+    "main",
+    "blog_sorting_with_title_mnQWBm"
   ]
 }

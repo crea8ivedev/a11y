@@ -261,10 +261,10 @@
     {%- endunless -%}
   {%- endif -%}
   <!-- Back to Top Button -->
-  <div class="back-to-top-wrapper pb-40 w-full flex items-end justify-end container_fluid">
+  <div class="back-to-top-wrapper xl:pb-40 pb-20 w-full flex items-end justify-end container_fluid">
     <button
       type="button"
-      class="cursor-pointer back-to-top-button group bg-white border border-white hover:bg-transparent mdscreen2:w-60 w-40 mdscreen2:h-60 h-40 rounded-full flex justify-center items-center"
+      class="cursor-pointer back-to-top-button group bg-white border border-white hover:bg-transparent xl:w-60 w-40 xl:h-60 h-40 max-xl:p-10 rounded-full flex justify-center items-center"
       aria-label="Back to top"
     >
       <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -319,7 +319,7 @@
         {%- endif -%}
       </div>
     </div>
-    <div class="footer__content-bottom-wrapper pt-30 border-t border-pale-grey {% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} footer__content-bottom-wrapper--center{% endif %}">
+    <div class="footer__content-bottom-wrapper xl:pt-30 pt-20 border-t border-pale-grey {% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} footer__content-bottom-wrapper--center{% endif %}">
       <div class="footer__copyright caption">
         <small class="copyright__content"
           >&copy; {{ 'now' | date: '%Y' }} Aura Beauty is proudly powered by |<span class="font-bold">
