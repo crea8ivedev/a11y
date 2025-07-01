@@ -3724,3 +3724,11 @@ modal-opener.product__modal-opener .wishlist-btn .heart-hulk-animation {
     background-color: #cccccc;
     border-radius:50%;
 }
+.header__icons .hulk-wishlist-icon {
+    padding: 0;
+}
+
+.header__icons .hulk-wishlist-icon i {
+    font-size: 20px;
+    font-weight: bold;
+}
