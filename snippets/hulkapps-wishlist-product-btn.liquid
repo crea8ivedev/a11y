@@ -6,7 +6,7 @@
     <div class="hulk_wl_icon-text" hulk-wl-custom-style data-count="{{ shop.metafields.hulkapps_wishlist.hulkapps_wishlist_general.public_wishlist_count }}">
         <div class="hulk_wl_icon">
             <i class="heart-hulk-animation"><i class="icon-wishlist-heart-empty"></i></i>
-            <span>Add to wishlist</span>
+          {% comment %}  <span>Add to wishlist</span> {% endcomment %} 
         </div>
     </div>
     {% if button_layout == 'multi_color_button' and shop.metafields.hulkapps_wishlist.hulkapps_wishlist_buttonstyle.button_style == 'style_2' or shop.metafields.hulkapps_wishlist.hulkapps_wishlist_buttonstyle.button_style == 'style_4' %}
