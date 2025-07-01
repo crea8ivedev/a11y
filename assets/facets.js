@@ -56,6 +56,7 @@ class FacetFiltersForm extends HTMLElement {
     });
 
     if (updateURLHash) FacetFiltersForm.updateURLHash(searchParams);
+    setTimeout(function(){ HulkappWishlist.init(); }, 2000);
   }
 
   static renderSectionFromFetch(url, event) {
