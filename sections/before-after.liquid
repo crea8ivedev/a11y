@@ -98,12 +98,12 @@
 </style>
 
 {% if section.settings.before_image != blank and section.settings.after_image != blank %}
-  <div class="image-comparison container_fluid" data-section-id="{{ section.id }}">
+  <div class="image-comparison container_fluid pb-60" data-section-id="{{ section.id }}">
     <div class="image-container ">
       <div class="image-wrapper max-midlarge_desktop:h-[522px] h-[700px]">
         <img
           class="image-before"
-          src="{{ section.settings.before_image | image_url: width: 1500 }}"
+          src="{{ section.settings.before_image | image_url }}"
           alt="Before"
           loading="lazy"
           height="auto"
@@ -112,7 +112,7 @@
         <div class="image-clip" style="width: {{ section.settings.starting_position }}%">
           <img
             class="image-after"
-            src="{{ section.settings.after_image | image_url: width: 1500 }}"
+            src="{{ section.settings.after_image | image_url }}"
             alt="After"
             loading="lazy"
             height="auto"

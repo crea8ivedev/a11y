@@ -309,12 +309,101 @@
 
 /* common */
 
+.color-primary-blue {
+  @apply text-primary-blue;
+}
+
+.color-252525 {
+  @apply text-[#252525];
+}
+
+.color-grey-50 {
+  @apply text-[rgba(37,_37,_37,_0.50)];
+}
+
+.common-text-16 {
+  @apply font-body font-normal text-16 leading-125p tracking-normal;
+}
+
+.common-text-18 {
+  @apply font-body font-medium text-18 leading-[124%] tracking-normal;
+}
+
 .main-section-title {
-  @apply font-heading font-regular text-34 leading-153p text-primary-blue tracking-normal;
+  @apply font-heading font-regular text-28 min-576:text-30 min-990:text-32 min-1400:text-34 leading-153p tracking-normal;
+}
+
+.product-social-icons-list {
+  @apply gap-[10px];
+}
+
+.product-social-icons-list .list-social__item a {
+  @apply p-[7px] rounded-[50%] border-[1px] border-solid border-primary-blue transition-all duration-300 ease-in-out;
+}
+
+.product-social-icons-list .list-social__item a:hover {
+  @apply bg-primary-blue;
+}
+
+.product-social-icons-list .list-social__item a .svg-wrapper {
+  @apply w-[14px] h-[14px];
+}
+
+.product-social-icons-list .list-social__item a .svg-wrapper svg {
+  @apply text-primary-blue w-[14px] h-[14px] transition-all duration-300 ease-in-out;
+  transform: scale(1) !important;
+}
+
+.product-social-icons-list .list-social__item a .svg-wrapper svg * {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.product-social-icons-list .list-social__item a:hover .svg-wrapper svg {
+  @apply text-white;
 }
 
 /* common */
 
 /* key-ingredients */
 
+.key-ingredients-swiper-arrow {
+  @apply !w-[40px] min-1400:!w-[60px] !h-auto !aspect-square !top-[50%] !translate-y-[-50%];
+}
+
+.key-ingredients-swiper-arrow.swiper-button-prev {
+  @apply left-[-15px] min-1400:left-[-30px];
+}
+
+.key-ingredients-swiper-arrow.swiper-button-next {
+  @apply right-[-15px] min-1400:right-[-30px];
+}
+
 /* key-ingredients */
+
+/* pdp-main-section */
+
+.ctm-product-page .product-social-icons {
+  @apply mb-0 mt-16 min-1400:mt-26;
+}
+
+.ctm-product-page .product-social-icons .product-social-icons-list {
+  @apply justify-start;
+}
+
+.ctm-product-page .product.grid {
+  @apply flex flex-col min-990:flex-row gap-x-[30px] min-1400:gap-x-[90px] gap-y-[30px];
+}
+
+.ctm-product-page .product.grid > * {
+  @apply flex-[0_0_100%] min-990:flex-[0_0_calc(50%_-_15px)] min-1400:flex-[0_0_calc(50%_-_45px)] !w-full min-990:!w-[calc(50%_-_15px)] min-1400:!w-[calc(50%_-_45px)] !max-w-[unset] !p-0;
+}
+
+.ctm-product-page .product .product__text {
+  @apply font-body font-normal text-16 leading-137p text-[#252525] capitalize tracking-normal mb-10;
+}
+
+.ctm-product-page .product .product__title {
+  @apply font-heading font-normal text-30 min-576:text-32 min-990:text-34 min-1400:text-36 leading-[144%] text-primary-blue tracking-normal m-0;
+}
+
+/* pdp-main-section */

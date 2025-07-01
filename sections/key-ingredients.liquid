@@ -2,72 +2,66 @@
   Key Ingredients Section with Swiper.js
 {% endcomment %}
 {% # theme-check-disable %}
-<style>
-  .key-ingredients-section {
-    padding: 50px 0;
-    background: #fff;
-  }
-  .section-title {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
-  .ingredient-card {
-    text-align: center;
-  }
-  .ingredient-image {
-    border-radius: 20px;
-    width: 100%;
-    height: auto;
-    margin-bottom: 1rem;
-  }
-  .ingredient-title {
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-  }
-  .ingredient-description {
-    color: #666;
-    font-size: 0.9rem;
-    margin-bottom: 0.25rem;
-  }
-</style>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
-<section class="key-ingredients-section">
-  <div class="page-width">
+<section class="key-ingredients-section bg-[#F9F7F7] py-[60px] {{ section.settings.extra_class }}">
+  <div class="container_fluid">
     {% if section.settings.heading != blank %}
-      <div class="key-ingredient-title-start text-left">
-        <h2 class="main-section-title">{{ section.settings.heading }}</h2>
+      <div class="key-ingredient-title-start text-left mb-[30px] min-990:mb-[60px]">
+        <h2 class="main-section-title color-primary-blue">{{ section.settings.heading }}</h2>
       </div>
     {% endif %}
 
-    <div class="swiper key-ingredients-swiper">
-      <div class="swiper-wrapper">
-        {% for block in section.blocks %}
-          <div class="swiper-slide">
-            <div class="ingredient-card">
-              {% if block.settings.image %}
-                <img
-                  src="{{ block.settings.image | image_url: width: 400 }}"
-                  alt="{{ block.settings.title }}"
-                  class="ingredient-image"
-                  height="auto"
-                  width="auto"
-                >
-              {% endif %}
-              <h3 class="ingredient-title">{{ block.settings.title }}</h3>
-              <p class="ingredient-description">{{ block.settings.description }}</p>
-              {% if block.settings.description2 != blank %}
-                <p class="ingredient-description">{{ block.settings.description2 }}</p>
-              {% endif %}
+    <div class="ingredients-swiper-above relative">
+      <div class="swiper key-ingredients-swiper">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            <div class="swiper-slide">
+              <div class="ingredient-card">
+                {% if block.settings.image %}
+                  <img
+                    src="{{ block.settings.image | image_url: width: 400 }}"
+                    alt="{{ block.settings.title }}"
+                    class="ingredient-image rounded-[25px] w-full aspect-[0.86/1] object-cover"
+                    height="auto"
+                    width="auto"
+                  >
+                {% endif %}
+                <div class="ingredient-swiper-details text-center mt-20">
+                  {% if block.settings.title != blank %}
+                    <div class="ingredient-swiper-details-title">
+                      <h3 class="ingredient-title common-text-18 color-252525">{{ block.settings.title }}</h3>
+                    </div>
+                  {% endif %}
+                  {% if block.settings.description != blank %}
+                    <div class="ingredient-swiper-details-text mt-10">
+                      <p class="ingredient-description common-text-16 color-grey-50">
+                        {{ block.settings.description }}
+                      </p>
+                    </div>
+                  {% endif %}
+                  {% if block.settings.description2 != blank %}
+                    <p class="ingredient-description common-text-16 color-grey-50">{{ block.settings.description2 }}</p>
+                  {% endif %}
+                </div>
+              </div>
             </div>
-          </div>
-        {% endfor %}
+          {% endfor %}
+        </div>
       </div>
-
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev key-ingredients-swiper-arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+          <circle cx="30" cy="30" r="30" transform="rotate(-90 30 30)" fill="white"/>
+          <path d="M30.2041 18.849L19 29.4906C21.7155 32.2485 27.1104 37.7587 29.826 40.5168L31.2396 39.1959C28.7968 36.7155 25.566 33.4108 22.7153 30.5119L40.6508 30.8252L40.6842 28.9124L22.7487 28.5992L31.5705 20.233L30.2041 18.849Z" fill="#112D4E"/>
+        </svg>
+      </div>
+      <div class="swiper-button-next key-ingredients-swiper-arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+          <circle cx="30" cy="30" r="30" transform="matrix(0 -1 -1 0 60 60)" fill="white"/>
+          <path d="M29.7956 18.849L40.9998 29.4906C38.2842 32.2485 32.8894 37.7587 30.1737 40.5168L28.7602 39.1959C31.203 36.7155 34.4337 33.4108 37.2844 30.5119L19.3489 30.8252L19.3155 28.9124L37.2511 28.5992L28.4293 20.233L29.7956 18.849Z" fill="#112D4E"/>
+        </svg>
+      </div>
     </div>
   </div>
 </section>
@@ -76,14 +70,18 @@
 <script>
   new Swiper('.key-ingredients-swiper', {
     slidesPerView: 1,
-    spaceBetween: 20,
+    spaceBetween: 30,
+    loop: true,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-button-next.key-ingredients-swiper-arrow',
+      prevEl: '.swiper-button-prev.key-ingredients-swiper-arrow',
     },
     breakpoints: {
-      768: {
+      576: {
         slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
       },
       1024: {
         slidesPerView: 4,
@@ -96,6 +94,11 @@
 {
   "name": "Key Ingredients",
   "settings": [
+    {
+      "type": "text",
+      "id": "extra_class",
+      "label": "Extra Class"
+    },
     {
       "type": "text",
       "id": "heading",

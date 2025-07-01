@@ -73,46 +73,49 @@
     <div class="page-width section-{{ section.id }}-padding{% if section.settings.secondary_background %} isolate{% endif %}">
       <div class="featured-product product product--{{ section.settings.media_size }} grid grid--1-col gradient color-{{ section.settings.color_scheme }} product--{{ section.settings.media_position }}{% if section.settings.secondary_background == false %} isolate{% endif %} {% if product.media.size > 0 or section.settings.product == blank %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
         <div class="grid__item product__media-wrapper">
-          <div class="ctm-featured-video media-grid-card">
-            {% if section.settings.video_aura != blank %}
-              {% if section.settings.video_aura.preview_image %}
-                {% assign preview = section.settings.video_aura.preview_image | image_url: width: 1000 %}
-                <video
-                  class="media-video"
-                  playsinline
-                  loop
-                  muted
-                  poster="{{ preview }}"
-                >
-                  {% for source in section.settings.video_aura.sources %}
-                    <source src="{{ source.url }}" type="{{ source.mime_type }}">
-                  {% endfor %}
-                  Your browser does not support the video tag.
-                </video>
-              {% else %}
-                <video class="media-video" playsinline loop muted>
-                  {% for source in section.settings.video_aura.sources %}
-                    <source src="{{ source.url }}" type="{{ source.mime_type }}">
-                  {% endfor %}
-                  Your browser does not support the video tag.
-                </video>
+          <div class="flex gap-x-20 items-start product-media-inner">
+            <div class="ctm-featured-video media-grid-card rounded-25 aspect-[0.64]">
+              {% if section.settings.video_aura != blank %}
+                {% if section.settings.video_aura.preview_image %}
+                  {% assign preview = section.settings.video_aura.preview_image | image_url: width: 1000 %}
+                  <video
+                    class="media-video rounded-25 w-full h-full object-cover"
+                    playsinline
+                    loop
+                    muted
+                    poster="{{ preview }}"
+                  >
+                    {% for source in section.settings.video_aura.sources %}
+                      <source src="{{ source.url }}" type="{{ source.mime_type }}">
+                    {% endfor %}
+                    Your browser does not support the video tag.
+                  </video>
+                {% else %}
+                  <video class="media-video" playsinline loop muted>
+                    {% for source in section.settings.video_aura.sources %}
+                      <source src="{{ source.url }}" type="{{ source.mime_type }}">
+                    {% endfor %}
+                    Your browser does not support the video tag.
+                  </video>
+                {% endif %}
+              {% elsif section.settings.image != blank %}
+                <img src="{{ section.settings.image | img_url: '800x' }}" alt="{{ block.settings.label | escape }}">
               {% endif %}
-            {% elsif section.settings.image != blank %}
-              <img src="{{ section.settings.image | img_url: '800x' }}" alt="{{ block.settings.label | escape }}">
-            {% endif %}
-          </div>
-          {%- unless placeholder -%}
-            {% render 'featured-product-media', product: product, variant_images: variant_images %}
-          {%- else -%}
-            <div class="product__media-item">
-              <div
-                class="product-media-container global-media-settings gradient{% if section.settings.constrain_to_viewport %} constrain-height{% endif %}"
-                style="--ratio: 1.0; --preview-ratio: 1.0;"
-              >
-                {{ 'product-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
-              </div>
             </div>
-          {%- endunless -%}
+
+            {%- unless placeholder -%}
+              {% render 'featured-product-media', product: product, variant_images: variant_images %}
+            {%- else -%}
+              <div class="product__media-item">
+                <div
+                  class="product-media-container global-media-settings gradient{% if section.settings.constrain_to_viewport %} constrain-height{% endif %}"
+                  style="--ratio: 1.0; --preview-ratio: 1.0;"
+                >
+                  {{ 'product-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                </div>
+              </div>
+            {%- endunless -%}
+          </div>
         </div>
         <div class="product__info-wrapper grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
           <section

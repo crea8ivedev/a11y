@@ -39,7 +39,9 @@
         "slide_Ewnax7",
         "slide_tCpNLx"
       ],
-      "settings": {}
+      "settings": {
+        "extra_class": ""
+      }
     },
     "text_image_statements_zChfXR": {
       "type": "text-image-statements",
@@ -344,7 +346,7 @@
         "title_ppqXzi": {
           "type": "title",
           "settings": {
-            "heading_size": "h1"
+            "heading_size": "h2"
           }
         },
         "price_fp49qM": {
