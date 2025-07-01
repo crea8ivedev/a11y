@@ -98,7 +98,9 @@
         {{ 'products.product.media.open_media' | t: index: position }}
       </span>
     </button>
+    {% if product.available %}
     {% render 'hulkapps-wishlist-product-btn', product:product %}
+      {% endif %}
   </modal-opener>
 
   {%- if media.media_type != 'image' -%}
