@@ -313,6 +313,10 @@
   @apply font-heading font-regular text-28 min-576:text-30 min-990:text-32 min-1400:text-34 leading-153p tracking-normal;
 }
 
+.main-title-28 {
+  @apply font-heading font-regular text-[22px] min-576:text-24 min-990:text-[26px] min-1400:text-28 leading-[125.714%] text-primary-blue tracking-normal;
+}
+
 .product-social-icons-list {
   @apply gap-[10px];
 }

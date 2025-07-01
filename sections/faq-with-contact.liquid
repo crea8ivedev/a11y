@@ -124,17 +124,38 @@
           </div>
         </div>
         <div class="faq-right min-990:flex-[0_0_521px]">
-          <div class="faq-right-inside">
+          <div class="faq-right-inside p-[20px] min-1400:px-[40px] min-1400:py-[66px] bg-[#F9F7F7] rounded-[25px]">
             {% if section.settings.contact_heading != blank %}
-              <h3 class="contact-heading">{{ section.settings.contact_heading }}</h3>
+              <div>
+                <h3 class="main-title-28">{{ section.settings.contact_heading }}</h3>
+              </div>
             {% endif %}
             {% if section.settings.contact_text != blank %}
-              <p class="contact-text">{{ section.settings.contact_text }}</p>
+              <div class="mt-20 min-990:mt-[28px]">
+                <p class="contact-text font-body font-normal text-16 leading-[137.5%] text-primary-black tracking-normal">
+                  {{ section.settings.contact_text }}
+                </p>
+              </div>
             {% endif %}
             {% if section.settings.contact_button_link != blank and section.settings.contact_button_label != blank %}
-              <a href="{{ section.settings.contact_button_link }}" class="contact-button">
-                {{ section.settings.contact_button_label }}
-              </a>
+              <div class="mt-[40px] pt-[40px] border-t-[1px] border-solid border-pale-grey">
+                <a
+                  href="{{ section.settings.contact_button_link }}"
+                  class="contact-button ctm-button button-with-arrow"
+                >
+                  {{ section.settings.contact_button_label }}
+                  <svg
+                    class="icon transition-all duration-300 ease-in-out"
+                    width="10"
+                    height="11"
+                    viewBox="0 0 10 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M9.91988 10.1574L10 0.5C7.58106 0.523477 2.7615 0.556619 0.342494 0.580096L0.322628 1.7891C2.49837 1.76773 5.38677 1.74999 7.92773 1.72694L0 9.65453L0.845473 10.5L8.77321 2.57237L8.70443 10.1708L9.91988 10.1574Z" fill="white"></path>
+                  </svg>
+                </a>
+              </div>
             {% endif %}
           </div>
         </div>

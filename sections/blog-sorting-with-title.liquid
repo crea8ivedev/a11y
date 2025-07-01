@@ -5,16 +5,16 @@
     </h1>
   </div>
   <div class="page_sorting-tag">
+    {% assign rendered_tags = '' | split: ',' %}
+
     {% for block in section.blocks %}
-      {%- for article in blog.articles -%}
-        {% for tag in article.tags %}
-          <span
-            ><a href="{{ blog.url }}/tagged/{{ block.settings.tag_name | handle }}">
-              {{- block.settings.tag_name -}}
-            </a></span
-          >
-        {% endfor %}
-      {% endfor %}
+      {% assign current_tag = block.settings.tag_name %}
+      {% unless rendered_tags contains current_tag %}
+        {% assign rendered_tags = rendered_tags %}
+        <span>
+          <a href="{{ blog.url }}/tagged/{{ current_tag | handle }}">{{ current_tag }}</a>
+        </span>
+      {% endunless %}
     {% endfor %}
   </div>
 </div>
