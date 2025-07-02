@@ -5,15 +5,40 @@
     </h1>
   </div>
   <div class="page_sorting-tag">
-    {% assign rendered_tags = '' | split: ',' %}
+    {% assign rendered_tags_string = '' %}
 
     {% for block in section.blocks %}
       {% assign current_tag = block.settings.tag_name %}
-      {% unless rendered_tags contains current_tag %}
-        {% assign rendered_tags = rendered_tags %}
-        <span>
-          <a href="{{ blog.url }}/tagged/{{ current_tag | handle }}">{{ current_tag }}</a>
-        </span>
+      {% assign tag_handle = current_tag | handle %}
+
+      {% unless rendered_tags_string contains tag_handle %}
+        {% assign tag_found = false %}
+
+        {% for article in blog.articles %}
+          {% for tag in article.tags %}
+            {% assign article_tag = tag | handle %}
+            {% if article_tag == tag_handle %}
+              {% assign tag_found = true %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+          {% if tag_found %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+
+        {% if current_tag == 'All' %}
+          {% assign rendered_tags_string = rendered_tags_string | append: tag_handle | append: ',' %}
+          <span>
+            <a href="{{ blog.url }}">{{ current_tag }}</a>
+          </span>
+        {% endif %}
+        {% if tag_found %}
+          {% assign rendered_tags_string = rendered_tags_string | append: tag_handle | append: ',' %}
+          <span>
+            <a href="{{ blog.url }}/tagged/{{ current_tag | handle }}">{{ current_tag }}</a>
+          </span>
+        {% endif %}
       {% endunless %}
     {% endfor %}
   </div>

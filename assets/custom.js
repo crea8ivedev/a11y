@@ -11,7 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function scrollDownByBanner() {
-  const banner = document.querySelector(".custom-slider-wrapper");
+  const banner = document.querySelector(
+    ".custom-slider-wrapper, .banner__media",
+  );
   if (banner) {
     window.scrollBy({
       top: banner.offsetHeight,
@@ -111,4 +113,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     observer.observe(productInfo);
   }
+
+  // const right = document.querySelector('.ctm-product-page .product .product__media-wrapper .product__column-sticky .slider-mobile-gutter');
+  // const left = document.querySelector('.ctm-product-page .product .product__media-wrapper .product__column-sticky .thumbnail-slider');
+
+  // function matchHeights() {
+  //   left.style.maxHeight = right.offsetHeight + 'px';
+  // }
+
+  // window.addEventListener('load', matchHeights);
+  // window.addEventListener('resize', matchHeights);
 });

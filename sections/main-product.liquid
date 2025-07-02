@@ -54,6 +54,8 @@
     <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
 
+  <script></script>
+
   {%- assign first_3d_model = product.media | where: 'media_type', 'model' | first -%}
   {%- if first_3d_model -%}
     {{ 'component-product-model.css' | asset_url | stylesheet_tag }}
@@ -299,7 +301,7 @@
                   </div>
                 {%- endif -%}
               {%- when 'faq_metafield' -%}
-                <div class="pdp-accordion-main  {{ block.shopify_attributes }}">
+                <div class="pdp-accordion-main {{ block.settings.faq_extra_class }} {{ block.shopify_attributes }}">
                   {% for faq in product.metafields.custom.pdp_faq.value %}
                     <div class="pdp-accordion-item  {{ block.shopify_attributes }}">
                       <button class="pdp-accordion-header">
@@ -933,6 +935,11 @@
         {
           "type": "header",
           "content": "To Show Different Content On Every PDP Use This"
+        },
+        {
+          "type": "text",
+          "id": "faq_extra_class",
+          "label": "FAQ Extra Class"
         }
       ]
     },

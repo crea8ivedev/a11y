@@ -1,20 +1,13 @@
 {% # theme-check-disable %}
 {%- style -%}
   .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
-
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
   }
 {%- endstyle -%}
-<div class="media-grid-wrapper section-{{ section.id }}-padding">
+<div class="media-grid-wrapper section-{{ section.id }}-padding max-mdscreen6:!py-50">
   <div class="media-grid-container container_fluid">
-    <div class="flex items-center justify-between xl:gap-x-60 gap-x-40 max-mdscreen2:flex-col max-mdscreen2:items-start max-mdscreen2:gap-40">
+    <div class="flex items-center justify-between xl:gap-x-60 gap-x-40 max-mdscreen2:flex-col max-mdscreen2:items-start max-mdscreen2:gap-30">
       <div class="media-grid-text max-mdscreen2:flex justify-between items-center max-mdscreen2:w-full max-mdscreen2:gap-20 max-mdscreen6:flex-col max-mdscreen6:items-start">
         <div class="">
           {% if section.settings.heading != blank %}

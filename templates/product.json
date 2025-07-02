@@ -68,7 +68,9 @@
         },
         "faq_metafield_CpTmK7": {
           "type": "faq_metafield",
-          "settings": {}
+          "settings": {
+            "faq_extra_class": "faq-pdp-main"
+          }
         },
         "social_icons_qRnYJe": {
           "type": "social_icons",

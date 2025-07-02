@@ -1,5 +1,5 @@
-<section class="marquee-section bg-primary-blue py-40 max-xl:py-20 overflow-hidden whitespace-nowrap">
-  <div class="marquee-wrapper relative flex overflow-hidden">
+<section class="marquee-section bg-primary-blue py-40 max-xl:py-20 overflow-hidden whitespace-nowrap {{ section.settings.extra_class }}">
+  <div class="marquee-wrapper relative flex">
     <div class="marquee-track">
       {% for block in section.blocks %}
         <div
@@ -69,7 +69,13 @@
 {% schema %}
 {
   "name": "Marquee",
-  "settings": [],
+  "settings": [
+    {
+      "type": "text",
+      "label": "Extra Class",
+      "id": "extra_class"
+    }
+  ],
   "blocks": [
     {
       "type": "item",

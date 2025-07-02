@@ -45,6 +45,7 @@
   --spacing-14: 14px;
   --spacing-16: 16px;
   --spacing-20: 20px;
+  --spacing-22: 22px;
   --spacing-24: 24px;
   --spacing-25: 25px;
   --spacing-26: 26px;
@@ -500,14 +501,20 @@ localization-form .disclosure__list-wrapper .country-filter {
 .product-card-wrapper .card .card__information .price .price-item--regular {
   @apply text-[#112D4E4D];
 } */
+.ctm-featured-products-head.section-template--22522634535189__rich_text_BKf7e7-padding {
+  @apply max-mdscreen6:pt-50 max-mdscreen6:pb-30;
+}
 .product-card-wrapper .card .card__information .price {
   @apply mdscreen6:mt-10 !mt-4 text-center text-primary-black;
 }
 .ctm-collection-grid-section .collection__title.title-wrapper {
-  @apply flex items-center justify-between mb-44 max-mdscreen6:flex-col max-mdscreen6:items-start max-mdscreen6:gap-20;
+  @apply flex items-center justify-between mdscreen6:mb-44 mb-30 max-mdscreen6:flex-col max-mdscreen6:items-start max-mdscreen6:gap-20;
 }
 .ctm-collection-grid-section .collection_title-wrapper .title {
   @apply mdscreen6:text-[34px] mdscreen6:leading-40 text-28 leading-[35.2px] mt-0 mdscreen6:mb-10 !mb-6;
+}
+.about-our-mission.ctm-img-txt-main .image-with-text__content {
+  @apply p-0 xl:pr-90 mdscreen4:pr-40 max-mdscreen4:pt-20;
 }
 .ctm-img-txt-main .image-with-text__grid {
   @apply items-center;
@@ -603,10 +610,12 @@ localization-form .disclosure__list-wrapper .country-filter {
 .product .product-form__quantity .form__label {
   @apply hidden;
 }
-.product .product-form__quantity .quantity {
+.product .product-form__quantity .quantity,
+.cart-item__quantity .quantity.cart-quantity {
   @apply rounded-[100px] border border-primary-blue bg-transparent px-12 min-h-[45px] max-w-[114px];
 }
-.product .product-form__quantity {
+.product .product-form__quantit,
+.cart-item__quantity .quantity-popover-container {
   @apply max-w-fit mb-0 flex-[unset];
 }
 .quantity .quantity__button .svg-wrapper {
@@ -643,7 +652,7 @@ localization-form .disclosure__list-wrapper .country-filter {
   @apply flex items-center xl:gap-x-80 gap-x-30 max-mdscreen2:flex-col max-mdscreen2:!pb-20 max-mdscreen6:!px-20;
 }
 .ctm-footer .footer__blocks-wrapper {
-  @apply xl:gap-x-80 gap-x-40 max-mdscreen2:w-full;
+  @apply xl:gap-x-80 gap-x-40 max-mdscreen2:w-full midlarge_desktop:grow;
 }
 .ctm-footer .footer-block__newsletter,
 .ctm-footer .footer-block__newsletter .newsletter-form__field-wrapper,
@@ -715,3 +724,112 @@ localization-form .disclosure__list-wrapper .country-filter {
   @apply gap-x-10;
 }
 /* footer css */
+.about-hero-banner .banner__box .banner__text {
+  @apply p-10;
+}
+.about-hero-banner .banner__box {
+  @apply max-mdscreen6:max-w-[300px] max-mdscreen6:mx-auto;
+}
+.banner .banner__box * {
+  @apply text-white;
+}
+.about-illuminate-banner .banner__content .banner__text p {
+  @apply leading-[25px];
+}
+.about-illuminate-banner .banner__content .banner__text,
+.about-illuminate-banner .banner__content .banner__buttons {
+  @apply mdscreen6:mt-24 mt-12;
+}
+.about-illuminate-banner.banner:after {
+  @apply mdscreen6:!opacity-0;
+}
+.about-illuminate-banner .banner__content {
+  @apply mdscreen6:py-60 py-40;
+}
+.about-illuminate-banner .banner__content .banner__box {
+  @apply py-0 !max-w-[470px];
+}
+predictive-search .predictive-search__list-item:hover * {
+  @apply !text-primary-blue bg-transparent;
+}
+predictive-search .predictive-search__item .predictive-search__item-heading {
+  @apply text-16 leading-26 text-primary-black font-semibold !no-underline font-body;
+}
+predictive-search .predictive-search__heading {
+  @apply text-18 leading-28 text-primary-black tracking-normal normal-case;
+}
+predictive-search input.search__input.field__input:focus {
+  @apply shadow-none outline-primary-blue outline-2;
+}
+predictive-search input.search__input.field__input::placeholder {
+  @apply opacity-[100%] tracking-normal;
+}
+predictive-search form.search .field label {
+  @apply hidden;
+}
+predictive-search input.search__input.field__input {
+  @apply min-w-[unset] py-8 px-16 min-h-[42px] h-[42px] border border-primary-blue rounded-5 font-body text-primary-black tracking-normal;
+}
+predictive-search .predictive-search__result-group,
+predictive-search .predictive-search__result-group:first-child {
+  @apply flex-1/2;
+}
+/* cart page css */
+.cart-items thead th {
+  @apply text-16 leading-22 text-primary-blue font-semibold;
+}
+.cart-items .cart-item__details .product-option {
+  @apply text-16 leading-22 text-primary-black;
+}
+.cart-items .cart-item__name {
+  @apply text-20 leading-100p !no-underline mb-10 text-primary-blue;
+}
+.cart-items cart-remove-button svg path {
+  @apply fill-primary-blue;
+}
+.cart__footer .totals .totals__total {
+  @apply text-20;
+}
+.cart__footer .cart__ctas button {
+  @apply max-mdscreen4:max-w-full;
+}
+.cart__footer .tax-note {
+  @apply max-mdscreen4:text-center;
+}
+.cart__footer .totals {
+  @apply max-mdscreen4:justify-between;
+}
+cart-items .title-wrapper-with-link {
+  @apply max-mdscreen6:flex-col max-mdscreen6:gap-20 max-mdscreen6:items-center mb-50;
+}
+.cart__warnings .cart__login-paragraph a {
+  @apply text-primary-blue font-bold no-underline hover:underline;
+}
+/* cart page css */
+.contact-map-iframe iframe {
+  @apply w-full max-lgscreen2:h-[400px];
+}
+.ctm-contact .contact .title {
+  @apply text-center mdscreen6:mb-44 mb-30;
+}
+#ContactForm .field .field__label {
+  @apply !static text-16 leading-25 text-primary-black tracking-normal;
+}
+#ContactForm .field .field__input::placeholder {
+  @apply opacity-[1] text-16 leading-25 text-pale-grey tracking-normal;
+}
+#ContactForm .field textarea.field__input {
+  @apply min-h-[110px] rounded-25;
+}
+#ContactForm .field .field__input {
+  @apply min-h-45 px-16 !py-10 rounded-[100px] border border-pale-grey text-16 leading-25 text-primary-black tracking-normal;
+}
+#ContactForm .field {
+  @apply flex-col-reverse mdscreen6:gap-y-[15px] gap-y-4 max-mdscreen6:mb-10;
+}
+.contact .contact__field-error .form__message {
+  @apply items-center -mt-10;
+}
+.contact .form__message .form-status {
+  @apply flex items-center text-primary-black font-body font-semibold;
+}

@@ -115,7 +115,7 @@
       }}
     </div>
   {%- endif -%}
-  <div class="banner__content banner__content--{{ section.settings.desktop_content_position }} page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+  <div class="banner__content banner__content--{{ section.settings.desktop_content_position }} container_fluid{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
     <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
@@ -142,9 +142,10 @@
                   {% else %}
                     href="{{ block.settings.button_link_1 }}"
                   {% endif %}
-                  class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
+                  class="ctm-button button-with-arrow{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
                 >
                   {{- block.settings.button_label_1 | escape -}}
+                  {{- 'ctm-button-arrow.svg' | inline_asset_content -}}
                 </a>
               {%- endif -%}
               {%- if block.settings.button_label_2 != blank -%}
@@ -154,9 +155,10 @@
                   {% else %}
                     href="{{ block.settings.button_link_2 }}"
                   {% endif %}
-                  class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
+                  class="ctm-button button-with-arrow{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
                 >
                   {{- block.settings.button_label_2 | escape -}}
+                  {{- 'ctm-button-arrow.svg' | inline_asset_content -}}
                 </a>
               {%- endif -%}
             </div>
@@ -164,6 +166,19 @@
       {%- endfor -%}
     </div>
   </div>
+  {% if section.settings.page_scroll_button == true %}
+    <div
+      class="scroll-down-btn absolute mdscreen2:bottom-52 bottom-30 right-20 small_desktop:right-50 desktop:right-80 cursor-pointer flex items-center gap-x-8 group z-[2]"
+      onclick="scrollDownByBanner()"
+    >
+      <span class="text-16 leading-24 text-white">Scroll</span>
+      <div class="mdscreen6:w-30 mdscreen6:h-30 w-24 h-24 rounded-full bg-white flex justify-center items-center border border-white group-hover:bg-transparent">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.246094 5.99792L5.8444 11.6899C7.24465 10.2622 10.0425 7.4256 11.4428 5.99786L10.7477 5.27954C9.48837 6.56384 7.81036 8.2626 6.33853 9.76138L6.33862 0.49328L5.35019 0.493281L5.35013 9.7614L0.948723 5.27959L0.246094 5.99792Z" fill="#112D4E"/>
+        </svg>
+      </div>
+    </div>
+  {% endif %}
 </div>
 
 {% schema %}
@@ -247,6 +262,12 @@
       ],
       "default": "none",
       "label": "t:sections.all.animation.image_behavior.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "page_scroll_button",
+      "default": true,
+      "label": "Page Scroll Button"
     },
     {
       "type": "header",

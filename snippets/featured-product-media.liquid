@@ -53,7 +53,7 @@
 >
   <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
   <slider-component id="GalleryViewer-{{ section.id }}" class="slider-mobile-gutter">
-    <a class="skip-to-content-link button visually-hidden quick-add-hidden" href="#ProductInfo-{{ section.id }}">
+    <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">
       {{ 'accessibility.skip_to_product_info' | t }}
     </a>
     {% comment %}
@@ -132,7 +132,7 @@
         {%- if product.selected_or_first_available_variant.featured_media != null -%}
           {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
           <div class="swiper-slide">
-            {% render 'product-thumbnail',
+            {% render 'featured-product-thumbnail',
               media: featured_media,
               media_count: media_count,
               position: media_position,
@@ -152,7 +152,7 @@
         {%- for media in product.media -%}
           {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
             <div class="swiper-slide">
-              {% render 'product-thumbnail',
+              {% render 'main-product-thumbnail',
                 media: media,
                 media_count: media_count,
                 position: media_position,
@@ -174,7 +174,7 @@
       <div class="swiper-pagination"></div>
     </div>
 
-    <div class="slider-buttons quick-add-hidden{% if hide_mobile_slider %} small-hide{% endif %}">
+    <div class="slider-buttons {% if hide_mobile_slider %} small-hide{% endif %}">
       <button
         type="button"
         class="slider-button slider-button--prev"
@@ -234,7 +234,7 @@
   -%}
     <slider-component
       id="GalleryThumbnails-{{ section.id }}"
-      class="thumbnail-slider slider-mobile-gutter quick-add-hidden{% unless section.settings.gallery_layout contains 'thumbnail' %} medium-hide large-up-hide{% endunless %}{% if section.settings.mobile_thumbnails != 'show' %} small-hide{% endif %}{% if media_count <= 3 %} thumbnail-slider--no-slide{% endif %}"
+      class="thumbnail-slider slider-mobile-gutter {% unless section.settings.gallery_layout contains 'thumbnail' %} medium-hide large-up-hide{% endunless %}{% if section.settings.mobile_thumbnails != 'show' %} small-hide{% endif %}{% if media_count <= 3 %} thumbnail-slider--no-slide{% endif %}"
     >
       <button
         type="button"
@@ -373,13 +373,13 @@
           {%- if product.selected_or_first_available_variant.featured_media != null -%}
             {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
             <div class="swiper-slide">
-              {% render 'product-thumbnail', media: featured_media, ... %}
+              {% render 'main-product-thumbnail', media: featured_media, ... %}
             </div>
           {%- endif -%}
           {%- for media in product.media -%}
             {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
               <div class="swiper-slide">
-                {% render 'product-thumbnail', media: media, ... %}
+                {% render 'main-product-thumbnail', media: media, ... %}
               </div>
             {%- endunless -%}
           {%- endfor -%}

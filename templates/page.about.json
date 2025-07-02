@@ -17,26 +17,117 @@
         "padding_bottom": 28
       }
     },
-    "hero_slider_4MxQkP": {
-      "type": "hero-slider",
+    "image_banner_AJfjn3": {
+      "type": "image-banner",
       "blocks": {
-        "slide_mGb3tB": {
-          "type": "slide",
+        "heading_mhC6qP": {
+          "type": "heading",
           "settings": {
-            "background_image": "shopify://shop_images/about.png",
-            "tagline": "Glow with confidence",
             "heading": "Get the skin you want to feel",
-            "subtext": "",
-            "button_link": "",
-            "button_text": ""
+            "heading_size": "h1"
+          }
+        },
+        "text_m3d4h3": {
+          "type": "text",
+          "settings": {
+            "text": "Glow with confidence",
+            "text_style": "body"
           }
         }
       },
       "block_order": [
-        "slide_mGb3tB"
+        "heading_mhC6qP",
+        "text_m3d4h3"
       ],
+      "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "extra_class": "ctm-about-hero"
+        "extra_class": "about-hero-banner",
+        "image": "shopify://shop_images/about.png",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "image_behavior": "none",
+        "page_scroll_button": true,
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "scheme-1",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
+    },
+    "marquee_rhDqza": {
+      "type": "marquee",
+      "blocks": {
+        "item_FGDPTW": {
+          "type": "item",
+          "settings": {
+            "text": "20% off everything for women"
+          }
+        },
+        "item_fzW6nN": {
+          "type": "item",
+          "settings": {
+            "text": "Summer sale 40% off everything"
+          }
+        },
+        "item_fLLr48": {
+          "type": "item",
+          "settings": {
+            "text": "First time free delivery in usa"
+          }
+        },
+        "item_w6UpUm": {
+          "type": "item",
+          "settings": {
+            "text": "20% off everything for women"
+          }
+        },
+        "item_NAQ9TG": {
+          "type": "item",
+          "settings": {
+            "text": "Summer sale 40% off everything"
+          }
+        },
+        "item_cydkxG": {
+          "type": "item",
+          "settings": {
+            "text": "First time free delivery in usa"
+          }
+        },
+        "item_iD9NXk": {
+          "type": "item",
+          "settings": {
+            "text": "20% off everything for women"
+          }
+        },
+        "item_Bcekyy": {
+          "type": "item",
+          "settings": {
+            "text": "Summer sale 40% off everything"
+          }
+        },
+        "item_xJW8LU": {
+          "type": "item",
+          "settings": {
+            "text": "First time free delivery in usa"
+          }
+        }
+      },
+      "block_order": [
+        "item_FGDPTW",
+        "item_fzW6nN",
+        "item_fLLr48",
+        "item_w6UpUm",
+        "item_NAQ9TG",
+        "item_cydkxG",
+        "item_iD9NXk",
+        "item_Bcekyy",
+        "item_xJW8LU"
+      ],
+      "name": "Marquee",
+      "settings": {
+        "extra_class": ""
       }
     },
     "image_with_text_iHTU6m": {
@@ -81,7 +172,7 @@
       ],
       "settings": {
         "image": "shopify://shop_images/Frame_91.jpg",
-        "extra_class": "ctm-img-txt-main",
+        "extra_class": "ctm-img-txt-main about-our-mission",
         "height": "small",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -92,8 +183,8 @@
         "mobile_content_alignment": "left",
         "section_color_scheme": "",
         "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "key_ingredients_d6BrLi": {
@@ -195,7 +286,7 @@
           "type": "heading",
           "settings": {
             "heading": "Illuminate Your Inner Glow with Nature's Beauty Organic Products",
-            "heading_size": "h1"
+            "heading_size": "h2"
           }
         },
         "text_aHFEgz": {
@@ -224,17 +315,19 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
+        "extra_class": "about-illuminate-banner",
         "image": "shopify://shop_images/f3c0ce0eb1f53d01880494b40edf49b681a69628_469524b6-938a-4463-a8ba-aeecb6177679.png",
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
+        "image_overlay_opacity": 30,
+        "image_height": "small",
         "image_behavior": "none",
+        "page_scroll_button": false,
         "desktop_content_position": "middle-left",
         "desktop_content_alignment": "left",
         "show_text_box": false,
         "color_scheme": "",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
-        "show_text_below": true
+        "show_text_below": false
       }
     },
     "faq_with_contact_ckjMii": {
@@ -287,7 +380,8 @@
   },
   "order": [
     "main",
-    "hero_slider_4MxQkP",
+    "image_banner_AJfjn3",
+    "marquee_rhDqza",
     "image_with_text_iHTU6m",
     "key_ingredients_d6BrLi",
     "image_banner_chCyUU",

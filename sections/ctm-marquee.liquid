@@ -1,4 +1,4 @@
-<div class="{{ section.settings.section_class }} py-10 min-990:py-18">
+<div class="{{ section.settings.section_class }} py-10 min-990:py-18 {{ section.settings.extra_class }}">
   <div class="marquee">
     <div class="track">
       <div class="content">
@@ -56,6 +56,11 @@
   "name": "Repeat Text",
   "class": "ctm_marquee",
   "settings": [
+    {
+      "type": "text",
+      "label": "Extra Class",
+      "id": "extra_class"
+    },
     {
       "type": "text",
       "label": "Section Class",

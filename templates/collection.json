@@ -9,8 +9,76 @@
  */
 {
   "sections": {
+    "marquee_KGefmK": {
+      "type": "marquee",
+      "blocks": {
+        "item_Jp4TKR": {
+          "type": "item",
+          "settings": {
+            "text": "New Arrivals"
+          }
+        },
+        "item_RbnfPk": {
+          "type": "item",
+          "settings": {
+            "text": "20% off everything for women"
+          }
+        },
+        "item_FbJWwP": {
+          "type": "item",
+          "settings": {
+            "text": "New Arrivals"
+          }
+        },
+        "item_gBiDqJ": {
+          "type": "item",
+          "settings": {
+            "text": "20% off everything for women"
+          }
+        },
+        "item_wtL3tU": {
+          "type": "item",
+          "settings": {
+            "text": "New Arrivals"
+          }
+        },
+        "item_gcJ663": {
+          "type": "item",
+          "settings": {
+            "text": "20% off everything for women"
+          }
+        },
+        "item_RpMzNi": {
+          "type": "item",
+          "settings": {
+            "text": "New Arrivals"
+          }
+        },
+        "item_Ep837T": {
+          "type": "item",
+          "settings": {
+            "text": "20% off everything for women"
+          }
+        }
+      },
+      "block_order": [
+        "item_Jp4TKR",
+        "item_RbnfPk",
+        "item_FbJWwP",
+        "item_gBiDqJ",
+        "item_wtL3tU",
+        "item_gcJ663",
+        "item_RpMzNi",
+        "item_Ep837T"
+      ],
+      "name": "Marquee",
+      "settings": {
+        "extra_class": "collection-white-marquee-main"
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
         "show_collection_description": true,
         "show_collection_image": false,
@@ -33,12 +101,13 @@
         "enable_filtering": true,
         "filter_type": "vertical",
         "enable_sorting": true,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     }
   },
   "order": [
+    "marquee_KGefmK",
     "banner",
     "product-grid"
   ]

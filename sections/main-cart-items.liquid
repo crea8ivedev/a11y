@@ -29,19 +29,25 @@
   <div class="page-width">
     <div class="title-wrapper-with-link">
       <h1 class="title title--primary">{{ 'sections.cart.title' | t }}</h1>
-      <a href="{{ routes.all_products_collection_url }}" class="underlined-link">
-        {{- 'general.continue_shopping' | t -}}
+      <a href="{{ routes.all_products_collection_url }}" class="ctm-button button-with-arrow">
+        {{ 'general.continue_shopping' | t }}
+        {{- 'ctm-button-arrow.svg' | inline_asset_content -}}
       </a>
     </div>
 
     <div class="cart__warnings">
       <h1 class="cart__empty-text">{{ 'sections.cart.empty' | t }}</h1>
-      <a href="{{ routes.all_products_collection_url }}" class="button">
-        {{ 'general.continue_shopping' | t }}
-      </a>
+      <div class="w-full flex justify-center">
+        <a href="{{ routes.all_products_collection_url }}" class="ctm-button button-with-arrow">
+          {{ 'general.continue_shopping' | t }}
+          {{- 'ctm-button-arrow.svg' | inline_asset_content -}}
+        </a>
+      </div>
 
       {%- if shop.customer_accounts_enabled and customer == null -%}
-        <h2 class="cart__login-title">{{ 'sections.cart.login.title' | t }}</h2>
+        <h2 class="cart__login-title h4 max-mdscreen6:text-20 max-mdscreen6:leading-24">
+          {{ 'sections.cart.login.title' | t }}
+        </h2>
         <p class="cart__login-paragraph">
           {{ 'sections.cart.login.paragraph_html' | t: link: routes.account_login_url }}
         </p>

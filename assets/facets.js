@@ -229,6 +229,7 @@ class FacetFiltersForm extends HTMLElement {
     const activeFacetElementSelectors = [
       ".active-facets-mobile",
       ".active-facets-desktop",
+      ".active-facets-desktop-top",
     ];
 
     activeFacetElementSelectors.forEach((selector) => {
