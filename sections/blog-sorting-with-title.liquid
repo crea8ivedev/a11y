@@ -1,46 +1,55 @@
-<div class="main_ctm_blog_sorting">
-  <div class="blog_title_bradcumb">
-    <h1 class="title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-      {{ blog.title | escape }}
-    </h1>
-  </div>
-  <div class="page_sorting-tag">
-    {% assign rendered_tags_string = '' %}
+<div class="main_ctm_blog_sorting mdscreen6:pt-60 pt-40">
+  <div class="container_fluid flex max-mdscreen6:flex-col gap-20 items-center justify-between">
+    <div class="blog_title_bradcumb">
+      <h1 class="xl:text-34 xl:leading-40 m-0">
+        {{ blog.title | escape }}
+      </h1>
+    </div>
+    <div class="page_sorting-tag flex items-center gap-x-24">
+      {% assign rendered_tags_string = '' %}
 
-    {% for block in section.blocks %}
-      {% assign current_tag = block.settings.tag_name %}
-      {% assign tag_handle = current_tag | handle %}
+      {% for block in section.blocks %}
+        {% assign current_tag = block.settings.tag_name %}
+        {% assign tag_handle = current_tag | handle %}
 
-      {% unless rendered_tags_string contains tag_handle %}
-        {% assign tag_found = false %}
+        {% unless rendered_tags_string contains tag_handle %}
+          {% assign tag_found = false %}
 
-        {% for article in blog.articles %}
-          {% for tag in article.tags %}
-            {% assign article_tag = tag | handle %}
-            {% if article_tag == tag_handle %}
-              {% assign tag_found = true %}
+          {% for article in blog.articles %}
+            {% for tag in article.tags %}
+              {% assign article_tag = tag | handle %}
+              {% if article_tag == tag_handle %}
+                {% assign tag_found = true %}
+                {% break %}
+              {% endif %}
+            {% endfor %}
+            {% if tag_found %}
               {% break %}
             {% endif %}
           {% endfor %}
-          {% if tag_found %}
-            {% break %}
-          {% endif %}
-        {% endfor %}
 
-        {% if current_tag == 'All' %}
-          {% assign rendered_tags_string = rendered_tags_string | append: tag_handle | append: ',' %}
-          <span>
-            <a href="{{ blog.url }}">{{ current_tag }}</a>
-          </span>
-        {% endif %}
-        {% if tag_found %}
-          {% assign rendered_tags_string = rendered_tags_string | append: tag_handle | append: ',' %}
-          <span>
-            <a href="{{ blog.url }}/tagged/{{ current_tag | handle }}">{{ current_tag }}</a>
-          </span>
-        {% endif %}
-      {% endunless %}
-    {% endfor %}
+          {% if current_tag == 'All' %}
+            {% assign rendered_tags_string = rendered_tags_string | append: tag_handle | append: ',' %}
+            <span>
+              <a href="{{ blog.url }}" class="blog-tab text-16 leading-[21px] text-pale-grey hover:text-primary-blue">
+                {{- current_tag -}}
+              </a>
+            </span>
+          {% endif %}
+          {% if tag_found %}
+            {% assign rendered_tags_string = rendered_tags_string | append: tag_handle | append: ',' %}
+            <span>
+              <a
+                href="{{ blog.url }}/tagged/{{ current_tag | handle }}"
+                class="blog-tab text-16 leading-[21px] text-pale-grey hover:text-primary-blue"
+              >
+                {{- current_tag -}}
+              </a>
+            </span>
+          {% endif %}
+        {% endunless %}
+      {% endfor %}
+    </div>
   </div>
 </div>
 
@@ -69,3 +78,24 @@
   ]
 }
 {% endschema %}
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const currentURL = window.location.pathname;
+    const tagLinks = document.querySelectorAll('.page_sorting-tag a');
+
+    tagLinks.forEach((link) => {
+      const linkPath = new URL(link.href).pathname;
+
+      // If on the /tagged/ page, match exact tag URL
+      if (currentURL.startsWith('/blogs/') && currentURL.includes('/tagged/')) {
+        if (currentURL === linkPath) {
+          link.classList.add('active');
+        }
+      }
+      // Else, if it's the main blog page (All)
+      else if (currentURL === linkPath) {
+        link.classList.add('active');
+      }
+    });
+  });
+</script>

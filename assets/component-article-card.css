@@ -28,7 +28,7 @@
 
 .article-card__title a:after {
   bottom: 0;
-  content: '';
+  content: "";
   height: 100%;
   left: 0;
   position: absolute;
@@ -54,10 +54,6 @@
 .blog__posts .article-card .card__information {
   padding-left: 2rem;
   padding-right: 2rem;
-}
-
-.article-card__info {
-  padding-top: 0.4rem;
 }
 
 .article-card__footer {

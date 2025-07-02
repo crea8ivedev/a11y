@@ -9,6 +9,8 @@
   --color-primary-black: #252525;
   --color-primary-blue: #112d4e;
   --color-primary-cream: #f8f0e5;
+  --color-light-grey: #f9f7f7;
+  --color-dark-blue-30: rgba(17, 45, 78, 0.3);
 
   /* Font-family */
   --font-body: "DM Sans", sans-serif;
@@ -832,4 +834,32 @@ cart-items .title-wrapper-with-link {
 }
 .contact .form__message .form-status {
   @apply flex items-center text-primary-black font-body font-semibold;
+}
+.main-blog .blog-articles {
+  @apply !grid mdscreen2:!grid-cols-3 mdscreen6:!grid-cols-2 !grid-cols-1 gap-30;
+}
+.article-card-wrapper .card .card__inner *,
+.article-card-wrapper .card .card__inner {
+  @apply rounded-25;
+}
+.article-card-wrapper .card .card__heading a {
+  @apply !no-underline;
+}
+.article-card-wrapper .card .card__heading {
+  @apply text-18 leading-[22.4px] text-primary-black font-semibold mb-10;
+}
+.article-card-wrapper .article-card_description span {
+  @apply text-16 leading-20 text-[#112D4E4D] font-body tracking-normal normal-case;
+}
+.article-card-wrapper .card .article-card__excerpt {
+  @apply mt-0 mb-10 text-16 leading-20 text-[#112D4E4D];
+}
+.article-card-wrapper .card .card__information {
+  @apply pt-20 pb-0;
+}
+.article-card-wrapper .card:hover .read-more-link svg {
+  @apply rotate-90;
+}
+.main_ctm_blog_sorting .blog-tab.active {
+  @apply text-primary-blue font-semibold underline;
 }

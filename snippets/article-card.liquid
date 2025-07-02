@@ -120,18 +120,20 @@
               {{ article.title | truncate: 50 | escape }}
             </a>
           </h3>
-          <div class="article-card__info caption-with-letter-spacing h5">
-            {%- if show_date -%}
-              <span class="circle-divider">{{ article.published_at | time_tag: format: 'date' }}</span>
-            {%- endif -%}
-            {%- if show_author -%}
-              <span>{{ article.author }}</span>
-            {%- endif -%}
-          </div>
-          <div class="artical_tag_custom">
-            {% for tag in article.tags %}
-              <span>| {{ tag }}</span>
-            {% endfor %}
+          <div class="flex items-center article-card_description mb-10 gap-x-4">
+            <div class="article-card__info caption-with-letter-spacing h5">
+              {%- if show_date -%}
+                <span class="circle-divider">{{ article.published_at | time_tag: format: 'date' }}</span>
+              {%- endif -%}
+              {%- if show_author -%}
+                <span>{{ article.author }}</span>
+              {%- endif -%}
+            </div>
+            <div class="artical_tag_custom ">
+              {% for tag in article.tags %}
+                <span>| {{ tag }}</span>
+              {% endfor %}
+            </div>
           </div>
           {%- if show_excerpt -%}
             {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
@@ -149,7 +151,22 @@
               {%- endif -%}
             </div>
           {%- endif -%}
-          <a href="{{ article.url }}" class="full-unstyled-link">{{ button_txt }}</a>
+          <a
+            href="{{ article.url }}"
+            class="text-16 leading-[21px] font-semibold text-primary-blue hover:underline flex items-center gap-x-8 group read-more-link"
+          >
+            {{ button_txt }}
+            <svg
+              width="10"
+              height="11"
+              viewBox="0 0 10 11"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="transition-all duration-300 ease-in-out"
+            >
+              <path d="M9.91988 9.87736L10 0.219971C7.58106 0.243447 2.7615 0.27659 0.342494 0.300067L0.322628 1.50907C2.49837 1.4877 5.38677 1.46996 7.92773 1.44691L0 9.3745L0.845473 10.22L8.77321 2.29234L8.70443 9.89079L9.91988 9.87736Z" fill="#112D4E"/>
+            </svg>
+          </a>
         </div>
         {%- if show_badge -%}
           <div class="card__badge {{ settings.badge_position }}">
