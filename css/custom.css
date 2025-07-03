@@ -1168,7 +1168,7 @@ product-modal .product-media-modal__content img {
   .product-grid-container
   .product-grid
   .grid__item {
-  @apply max-w-full flex-[0_0_100%] min-576:flex-[0_0_calc(50%_-_15px)] flex-[0_0_100%] min-850:flex-[0_0_calc(50%_-_15px)] min-1400:flex-[0_0_calc(33.33%_-_20px)] w-[calc(33.33%_-_20px)];
+  @apply max-w-full flex-[0_0_100%] min-576:flex-[0_0_calc(50%_-_15px)] min-750:flex-[0_0_100%] min-850:flex-[0_0_calc(50%_-_15px)] min-1400:flex-[0_0_calc(33.33%_-_20px)] w-[calc(33.33%_-_20px)];
 }
 
 .ctm-collection-page
@@ -1255,7 +1255,7 @@ product-modal .product-media-modal__content img {
   .card
   .card__inner
   .quick-add {
-  @apply opacity-0 absolute top-[50%] left-[50%] translate-[-50%] z-99;
+  @apply opacity-0 absolute top-[50%] left-[50%] translate-[-50%] z-99 m-0;
 }
 
 .ctm-collection-page
@@ -1280,7 +1280,21 @@ product-modal .product-media-modal__content img {
   .card__inner
   .quick-add
   button {
-  @apply hover:bg-white hover:border-white;
+  @apply hover:bg-white hover:border-white whitespace-nowrap;
+}
+
+.ctm-collection-page
+  .facets-vertical
+  .product-grid-container
+  .product-grid
+  .grid__item
+  .card-wrapper
+  .card
+  .card__inner
+  .quick-add
+  button
+  svg {
+  @apply flex-[0_0_10px];
 }
 
 .ctm-collection-page
@@ -1328,7 +1342,7 @@ product-modal .product-media-modal__content img {
   .card-wrapper
   .card
   .card__heading:has(a):hover {
-  @apply text-primary-blue;
+  @apply underline;
 }
 
 .ctm-collection-page
@@ -1462,11 +1476,11 @@ product-modal .product-media-modal__content img {
 }
 
 .quick-add-modal__content {
-  @apply !max-w-[95%] !w-[1014px] !mx-auto !max-h-[545px] !m-0 !top-50p !left-50p !translate-50mp !border-0 !rounded-25 !transform-[unset];
+  @apply !max-w-[95%] !w-[1014px] !mx-auto !max-h-[95dvh] min-990:!max-h-[545px] !m-0 !top-50p !left-50p !translate-50mp !border-0 !rounded-25 !transform-[unset] !bottom-[unset];
 }
 
 .quick-add-modal__content .quick-add-modal__content-info {
-  @apply !p-0 min-990:!overflow-hidden;
+  @apply !p-0 !overflow-y-auto min-990:!overflow-hidden max-990:!overflow-x-hidden max-990:!h-[95dvh];
 }
 
 .quick-add-modal__content .quick-add-modal__content-info .container_fluid {
@@ -1479,7 +1493,7 @@ product-modal .product-media-modal__content img {
   .product__media-wrapper
   .product__column-sticky
   .slider-mobile-gutter:has(+ .thumbnail-slider) {
-  @apply !flex-[0_0_100%];
+  @apply !flex-[0_0_100%] !m-0;
 }
 
 .quick-add-modal__content
@@ -1514,7 +1528,7 @@ product-modal .product-media-modal__content img {
   .quick-add-modal__content-info
   .product.grid
   .product__info-wrapper {
-  @apply !flex-[0_0_54%] !pl-[44px] !pr-[60px] !py-[29px] min-990:!overflow-auto;
+  @apply !flex-[0_0_54%] !pl-[30px] min-1200:!pl-[44px] !pr-[30px] min-990:!pr-[40px] min-1200:!pr-[60px] !py-[29px] min-990:!overflow-auto;
 }
 
 .quick-add-modal__content
@@ -1527,7 +1541,7 @@ product-modal .product-media-modal__content img {
   .product-media-container
   .product__media
   img {
-  @apply min-990:!min-h-full min-990:!rounded-tr-none min-990:!rounded-br-none !aspect-[0.9/1];
+  @apply min-990:!min-h-full min-990:!rounded-tr-none min-990:!rounded-br-none max-990:!rounded-bl-none max-990:!rounded-br-none !aspect-square min-990:!aspect-[0.9/1];
 }
 
 .quick-add-modal__content
@@ -1583,7 +1597,38 @@ product-modal .product-media-modal__content img {
 }
 
 .quick-add-modal .quick-add-modal__content .quick-add-modal__toggle {
-  @apply;
+  @apply p-0 border-0 w-[20px] top-[20px] min-1200:top-[30px] right-[20px] min-1200:right-[30px] bg-transparent;
+}
+
+.quick-add-modal .quick-add-modal__content .quick-add-modal__toggle svg {
+  @apply w-[20px];
+}
+
+.quick-add-modal
+  .quick-add-modal__content
+  .product__media-list
+  .product__media-item {
+  @apply !m-0 !p-0;
+}
+
+.quick-add-modal
+  .quick-add-modal__content
+  .product.grid
+  .product__media-wrapper
+  .product__column-sticky
+  .slider-mobile-gutter
+  .product__media-list:after {
+  @apply hidden;
+}
+
+.quick-add-modal__content
+  .quick-add-modal__content-info
+  .product.grid
+  .product__media-wrapper
+  .product__column-sticky
+  .slider-mobile-gutter
+  .slider-buttons {
+  @apply hidden;
 }
 
 /* quick-view */
