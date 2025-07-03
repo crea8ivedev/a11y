@@ -1288,9 +1288,52 @@
   .grid__item
   .card-wrapper
   .card
+  .card__inner:before,
+.ctm-collection-page
+  .facets-vertical
+  .product-grid-container
+  .product-grid
+  .grid__item
+  .card-wrapper
+  .card
+  .card__inner:after {
+  @apply hidden;
+}
+
+.ctm-collection-page
+  .facets-vertical
+  .product-grid-container
+  .product-grid
+  .grid__item
+  .card-wrapper
+  .card
   .card__inner
   .card__media {
   @apply aspect-[0.86/1];
+}
+
+.ctm-collection-page
+  .facets-vertical
+  .product-grid-container
+  .product-grid
+  .grid__item
+  .card-wrapper
+  .card
+  .hulkapps-wl-collection-icon {
+  @apply text-primary-blue;
+}
+
+.ctm-collection-page
+  .facets-vertical
+  .product-grid-container
+  .product-grid
+  .grid__item
+  .card-wrapper
+  .card
+  .card__content
+  .card__information
+  .price {
+  @apply !mt-[10px];
 }
 
 /* collection-filter */
