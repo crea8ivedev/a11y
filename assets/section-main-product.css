@@ -862,9 +862,9 @@ a.product__text {
     padding: 0 3rem;
   }
 
-  .product-media-modal__dialog .global-media-settings--no-shadow {
+  /* .product-media-modal__dialog .global-media-settings--no-shadow {
     overflow: visible !important;
-  }
+  } */
 }
 
 .product-popup-modal__content img {
