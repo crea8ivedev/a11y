@@ -12,9 +12,9 @@
     "main": {
       "type": "main-register",
       "settings": {
-        "register_image": "shopify://shop_images/Slin.jpg",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "register_image": "shopify://shop_images/register-img.jpg",
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     }
   },

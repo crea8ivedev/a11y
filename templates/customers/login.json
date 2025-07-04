@@ -13,9 +13,9 @@
       "type": "main-login",
       "settings": {
         "enable_shop_login_button": false,
-        "login_image": "shopify://shop_images/Rectangle_118_1.jpg",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "login_image": "shopify://shop_images/login-img.jpg",
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     }
   },
