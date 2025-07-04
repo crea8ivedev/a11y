@@ -43,9 +43,54 @@
         "share"
       ],
       "settings": {}
+    },
+    "multicolumn_d6fB4L": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_FQAzWm": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "Products to get your glow back",
+            "link": "{{ article.metafields.custom.product_next.value }}"
+          }
+        },
+        "column_zAHQpK": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "Products to get your glow back",
+            "link": "{{ article.metafields.custom.product_next.value }}"
+          }
+        }
+      },
+      "block_order": [
+        "column_FQAzWm",
+        "column_zAHQpK"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "multicolumn_d6fB4L"
   ]
 }

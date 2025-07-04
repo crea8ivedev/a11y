@@ -2,6 +2,23 @@
 {{ 'section-blog-post.css' | asset_url | stylesheet_tag }}
 
 <article class="article-template">
+  <div class="back_pagition_combi">
+    <div class="article-template__back element-margin-top center{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+      <a href="{{ blog.url }}" class="article-template__link link animate-arrow">
+        Back
+        <span class="icon-wrap">
+          <span class="svg-wrapper">
+            {{- 'icon-back-arrow.svg' | inline_asset_content -}}
+          </span>
+        </span>
+      </a>
+    </div>
+    <div class="artical_breadcumbs_blog">
+      <a href="{{ routes.root_url }}">Home</a> / <a href="{{ blog.url }}">{{ blog.title }}</a> /
+      <span>{{ article.title }}</span>
+    </div>
+  </div>
+
   {%- for block in section.blocks -%}
     {%- case block.type -%}
       {%- when '@app' -%}
@@ -88,16 +105,6 @@
     {%- endcase -%}
   {%- endfor -%}
 
-  <div class="article-template__back element-margin-top center{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-    <a href="{{ blog.url }}" class="article-template__link link animate-arrow">
-      <span class="icon-wrap">
-        <span class="svg-wrapper">
-          {{- 'icon-arrow.svg' | inline_asset_content -}}
-        </span>
-      </span>
-      {{ 'blogs.article.back_to_blog' | t: title: blog.title | escape }}
-    </a>
-  </div>
   {%- if blog.comments_enabled? -%}
     <div class="article-template__comment-wrapper background-secondary">
       <div
