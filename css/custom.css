@@ -997,6 +997,10 @@ product-modal .product-media-modal__content img {
   @apply w-full;
 }
 
+.facets-container facet-filters-form .facets__disclosure-vertical {
+  @apply border-0 border-t-[1px] border-solid border-pale-grey;
+}
+
 .facets-container facet-filters-form .facets__summary {
   @apply py-20 min-1200:py-[26px] pr-[34px] relative;
 }
@@ -1199,6 +1203,17 @@ product-modal .product-media-modal__content img {
   .card
   .card__inner:after {
   @apply hidden;
+}
+
+.ctm-collection-page
+  .facets-vertical
+  .product-grid-container
+  .product-grid
+  .grid__item
+  .card-wrapper
+  .card
+  .wishlist-btn {
+  @apply z-9;
 }
 
 .ctm-collection-page
@@ -1465,6 +1480,310 @@ product-modal .product-media-modal__content img {
 
 .product-grid .grid__item .card-wrapper .card .card__content .quick-add {
   @apply hidden;
+}
+
+.ctm-collection-page facet-filters-form .facets__header-vertical {
+  @apply !p-0;
+}
+
+.ctm-collection-page
+  facet-filters-form
+  .facets__header-vertical
+  .facets__selected {
+  @apply font-body font-normal text-14 leading-1375p text-primary-black tracking-normal;
+}
+
+.ctm-collection-page facet-filters-form .facets__price * {
+  @apply font-body font-semibold text-16 leading-1375p text-primary-blue capitalize tracking-normal;
+}
+
+.ctm-collection-page facet-filters-form .facets__price input {
+  @apply shadow-none border-0 bg-light-grey rounded-100;
+}
+
+.ctm-collection-page .facets-vertical .facets-container {
+  @apply block;
+}
+
+menu-drawer.mobile-facets__wrapper
+  .mobile-facets__open-wrapper
+  .mobile-facets__open {
+  @apply px-24 py-12 gap-[8px] border-[1px] border-solid border-primary-blue rounded-100;
+}
+
+menu-drawer.mobile-facets__wrapper .mobile-facets__open-wrapper span {
+  @apply m-0;
+}
+
+menu-drawer.mobile-facets__wrapper
+  .mobile-facets__open-wrapper
+  .mobile-facets__open-label {
+  @apply font-body font-semibold text-16 leading-1375p text-primary-blue tracking-normal;
+}
+
+.ctm-collection-page .facets-vertical .facets-container .product-count {
+  @apply text-left opacity-100 mt-40 mb-20;
+}
+
+.ctm-collection-page
+  .facets-vertical
+  .facets-container
+  .product-count
+  .product-count__text,
+.ctm-collection-page
+  .facets-vertical
+  .facets-container
+  .product-count
+  .product-count__text {
+  @apply font-body font-semibold text-16 leading-1375p text-primary-black capitalize tracking-normal;
+}
+
+.ctm-collection-page .facets-vertical .facets-container .active-facets-mobile {
+  @apply m-0 gap-x-[12px] gap-y-[8px] mt-[10px];
+}
+
+.ctm-collection-page
+  .facets-vertical
+  .facets-container
+  .active-facets-mobile
+  facet-remove {
+  @apply m-0;
+}
+
+.ctm-collection-page
+  .facets-vertical
+  .facets-container
+  .active-facets-mobile
+  facet-remove
+  a {
+  @apply p-0;
+}
+
+.ctm-collection-page
+  .facets-vertical
+  .facets-container
+  .active-facets-mobile
+  facet-remove
+  .active-facets__button-inner {
+  @apply px-14 py-[7px] bg-light-grey rounded-100 border-0 shadow-none font-body font-semibold text-16 leading-1375p text-dark-blue-30 capitalize tracking-normal;
+}
+
+.ctm-collection-page
+  .facets-vertical
+  .facets-container
+  .active-facets-mobile
+  facet-remove
+  .active-facets__button-inner
+  .svg-wrapper {
+  @apply m-0 w-[15px] h-[15px];
+}
+
+.ctm-collection-page
+  .facets-vertical
+  .facets-container
+  .active-facets-mobile
+  facet-remove.active-facets__button-wrapper,
+.ctm-collection-page
+  .facets-vertical
+  .facets-container
+  .active-facets-mobile
+  facet-remove.active-facets__button-wrapper
+  * {
+  @apply font-body font-semibold text-16 leading-1375p text-primary-black capitalize tracking-normal;
+}
+
+.ctm-collection-page
+  .facets-vertical
+  .facets-container
+  .mobile-facets__main
+  .mobile-facets__summary
+  label,
+.ctm-collection-page
+  .facets-vertical
+  .facets-container
+  .mobile-facets__main
+  .mobile-facets__summary
+  div
+  > span {
+  @apply font-body font-semibold text-16 leading-1375p text-primary-black capitalize tracking-normal;
+}
+
+.ctm-collection-page
+  .facets-vertical
+  .facets-container
+  .mobile-facets__header
+  .mobile-facets__heading {
+  @apply font-body font-semibold text-18 leading-1375p text-primary-blue tracking-normal;
+}
+
+.ctm-collection-page
+  .facets-vertical
+  .facets-container
+  .mobile-facets__header
+  .mobile-facets__count {
+  @apply font-body font-semibold text-16 leading-1375p text-primary-black capitalize tracking-normal mt-[4px];
+}
+
+.ctm-collection-page
+  .facets-vertical
+  .facets-container
+  .mobile-facets__main
+  .mobile-facets__summary
+  .mobile-facets__sort {
+  @apply flex-wrap gap-[10px];
+}
+
+.ctm-collection-page
+  .facets-vertical
+  .facets-container
+  .mobile-facets__main
+  .mobile-facets__summary
+  .select
+  select {
+  @apply pl-[24px] pr-[41px] py-[11px] font-body font-semibold text-16 leading-135p text-primary-blue tracking-normal border-[1px] border-solid border-primary-blue rounded-[100px] !outline-0 !shadow-none !w-auto !min-w-[unset] !h-auto !min-h-[auto] !m-0;
+}
+
+.ctm-collection-page
+  .facets-vertical
+  .facets-container
+  .mobile-facets__main
+  .mobile-facets__summary
+  .select
+  .svg-wrapper {
+  @apply !hidden;
+}
+
+.ctm-collection-page
+  .facets-vertical
+  .facets-container
+  .mobile-facets__main
+  .mobile-facets__summary
+  .select:after {
+  @apply content-[''] absolute right-[24px] top-[50%] translate-y-[-50%] w-[10px] h-[7px] bg-[url('https://cdn.shopify.com/s/files/1/0853/9370/3189/files/select-collection-arrow.svg?v=1751453202')] bg-[length:100%_100%] bg-no-repeat border-0 shadow-none rounded-[0px] left-[unset] bottom-[unset];
+}
+
+.ctm-collection-page
+  .facets-vertical
+  .facets-container
+  .mobile-facets__wrapper
+  .mobile-facets__footer
+  .mobile-facets__clear-wrapper {
+  @apply justify-start;
+}
+
+.ctm-collection-page
+  .facets-vertical
+  .facets-container
+  .mobile-facets__wrapper
+  .mobile-facets__footer
+  .mobile-facets__clear-wrapper
+  * {
+  @apply font-body font-semibold text-16 leading-1375p text-primary-black capitalize tracking-normal;
+}
+
+.ctm-collection-page
+  .facets-vertical
+  .facets-container
+  .mobile-facets__wrapper
+  .mobile-facets__footer
+  .mobile-facets__clear-wrapper
+  a:hover {
+  @apply underline;
+}
+
+.ctm-collection-page
+  .facets-vertical
+  .facets-container
+  .mobile-facets__close-button,
+.ctm-collection-page
+  .facets-vertical
+  .facets-container
+  .mobile-facets__close-button
+  span {
+  @apply font-body font-semibold text-16 leading-1375p text-primary-black capitalize tracking-normal;
+}
+
+.ctm-collection-page
+  .facets-vertical
+  .facets-container
+  .mobile-facets__main
+  .facets-layout-list {
+  @apply !flex !flex-col !gap-[0] !overflow-hidden;
+}
+
+.ctm-collection-page
+  .facets-vertical
+  .facets-container
+  .mobile-facets__main
+  .facets-layout-list
+  .mobile-facets__item
+  label {
+  @apply !pl-[60px] !relative;
+}
+
+.ctm-collection-page
+  .facets-vertical
+  .facets-container
+  .mobile-facets__main
+  .facets-layout-list
+  .mobile-facets__item
+  label:after {
+  @apply !content-[''] !absolute !left-[24px] !top-[50%] !translate-y-[-50%] !w-[22px] !h-[22px] !border-[1px] !border-solid !border-pale-grey !rounded-[5px];
+}
+
+.ctm-collection-page
+  .facets-vertical
+  .facets-container
+  .mobile-facets__main
+  .facets-layout-list
+  .mobile-facets__item
+  label:has(input[checked]):after {
+  @apply !border-primary-black !bg-primary-black !bg-[url('https://cdn.shopify.com/s/files/1/0853/9370/3189/files/check-solid.svg?v=1751460540')] !bg-[length:calc(100%_-_6px)_calc(100%_-_6px)] !bg-center !bg-no-repeat;
+}
+
+.ctm-collection-page
+  .facets-vertical
+  .facets-container
+  .mobile-facets__main
+  .facets-layout-list
+  .mobile-facets__item
+  label
+  .facet-checkbox__text {
+  @apply !font-body !font-normal !text-16 !leading-[137.5%] !text-primary-black !capitalize !tracking-normal;
+}
+
+.ctm-collection-page
+  .facets-vertical
+  .facets-container
+  .mobile-facets__main
+  .facets-layout-list
+  .mobile-facets__item
+  label
+  svg,
+.ctm-collection-page
+  .facets-vertical
+  .facets-container
+  .mobile-facets__main
+  .facets-layout-list
+  .mobile-facets__item
+  label
+  .svg-wrapper {
+  @apply !hidden;
+}
+
+.ctm-collection-page
+  .facets-vertical
+  .facets-container
+  .mobile-facets__main
+  .facets-layout-list
+  .mobile-facets__item
+  label
+  .mobile-facets__highlight {
+  @apply !hidden;
+}
+
+.ctm-collection-page .facets-vertical .facets-container .mobile-facets__info {
+  @apply !font-body !font-normal !text-14 !leading-[137.5%] !text-primary-black !tracking-normal;
 }
 
 /* collection-filter */

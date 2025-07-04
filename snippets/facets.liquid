@@ -394,7 +394,8 @@
       <summary class="mobile-facets__open-wrapper focus-offset">
         <span class="mobile-facets__open{% if filter_type == 'drawer' and enable_filtering == false %} medium-hide large-up-hide{% endif %}">
           <span class="svg-wrapper">
-            {{- 'icon-filter.svg' | inline_asset_content -}}
+            {% comment %} {{- 'icon-filter.svg' | inline_asset_content -}} {% endcomment %}
+            {{- 'icon-filter-copy.svg' | inline_asset_content -}}
           </span>
           <span class="mobile-facets__open-label button-label medium-hide large-up-hide">
             {%- if enable_filtering and enable_sorting -%}
@@ -600,10 +601,23 @@
                             </facet-remove>
                             <button
                               type="button"
-                              class="button button--primary"
+                              class="ctm-button button-with-arrow"
                               onclick="this.closest('.mobile-facets__wrapper').querySelector('summary').click()"
                             >
                               {{ 'products.facets.apply' | t }}
+                              <svg
+                                class="icon transition-all duration-300 ease-in-out"
+                                width="10"
+                                height="11"
+                                viewBox="0 0 10 11"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                    d="M9.91988 10.1574L10 0.5C7.58106 0.523477 2.7615 0.556619 0.342494 0.580096L0.322628 1.7891C2.49837 1.76773 5.38677 1.74999 7.92773 1.72694L0 9.65453L0.845473 10.5L8.77321 2.57237L8.70443 10.1708L9.91988 10.1574Z"
+                                    fill="white"
+                                ></path>
+                              </svg>
                             </button>
                           </div>
                         </div>
@@ -651,10 +665,23 @@
                             </facet-remove>
                             <button
                               type="button"
-                              class="button button--primary"
+                              class="ctm-button button-with-arrow"
                               onclick="this.closest('.mobile-facets__wrapper').querySelector('summary').click()"
                             >
                               {{ 'products.facets.apply' | t }}
+                              <svg
+                                class="icon transition-all duration-300 ease-in-out"
+                                width="10"
+                                height="11"
+                                viewBox="0 0 10 11"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                    d="M9.91988 10.1574L10 0.5C7.58106 0.523477 2.7615 0.556619 0.342494 0.580096L0.322628 1.7891C2.49837 1.76773 5.38677 1.74999 7.92773 1.72694L0 9.65453L0.845473 10.5L8.77321 2.57237L8.70443 10.1708L9.91988 10.1574Z"
+                                    fill="white"
+                                ></path>
+                              </svg>
                             </button>
                           </div>
                         </div>
@@ -707,10 +734,23 @@
                 </facet-remove>
                 <button
                   type="button"
-                  class="button button--primary"
+                  class="ctm-button button-with-arrow"
                   onclick="this.closest('.mobile-facets__wrapper').querySelector('summary').click()"
                 >
                   {{ 'products.facets.apply' | t }}
+                  <svg
+                    class="icon transition-all duration-300 ease-in-out"
+                    width="10"
+                    height="11"
+                    viewBox="0 0 10 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                        d="M9.91988 10.1574L10 0.5C7.58106 0.523477 2.7615 0.556619 0.342494 0.580096L0.322628 1.7891C2.49837 1.76773 5.38677 1.74999 7.92773 1.72694L0 9.65453L0.845473 10.5L8.77321 2.57237L8.70443 10.1708L9.91988 10.1574Z"
+                        fill="white"
+                    ></path>
+                  </svg>
                 </button>
               </div>
             </div>
