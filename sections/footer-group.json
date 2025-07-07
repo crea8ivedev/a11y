@@ -42,7 +42,7 @@
         "text_Vh9XcN"
       ],
       "settings": {
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-1",
         "newsletter_enable": true,
         "payment_heading": "<p>Payment Available:</p>",
         "payment_image": "shopify://shop_images/payment.png",
@@ -54,8 +54,8 @@
         "payment_enable": false,
         "show_policy": false,
         "margin_top": 0,
-        "padding_top": 60,
-        "padding_bottom": 40
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
