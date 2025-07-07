@@ -14,12 +14,18 @@
   }
 {%- endstyle -%}
 
-<div class="page-width page-width--narrow section-{{ section.id }}-padding">
-  <h1 class="main-page-title page-title h0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-    {{ page.title | escape }}
-  </h1>
-  <div class="rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-    {{ page.content }}
+<div class="common-policy-main">
+  <div class="container_fluid section-{{ section.id }}-padding">
+    <div class="common-policy-section">
+      <div class="common-policy-title">
+        <h1 class="main-section-title page-title h0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %} !m-0">
+          {{ page.title | escape }}
+        </h1>
+      </div>
+      <div class="rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} single-journal-conetent common-policy-content mt-30 min-1200:mt-44">
+        {{ page.content }}
+      </div>
+    </div>
   </div>
 </div>
 

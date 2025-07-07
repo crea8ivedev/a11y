@@ -13,11 +13,14 @@
 <script src="{{ 'share.js' | asset_url }}" defer="defer"></script>
 
 <share-button id="Share-{{ section.id }}" class="share-button quick-add-hidden" {{ block.shopify_attributes }}>
-  <button class="share-button__button hidden">
+  <button class="hidden ctm-button button-with-arrow !mx-auto">
     {% unless template.name == 'article' %}
       <span class="svg-wrapper">{{ 'icon-share.svg' | inline_asset_content }}</span>
     {% endunless %}
     {{ block.settings.share_label | escape }}
+    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+      <path d="M10.4199 10.1574L10.5 0.5C8.08106 0.523477 3.2615 0.556619 0.842494 0.580096L0.822628 1.7891C2.99837 1.76773 5.88677 1.74999 8.42773 1.72694L0.5 9.65453L1.34547 10.5L9.27321 2.57237L9.20443 10.1708L10.4199 10.1574Z" fill="white"/>
+    </svg>
   </button>
   <details id="Details-{{ block.id }}-{{ section.id }}">
     <summary class="share-button__button">
