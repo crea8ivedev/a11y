@@ -9,7 +9,12 @@
           <button class="close-popup" data-closeMyWishlistPopup2><span class="icon-wishlist-cross"></span></button>
         </div>
         <div class="wishlist-modal__body">
-          <select class="hulk-wishlists" data-sidebarWidgetHulkWishlists style="display: none;"></select>
+          <select
+            class="hulk-wishlists"
+            data-sidebarWidgetHulkWishlists
+            style="display: none;"
+            aria-label="hulk-wishlists"
+          ></select>
           <div class="wishlist-empty" data-hulkemptywishlist="" style="display: none;">
             <div class="empty_content">
               <span>Please add product to your wishlist to see them here.</span>
@@ -28,6 +33,7 @@
                 name="select_all"
                 value="select_all"
                 data-com.bitwarden.browser.user-edited="yes"
+                aria-label="hulk_select_all"
 
               ><span>Select All</span>
             </li>
@@ -71,7 +77,12 @@
           <button class="close-popup" data-closeMyWishlistDrawer2><span class="icon-wishlist-cross"></span></button>
         </div>
         <div class="wishlist-modal__body">
-          <select class="hulk-wishlists multiple-wishlists" data-hulkDrawerWishlists style="display: none;"></select>
+          <select
+            class="hulk-wishlists multiple-wishlists"
+            data-hulkDrawerWishlists
+            style="display: none;"
+            aria-label="hulk-wishlists multiple-wishlists"
+          ></select>
           <div class="wishlist-empty" data-hulkemptywishlist="" style="display: none;">
             <div class="empty_content">
               <span>Please add product to your wishlist to see them here.</span>
@@ -90,6 +101,7 @@
                 name="select_all"
                 value="select_all"
                 data-com.bitwarden.browser.user-edited="yes"
+                aria-label="hulk_select_drawer_all"
 
               ><span>Select All</span>
             </li>
@@ -178,9 +190,16 @@
                   >
                     <span class="icon-wishlist-cross"></span>
                   </button>
-                  <label for="newWishlist" class="wishlist-checkbox"
-                    ><span></span><input data-newWishlist type="text" placeholder="Ex. Watch" value=""
-                  ></label>
+                  <div for="newWishlist" class="wishlist-checkbox">
+                    <span></span
+                    ><input
+                      data-newWishlist
+                      type="text"
+                      placeholder="Ex. Watch"
+                      value=""
+                      aria-label="wishlist-checkbox"
+                    >
+                  </div>
                   <button class="wishlist-btn hulkBtnStyle" data-saveNewWishlist>Save</button>
                 </div>
               </li>
@@ -427,7 +446,15 @@
           {% endif %}
 
           <form class="input-group search-bar" style="padding: 0;">
-            <input type="text" id="shareURL" value="" class="input-group-field" data-shareURL readonly>
+            <input
+              type="text"
+              id="shareURL"
+              value=""
+              class="input-group-field"
+              data-shareURL
+              aria-label="shareURL"
+              readonly
+            >
             <span class="input-group-btn">
               <button type="button" class="wishlist-btn hulkBtnStyle" data-copyshareURLButton></button>
             </span>
@@ -668,7 +695,15 @@
             <a href="/account/login" class="hulkBtnStyle login-drawer" data-loginBtn style="display: none;">Login</a>
           </div>
           <form class="input-group search-bar" style="padding: 0;">
-            <input type="text" id="guestShareURL" value="" class="input-group-field" data-shareGuestURL readonly>
+            <input
+              type="text"
+              id="guestShareURL"
+              value=""
+              class="input-group-field"
+              data-shareGuestURL
+              aria-label="guestShareURL"
+              readonly
+            >
             <span class="input-group-btn">
               <button type="button" class="wishlist-btn hulkBtnStyle" data-copyGuestshareURLButton></button>
             </span>
@@ -808,7 +843,15 @@
             </ul>
           {% endif %}
           <form class="input-group search-bar" style="padding: 0;">
-            <input type="text" id="productShareURL" value="" class="input-group-field" data-productShareURL readonly>
+            <input
+              type="text"
+              id="productShareURL"
+              value=""
+              class="input-group-field"
+              data-productShareURL
+              aria-label="productShareURL"
+              readonly
+            >
             <span class="input-group-btn">
               <button type="button" class="wishlist-btn hulkBtnStyle" data-copyProductShareURLButton></button>
             </span>

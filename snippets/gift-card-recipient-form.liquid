@@ -76,6 +76,7 @@
               aria-invalid="true"
               aria-describedby="RecipientForm-email-error-{{ section.id }}"
             {% endif %}
+            aria-label="email"
           >
           <label class="field__label" for="Recipient-email-{{ section.id }}">
             <span class="recipient-email-label required">{{ 'recipient.form.email_label' | t }}</span>
@@ -112,6 +113,7 @@
               aria-invalid="true"
               aria-describedby="RecipientForm-name-error-{{ section.id }}"
             {% endif %}
+            aria-label="recipient-name"
           >
           <label class="field__label" for="Recipient-name-{{ section.id }}">
             {{- 'recipient.form.name_label' | t -}}

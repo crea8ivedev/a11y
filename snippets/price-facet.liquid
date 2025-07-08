@@ -14,6 +14,7 @@
     data-pattern="\d| |,|\."
     data-min="0"
     data-max="{{ filter.range_max | money_without_currency }}"
+    aria-label="price-from"
   >
   <label class="field__label" for="{{ id_prefix }}{{ filter.label | escape }}-GTE">
     {{- 'products.facets.from' | t -}}
@@ -38,6 +39,7 @@
     data-pattern="\d| |,|\."
     data-min="0"
     data-max="{{ filter.range_max | money_without_currency }}"
+    aria-label="price-to"
   >
   <label class="field__label" for="{{ id_prefix }}{{ filter.label | escape }}-LTE">
     {{- 'products.facets.to' | t -}}
