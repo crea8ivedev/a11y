@@ -230,6 +230,7 @@
                             class="button-show-more link underlined-link"
                             id="Show-More-{{ forloop.index }}-{{ section.id }}"
                             type="button"
+                            aria-label="button-show-more"
                           >
                             <span class="label-show-more label-text"
                               ><span aria-hidden="true">+ </span>{{ 'products.facets.show_more' | t -}}
@@ -489,6 +490,7 @@
                             class="mobile-facets__close-button link link--text focus-inset"
                             aria-expanded="true"
                             type="button"
+                            aria-label="close-button"
                           >
                             {{- 'icon-arrow.svg' | inline_asset_content -}}
                             <span>{{ filter.label | escape }}</span>
@@ -603,6 +605,7 @@
                               type="button"
                               class="ctm-button button-with-arrow"
                               onclick="this.closest('.mobile-facets__wrapper').querySelector('summary').click()"
+                              aria-label="apply-button"
                             >
                               {{ 'products.facets.apply' | t }}
                               <svg
@@ -644,6 +647,7 @@
                             class="mobile-facets__close-button link link--text focus-inset"
                             aria-expanded="true"
                             type="button"
+                            aria-label="close-button"
                           >
                             {{- 'icon-arrow.svg' | inline_asset_content -}}
                             {{ filter.label | escape }}
@@ -667,6 +671,7 @@
                               type="button"
                               class="ctm-button button-with-arrow"
                               onclick="this.closest('.mobile-facets__wrapper').querySelector('summary').click()"
+                              aria-label="apply-button"
                             >
                               {{ 'products.facets.apply' | t }}
                               <svg
@@ -736,6 +741,7 @@
                   type="button"
                   class="ctm-button button-with-arrow"
                   onclick="this.closest('.mobile-facets__wrapper').querySelector('summary').click()"
+                  aria-label="apply-button"
                 >
                   {{ 'products.facets.apply' | t }}
                   <svg

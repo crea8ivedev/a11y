@@ -211,7 +211,7 @@
                       </label>
                       <div class="price-per-item__container">
                         <quantity-input class="quantity">
-                          <button class="quantity__button" name="minus" type="button">
+                          <button class="quantity__button" name="minus" type="button" aria-label="minus">
                             <span class="visually-hidden">
                               {{- 'products.product.quantity.decrease' | t: product: product.title | escape -}}
                             </span>
@@ -236,7 +236,7 @@
                             form="{{ product_form_id }}"
                             aria-label="quantity"
                           >
-                          <button class="quantity__button" name="plus" type="button">
+                          <button class="quantity__button" name="plus" type="button" aria-label="plus">
                             <span class="visually-hidden">
                               {{- 'products.product.quantity.increase' | t: product: product.title | escape -}}
                             </span>
@@ -399,6 +399,7 @@
                                   class="button-show-more link underlined-link"
                                   id="Show-More-{{ section.id }}"
                                   type="button"
+                                  aria-label="show more"
                                 >
                                   <span class="label-show-more label-text"
                                     ><span aria-hidden="true">+ </span>{{ 'products.facets.show_more' | t }}

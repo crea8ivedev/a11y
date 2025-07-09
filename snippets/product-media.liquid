@@ -51,7 +51,12 @@
     >
   {%- endif -%}
 
-  <button id="Deferred-Poster-Modal-{{ media.id }}" class="deferred-media__poster" type="button">
+  <button
+    id="Deferred-Poster-Modal-{{ media.id }}"
+    class="deferred-media__poster"
+    type="button"
+    aria-label="Deferred-Poster-Modal"
+  >
     <span class="deferred-media__poster-button motion-reduce">
       {%- if media.media_type == 'model' -%}
         <span class="svg-wrapper">{{ 'icon-3d-model' | inline_asset_content }}</span>

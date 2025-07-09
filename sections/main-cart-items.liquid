@@ -242,12 +242,13 @@
                                 type="button"
                                 aria-expanded="false"
                                 class="quantity-popover__info-button quantity-popover__info-button--icon-only button button--tertiary small-hide medium-hide"
+                                aria-label="info icon"
                               >
                                 {{- 'icon-info.svg' | inline_asset_content -}}
                               </button>
                             {%- endif -%}
                             <quantity-input class="quantity cart-quantity">
-                              <button class="quantity__button" name="minus" type="button">
+                              <button class="quantity__button" name="minus" type="button" aria-label="minus">
                                 <span class="visually-hidden">
                                   {{- 'products.product.quantity.decrease' | t: product: item.product.title | escape -}}
                                 </span>
@@ -274,7 +275,7 @@
                                 id="Quantity-{{ item.index | plus: 1 }}"
                                 data-index="{{ item.index | plus: 1 }}"
                               >
-                              <button class="quantity__button" name="plus" type="button">
+                              <button class="quantity__button" name="plus" type="button" aria-label="plus">
                                 <span class="visually-hidden">
                                   {{- 'products.product.quantity.increase' | t: product: item.product.title | escape -}}
                                 </span>
@@ -304,6 +305,7 @@
                             type="button"
                             class="quantity-popover__info-button quantity-popover__info-button--icon-with-label button button--tertiary large-up-hide"
                             aria-expanded="false"
+                            aria-label="quality popover button"
                           >
                             {{- 'icon-info.svg' | inline_asset_content -}}
                             <span>

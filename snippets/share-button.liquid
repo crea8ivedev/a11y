@@ -13,7 +13,7 @@
 <script src="{{ 'share.js' | asset_url }}" defer="defer"></script>
 
 <share-button id="Share-{{ section.id }}" class="share-button quick-add-hidden" {{ block.shopify_attributes }}>
-  <button class="hidden ctm-button button-with-arrow !mx-auto">
+  <button class="hidden ctm-button button-with-arrow !mx-auto" aria-label="share">
     {% unless template.name == 'article' %}
       <span class="svg-wrapper">{{ 'icon-share.svg' | inline_asset_content }}</span>
     {% endunless %}
@@ -44,13 +44,13 @@
         >
         <label class="field__label" for="ShareUrl-{{ section.id }}">{{ 'general.share.share_url' | t }}</label>
       </div>
-      <button class="share-button__close hidden">
+      <button class="share-button__close hidden" aria-label="share-close">
         <span class="svg-wrapper">
           {{- 'icon-close.svg' | inline_asset_content -}}
         </span>
         <span class="visually-hidden">{{ 'general.share.close' | t }}</span>
       </button>
-      <button class="share-button__copy">
+      <button class="share-button__copy" aria-label="copy">
         <span class="svg-wrapper">
           {{- 'icon-copy.svg' | inline_asset_content -}}
         </span>

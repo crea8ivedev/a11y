@@ -97,10 +97,10 @@
       {%- endif -%}
     </div>
 
-    <button>
+    <button aria-label="activate">
       {{ 'customer.activate_account.submit' | t }}
     </button>
-    <button name="decline">
+    <button name="decline" aria-label="decline">
       {{ 'customer.activate_account.cancel' | t }}
     </button>
   {%- endform -%}

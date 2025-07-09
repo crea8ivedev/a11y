@@ -282,7 +282,7 @@
                             <div class="cart-item__quantity-wrapper quantity-popover-wrapper">
                               <div class="quantity-popover-container{% if has_qty_rules or has_vol_pricing %} quantity-popover-container--hover{% endif %}">
                                 <quantity-input class="quantity cart-quantity">
-                                  <button class="quantity__button" name="minus" type="button">
+                                  <button class="quantity__button" name="minus" type="button" aria-label="minus">
                                     <span class="visually-hidden">
                                       {{-
                                         'products.product.quantity.decrease'
@@ -313,7 +313,7 @@
                                     id="Drawer-quantity-{{ item.index | plus: 1 }}"
                                     data-index="{{ item.index | plus: 1 }}"
                                   >
-                                  <button class="quantity__button" name="plus" type="button">
+                                  <button class="quantity__button" name="plus" type="button" aria-label="plus">
                                     <span class="visually-hidden">
                                       {{-
                                         'products.product.quantity.increase'
@@ -348,6 +348,7 @@
                                 type="button"
                                 class="quantity-popover__info-button quantity-popover__info-button--icon-with-label button button--tertiary"
                                 aria-expanded="false"
+                                aria-label="quantity-popover"
                               >
                                 <span class="svg-wrapper">
                                   {{- 'icon-info.svg' | inline_asset_content -}}
@@ -548,6 +549,7 @@
             class="cart__checkout-button button"
             name="checkout"
             form="CartDrawer-Form"
+            aria-label="CartDrawer Checkout"
             {% if cart == empty %}
               disabled
             {% endif %}

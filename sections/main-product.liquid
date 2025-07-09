@@ -304,7 +304,7 @@
                 <div class="pdp-accordion-main {{ block.settings.faq_extra_class }} {{ block.shopify_attributes }}">
                   {% for faq in product.metafields.custom.pdp_faq.value %}
                     <div class="pdp-accordion-item  {{ block.shopify_attributes }}">
-                      <button class="pdp-accordion-header">
+                      <button class="pdp-accordion-header" aria-label="faq-question">
                         {{ faq.question }}
                         <span class="arrow-icon">
                           {% render 'pdp-faq-arrow' %}
@@ -344,7 +344,7 @@
                     </label>
                     <div class="price-per-item__container">
                       <quantity-input class="quantity" data-url="{{ product.url }}" data-section="{{ section.id }}">
-                        <button class="quantity__button" name="minus" type="button">
+                        <button class="quantity__button" name="minus" type="button" aria-label="minus">
                           <span class="visually-hidden">
                             {{- 'products.product.quantity.decrease' | t: product: product.title | escape -}}
                           </span>
@@ -369,7 +369,7 @@
                           form="{{ product_form_id }}"
                           aria-label="quantity"
                         >
-                        <button class="quantity__button" name="plus" type="button">
+                        <button class="quantity__button" name="plus" type="button" aria-label="plus">
                           <span class="visually-hidden">
                             {{- 'products.product.quantity.increase' | t: product: product.title | escape -}}
                           </span>
@@ -525,6 +525,7 @@
                                 class="button-show-more link underlined-link"
                                 id="Show-More-{{ section.id }}"
                                 type="button"
+                                aria-label="show more"
                               >
                                 <span class="label-show-more label-text"
                                   ><span aria-hidden="true">+ </span>{{ 'products.facets.show_more' | t }}
@@ -587,6 +588,7 @@
                     class="product-popup-modal__button link"
                     type="button"
                     aria-haspopup="dialog"
+                    aria-label="product popup"
                   >
                     {{ block.settings.text | default: block.settings.page.title | escape }}
                   </button>
@@ -867,14 +869,16 @@
         {% endif %}
       </p>
     </div>
-    <button id="toggle-cart-drawer" class="toggle-button" aria-expanded="false">+</button>
+    <button id="toggle-cart-drawer" class="toggle-button" aria-expanded="false" aria-label="toggle cart drawer">
+      +
+    </button>
   </div>
 
   <div class="sticky-cart-body">
     {% if product.variants.size > 1 %}
       <div class="variant-options">
         {% for variant in product.variants %}
-          <button class="variant-button" data-variant-id="{{ variant.id }}">
+          <button class="variant-button" data-variant-id="{{ variant.id }}" aria-label="variant button">
             {{ variant.title }}
           </button>
         {% endfor %}
@@ -883,7 +887,7 @@
 
     <form method="post" action="/cart/add">
       <input type="hidden" name="id" id="variant-id-input" value="{{ product.variants.first.id }}">
-      <button type="submit" class="add-to-cart-btn">Add to cart</button>
+      <button type="submit" class="add-to-cart-btn" aria-label="Add to cart">Add to cart</button>
     </form>
   </div>
 </div>

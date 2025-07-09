@@ -32,6 +32,7 @@
     aria-expanded="false"
     aria-controls="{{ localPosition }}-country-results"
     aria-describedby="{{ localPosition }}Label"
+    aria-label="disclosure__button"
   >
     <span>
       {{- localization.country.name }} |
@@ -62,8 +63,9 @@
             autocomplete="off"
             autocapitalize="off"
             spellcheck="false"
+            aria-label="country-filter-input"
           >
-          <label class="field__label" for="country-filter-input">{{ 'localization.search' | t }}</label>
+          {% comment %} <label class="field__label" for="country-filter-input">{{ 'localization.search' | t }}</label> {% endcomment %}
           <button
             type="reset"
             class="country-filter__reset-button field__button hidden"

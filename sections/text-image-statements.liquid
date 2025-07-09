@@ -34,7 +34,7 @@
           </span>
         {% endif %}
 
-        {% if block.settings.post_text %}
+        {% if block.settings.post_text != blank %}
           <h2 class="h1 normal-case text-primary-blue font-normal xl:leading-52 max-xl:text-28 max-mdscreen6:text-24">
             {{ block.settings.post_text }}
           </h2>

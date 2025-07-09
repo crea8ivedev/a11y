@@ -93,6 +93,7 @@
       type="button"
       aria-haspopup="dialog"
       data-media-id="{{ media.id }}"
+      aria-label="product__media-toggle"
     >
       <span class="visually-hidden">
         {{ 'products.product.media.open_media' | t: index: position }}
@@ -109,7 +110,12 @@
     {%- else -%}
       <deferred-media class="deferred-media media media--transparent" data-media-id="{{ media.id }}">
     {%- endif -%}
-    <button id="Deferred-Poster-Modal-{{ media.id }}" class="deferred-media__poster" type="button">
+    <button
+      id="Deferred-Poster-Modal-{{ media.id }}"
+      class="deferred-media__poster"
+      type="button"
+      aria-label="Deferred-Poster-Modal"
+    >
       <span class="deferred-media__poster-button motion-reduce">
         {%- if media.media_type == 'model' -%}
           <span class="visually-hidden">{{ 'products.product.media.play_model' | t }}</span>

@@ -145,7 +145,7 @@
                   data-action="confirm"
                   class="{% if items_in_cart == 0 %}hidden{% endif %}"
                 >
-                  <button class="button button--tertiary" type="button">
+                  <button class="button button--tertiary" type="button" aria-label="remove">
                     <span class="svg-wrapper">
                       {{- 'icon-remove.svg' | inline_asset_content -}}
                     </span>
@@ -236,7 +236,7 @@
                   class="{% if items_in_cart == 0 %}hidden{% endif %}"
                   data-action="confirm"
                 >
-                  <button class="button button--tertiary" type="button">
+                  <button class="button button--tertiary" type="button" aria-label="remove">
                     <span class="svg-wrapper">
                       {{- 'icon-remove.svg' | inline_asset_content -}}
                     </span>
@@ -269,6 +269,7 @@
             <button
               class="quick-order-list__button-confirm button button--secondary"
               type="button"
+              aria-label="quick-order-list__button-confirm"
             >
               {{- 'sections.quick_order_list.remove_all' | t -}}
             </button>
@@ -279,6 +280,7 @@
             <button
               class="quick-order-list__button-cancel button button--tertiary"
               type="button"
+              aria-label="quick-order-list__button-cancel"
             >
               {{- 'sections.quick_order_list.cancel' | t -}}
             </button>
