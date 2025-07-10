@@ -86,7 +86,7 @@
         "media_card_cgArVA": {
           "type": "media_card",
           "settings": {
-            "video_aura": "shopify://files/videos/file_example_MP4_640_3MG.mp4",
+            "image": "shopify://shop_images/251d6cc3e2965fa2e249450c90b287aa3f389922_26b5bcd3-c811-49d6-8600-ca029e2dafbe.png",
             "label": "Serums",
             "collection_url": "shopify://collections/serums"
           }
@@ -94,7 +94,7 @@
         "media_card_7jTnTw": {
           "type": "media_card",
           "settings": {
-            "image": "shopify://shop_images/dsa.png",
+            "image": "shopify://shop_images/Aura_Night_Cream.png",
             "label": "Creams",
             "collection_url": "shopify://collections/creams"
           }
@@ -102,7 +102,7 @@
         "media_card_XRNRA8": {
           "type": "media_card",
           "settings": {
-            "image": "shopify://shop_images/4c55a79f5fe124b5b0bb225991d4ee213eb8ee03.png",
+            "image": "shopify://shop_images/Soothing_Moisturzier.png",
             "label": "Moisturizer",
             "collection_url": "shopify://collections/moisturizer"
           }
@@ -384,7 +384,7 @@
       ],
       "settings": {
         "video_aura": "shopify://files/videos/file_example_MP4_640_3MG.mp4",
-        "product": "exfoliating-serum",
+        "product": "vitamin-c",
         "color_scheme": "scheme-e8ed460d-f63f-4071-acf9-6effb87b4538",
         "secondary_background": false,
         "media_size": "medium",

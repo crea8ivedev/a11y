@@ -595,7 +595,7 @@ localization-form .disclosure__list-wrapper .country-filter {
 }
 .featured-product .product-media-container .product__media img,
 .featured-product .product-media-container .product__media {
-  @apply !p-0 rounded-25;
+  @apply !p-0 rounded-25 object-cover;
 }
 .featured-product .product-media-inner media-gallery {
   @apply mdscreen6:aspect-[0.64] aspect-square;
@@ -640,6 +640,7 @@ localization-form .disclosure__list-wrapper .country-filter {
 .featured-product.product.grid {
   @apply small_desktop:gap-x-60 gap-x-30 max-mdscreen2:flex-col max-mdscreen2:gap-20;
 }
+
 /* quantity css */
 .product .product-form__quantity .form__label {
   @apply hidden;

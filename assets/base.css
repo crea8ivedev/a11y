@@ -2670,7 +2670,13 @@ details[open] > .search-modal {
   opacity: 1;
   animation: animateMenuOpen var(--duration-default) ease;
 }
-
+#search-popup.active .search-modal {
+  opacity: 1 !important;
+  animation: animateMenuOpen var(--duration-default) ease;
+}
+#search-popup.active .modal-overlay {
+  display: block !important;
+}
 details[open] .modal-overlay {
   display: block;
 }

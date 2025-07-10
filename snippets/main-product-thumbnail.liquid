@@ -72,36 +72,35 @@
           </span>
         {% else %}
           <span class="svg-wrapper">
-            {{- 'icon-zoom-copy.svg' | inline_asset_content -}}
+            {{- 'icon-zoom.svg' | inline_asset_content -}}
           </span>
       {% endcase %}
     </span>
     {%- render 'loading-spinner' -%}
     <div class="product__media media media--transparent">
-      {{
-        media.preview_image
-        | image_url: width: 1946
-        | image_tag:
-          class: image_class,
-          loading: lazy,
-          sizes: sizes,
-          widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
-      }}
+      <a href="{{ product.url }}">
+        {{
+          media.preview_image
+          | image_url: width: 1946
+          | image_tag:
+            class: image_class,
+            loading: lazy,
+            sizes: sizes,
+            widths: '246, 493,
+           600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
+        }}
+      </a>
     </div>
     <button
       class="product__media-toggle quick-add-hidden product__media-zoom-{{ section.settings.image_zoom }}"
       type="button"
       aria-haspopup="dialog"
       data-media-id="{{ media.id }}"
-      aria-label="product__media-toggle"
     >
       <span class="visually-hidden">
         {{ 'products.product.media.open_media' | t: index: position }}
       </span>
     </button>
-    {% if product.available %}
-      {% render 'hulkapps-wishlist-product-btn', product: product %}
-    {% endif %}
   </modal-opener>
 
   {%- if media.media_type != 'image' -%}
@@ -110,12 +109,7 @@
     {%- else -%}
       <deferred-media class="deferred-media media media--transparent" data-media-id="{{ media.id }}">
     {%- endif -%}
-    <button
-      id="Deferred-Poster-Modal-{{ media.id }}"
-      class="deferred-media__poster"
-      type="button"
-      aria-label="Deferred-Poster-Modal"
-    >
+    <button id="Deferred-Poster-Modal-{{ media.id }}" class="deferred-media__poster" type="button">
       <span class="deferred-media__poster-button motion-reduce">
         {%- if media.media_type == 'model' -%}
           <span class="visually-hidden">{{ 'products.product.media.play_model' | t }}</span>

@@ -13,7 +13,7 @@
       "type": "main-login",
       "settings": {
         "enable_shop_login_button": false,
-        "login_image": "shopify://shop_images/login-img.jpg",
+        "login_image": "shopify://shop_images/Login.jpg",
         "padding_top": 60,
         "padding_bottom": 60
       }

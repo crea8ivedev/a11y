@@ -159,7 +159,7 @@
           "type": "button",
           "settings": {
             "button_label": "Contact Us",
-            "button_link": "",
+            "button_link": "shopify://pages/contact",
             "button_style_secondary": false
           }
         }
@@ -300,7 +300,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop All",
-            "button_link_1": "",
+            "button_link_1": "shopify://collections/feature-products",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -373,7 +373,7 @@
         "faq_subheading": "Shop Our Summer Trendy Collection.",
         "contact_heading": "Still Looking For an Answer?",
         "contact_text": "Shoot our team an email and we’ll get back to you ASAP (definitely within 24 hours).",
-        "contact_button_link": "#",
+        "contact_button_link": "shopify://pages/contact",
         "contact_button_label": "Contact Us"
       }
     }

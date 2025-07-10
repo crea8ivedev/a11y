@@ -12,7 +12,7 @@
     "main": {
       "type": "main-register",
       "settings": {
-        "register_image": "shopify://shop_images/register-img.jpg",
+        "register_image": "shopify://shop_images/sign-up.png",
         "padding_top": 60,
         "padding_bottom": 60
       }
