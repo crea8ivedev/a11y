@@ -19,7 +19,7 @@
             "tagline": "Skin Friendly",
             "heading": "Unveil Your Radiance with Aura Beauty",
             "subtext": "Elevating Your Natural Glow with Every Application. Dive into Luxurious Beauty, Redefined.",
-            "button_link": "#",
+            "button_link": "shopify://collections/moisturizer",
             "button_text": "Shop Now"
           }
         },
@@ -30,7 +30,7 @@
             "tagline": "Skin Friendly",
             "heading": "Unveil Your Radiance with Aura Beauty",
             "subtext": "Elevating Your Natural Glow with Every Application. Dive into Luxurious Beauty, Redefined.",
-            "button_link": "#",
+            "button_link": "shopify://collections/serums",
             "button_text": "Shop Now"
           }
         }
@@ -88,7 +88,7 @@
           "settings": {
             "video_aura": "shopify://files/videos/file_example_MP4_640_3MG.mp4",
             "label": "Serums",
-            "collection_url": ""
+            "collection_url": "shopify://collections/serums"
           }
         },
         "media_card_7jTnTw": {
@@ -96,7 +96,7 @@
           "settings": {
             "image": "shopify://shop_images/dsa.png",
             "label": "Creams",
-            "collection_url": ""
+            "collection_url": "shopify://collections/creams"
           }
         },
         "media_card_XRNRA8": {
@@ -104,7 +104,7 @@
           "settings": {
             "image": "shopify://shop_images/4c55a79f5fe124b5b0bb225991d4ee213eb8ee03.png",
             "label": "Moisturizer",
-            "collection_url": ""
+            "collection_url": "shopify://collections/moisturizer"
           }
         }
       },
@@ -117,7 +117,7 @@
         "heading": "Our Collections",
         "subtext": "Cursus sit amet dictum sit amet. Cras adipiscing enim eu turpis egestas pretium aenean.",
         "button_label": "Shop All",
-        "button_url": "#",
+        "button_url": "shopify://collections/feature-products",
         "padding_top": 0,
         "padding_bottom": 60
       }
@@ -133,7 +133,7 @@
         "show_description": false,
         "description_style": "body",
         "button_txt": "Shop all collections",
-        "button_url": "#",
+        "button_url": "shopify://collections/feature-products",
         "columns_desktop": 4,
         "enable_desktop_slider": false,
         "full_width": false,
@@ -142,7 +142,7 @@
         "color_scheme": "scheme-e8ed460d-f63f-4071-acf9-6effb87b4538",
         "image_ratio": "square",
         "image_shape": "default",
-        "show_secondary_image": false,
+        "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
         "quick_add": "none",
@@ -231,7 +231,9 @@
         "item_xrGxGY"
       ],
       "name": "Marquee",
-      "settings": {}
+      "settings": {
+        "extra_class": ""
+      }
     },
     "image_with_text_diifcB": {
       "type": "image-with-text",
@@ -262,7 +264,7 @@
           "type": "button",
           "settings": {
             "button_label": "About Us",
-            "button_link": "",
+            "button_link": "shopify://pages/about-us",
             "button_style_secondary": false
           }
         }
@@ -367,7 +369,7 @@
         "buy_buttons_J7bXhV": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": false,
+            "show_dynamic_checkout": true,
             "show_gift_card_recipient": false
           }
         }
@@ -390,7 +392,7 @@
         "media_fit": "contain",
         "media_position": "left",
         "image_zoom": "none",
-        "hide_variants": false,
+        "hide_variants": true,
         "enable_video_looping": false,
         "padding_top": 0,
         "padding_bottom": 60
@@ -439,7 +441,7 @@
         "faq_subheading": "Shop Our Summer Trendy Collection.",
         "contact_heading": "Still Looking For an Answer?",
         "contact_text": "Shoot our team an email and we’ll get back to you ASAP (definitely within 24 hours).",
-        "contact_button_link": "#",
+        "contact_button_link": "shopify://pages/contact",
         "contact_button_label": "Contact Us"
       }
     }
