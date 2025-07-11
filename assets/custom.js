@@ -10,6 +10,15 @@
 //   });
 // });
 
+document
+  .querySelector("details.search-popup")
+  .addEventListener("toggle", function () {
+    if (this.open) {
+      this.classList.add("active");
+    } else {
+      this.classList.remove("active");
+    }
+  });
 function scrollDownByBanner() {
   const banner = document.querySelector(
     ".custom-slider-wrapper, .banner__media",

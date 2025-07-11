@@ -436,7 +436,7 @@ localization-form .disclosure__list-wrapper .country-filter {
   @apply static ml-10 w-auto h-full;
 }
 .header nav.header__inline-menu .header__menu-item {
-  @apply p-0 font-body text-16 leading-[21px] font-medium tracking-normal text-primary-black hover:underline;
+  @apply p-0 font-body text-16 leading-[21px] font-medium tracking-normal text-primary-black hover:no-underline;
 }
 .header .menu-drawer .menu-drawer__menu-item,
 .header .menu-drawer .menu-drawer__close-button {
@@ -480,7 +480,7 @@ localization-form .disclosure__list-wrapper .country-filter {
 }
 .mega-menu .mega-menu__product-image-wrapper,
 .mega-menu .mega-menu__product-image-wrapper img {
-  @apply rounded-[25px] aspect-[13/15];
+  @apply rounded-[25px] aspect-[15/15];
 }
 .mega-menu .mega-menu__product-image-wrapper img {
   @apply object-cover;

@@ -53,7 +53,7 @@
                               <div class="mega-menu__product-image-wrapper">
                                 {%- if product.featured_image -%}
                                   <img
-                                    src="{{ product.featured_image | image_url }}"
+                                    src="{{ product.featured_image | image_url: width:500 }}"
                                     height="auto"
                                     width="auto"
                                     loading="lazy"

@@ -2764,7 +2764,15 @@ menu-drawer.mobile-facets__wrapper
 .customer-common-image-right form {
   @apply !m-0;
 }
-
+.ctm-index .shopify-payment-button__button--unbranded {
+  @apply cursor-pointer transition-all duration-300 ease-in-out w-fit font-body font-semibold text-white mdscreen6:min-h-45 min-h-40 mdscreen6:px-25 px-16 text-16 leading-100p tracking-normal flex justify-center items-center gap-x-10 bg-primary-blue border border-primary-blue rounded-[100px] hover:bg-transparent hover:text-primary-blue capitalize;
+}
+.ctm-index .shopify-payment-button__button--unbranded:hover {
+  @apply !bg-white !text-primary-blue;
+}
+.ctm-index .product-form__buttons {
+  @apply flex flex-col gap-20;
+}
 .customer-common-inside form .field {
   @apply flex-col-reverse gap-[15px] m-0;
 }
