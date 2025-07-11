@@ -117,7 +117,7 @@
         "heading": "Our Collections",
         "subtext": "Cursus sit amet dictum sit amet. Cras adipiscing enim eu turpis egestas pretium aenean.",
         "button_label": "Shop All",
-        "button_url": "shopify://collections/feature-products",
+        "button_url": "shopify://collections/best-seller",
         "padding_top": 0,
         "padding_bottom": 60
       }
@@ -125,7 +125,7 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "collection": "feature-products",
+        "collection": "best-seller",
         "products_to_show": 4,
         "title": "Feature Products",
         "heading_size": "h2",
@@ -133,7 +133,7 @@
         "show_description": false,
         "description_style": "body",
         "button_txt": "Shop all collections",
-        "button_url": "shopify://collections/feature-products",
+        "button_url": "shopify://collections/best-seller",
         "columns_desktop": 4,
         "enable_desktop_slider": false,
         "full_width": false,
