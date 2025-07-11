@@ -3009,3 +3009,11 @@ menu-drawer.mobile-facets__wrapper
 }
 
 /* serach-result */
+
+/* header */
+
+.header .mega-menu__inner {
+  @apply !max-w-[1280px] mx-auto;
+}
+
+/* header */
