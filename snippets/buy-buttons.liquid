@@ -98,6 +98,11 @@
             {{ form | payment_button }}
           {%- endif -%}
         </div>
+        {%- if show_dynamic_checkout -%}
+          <div class="ctm-index_shopify-payments">
+            {{ form | payment_button }}
+          </div>
+        {%- endif -%}
       {%- endform -%}
     </product-form>
   {%- else -%}
