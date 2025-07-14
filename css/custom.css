@@ -3008,6 +3008,10 @@ menu-drawer.mobile-facets__wrapper
   @apply rounded-25;
 }
 
+/* body:has(details#search-details[open="true"]) {
+  overflow: hidden !important;
+} */
+
 /* serach-result */
 
 /* header */

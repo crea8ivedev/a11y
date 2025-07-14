@@ -10,15 +10,39 @@
 //   });
 // });
 
-document
-  .querySelector("details.search-popup")
-  .addEventListener("toggle", function () {
-    if (this.open) {
-      this.classList.add("active");
-    } else {
-      this.classList.remove("active");
-    }
+// search
+// search
+function toggleSearchDetails(event) {
+  event.preventDefault();
+  event.stopPropagation();
+
+  const detailsElement = document.getElementById("search-details");
+
+  // `willBeOpen` tells us the state *after* the toggle
+  const willBeOpen = !detailsElement.hasAttribute("open");
+
+  // Toggle the `open` attribute
+  detailsElement.toggleAttribute("open", willBeOpen);
+
+  // Add the class while closed, remove it while open
+  detailsElement.classList.toggle("close-verlay", !willBeOpen);
+}
+
+function closeSearchDetails() {
+  const detailsElement = document.getElementById("search-details");
+
+  detailsElement.removeAttribute("open"); // close it
+  detailsElement.classList.add("close-verlay"); // mark it as closed
+}
+
+const modalOverlay = document.querySelector(".modal-overlay");
+
+if (modalOverlay) {
+  modalOverlay.addEventListener("click", function () {
+    this.classList.add("close-overlay");
   });
+}
+
 function scrollDownByBanner() {
   const banner = document.querySelector(
     ".custom-slider-wrapper, .banner__media",
