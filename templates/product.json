@@ -397,6 +397,7 @@
         "media_card_PCR74Y",
         "media_card_D9exKb"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Our Collections",
         "subtext": "Cursus sit amet dictum sit amet. Cras adipiscing enim eu turpis egestas pretium aenean.",

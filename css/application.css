@@ -412,7 +412,7 @@ header localization-form {
 }
 .header .header__icons .header__icon .svg-wrapper,
 .header .header__icons .header__icon .svg {
-  @apply h-[22px] w-full;
+  @apply h-[23px] w-full;
 }
 .header .header__heading-logo-wrapper img {
   @apply w-full h-full;
