@@ -1979,7 +1979,7 @@
   .card
   .card__heading
   a:after {
-  @apply hidden;
+  @apply z-9;
 }
 
 .ctm-collection-page
@@ -2001,7 +2001,7 @@
   .card-wrapper
   .card
   .card__inner:before {
-  @apply opacity-0 !content-[''] !block absolute w-full h-full top-0 left-0 rounded-[25px] bg-[rgba(37,_37,_37,_0.5)] p-0 cursor-auto z-9 transition-all duration-300 ease-in-out;
+  @apply opacity-0 !content-[''] absolute w-full h-full top-0 left-0 rounded-[25px] bg-[rgba(37,_37,_37,_0.5)] p-0 cursor-auto z-9 transition-all duration-300 ease-in-out !hidden;
 }
 
 /* .ctm-collection-page
@@ -2111,7 +2111,7 @@
   .card-wrapper
   .card
   .card__heading:has(a):hover {
-  @apply underline;
+  @apply no-underline;
 }
 
 .ctm-collection-page
@@ -3036,19 +3036,24 @@ menu-drawer.mobile-facets__wrapper
 }
 
 .ctm-index .item-week-buy-main-block .ctm-index_shopify-payments {
-  @apply absolute w-full left-0 bottom-[20px] small_desktop:bottom-[40px];
+  @apply absolute left-0 bottom-[20px] small_desktop:bottom-[40px];
 }
 
 .ctm-index
   .item-week-buy-main-block
   .ctm-index_shopify-payments
   shopify-buy-it-now-button
-  button {
-  @apply w-full;
+  button.shopify-payment-button__button {
+  @apply !w-full;
 }
-
+.ctm-index .item-week-buy-main-block .ctm-index_shopify-payments {
+  @apply !w-full;
+}
 .ctm-product .ctm-index_shopify-payments {
   @apply hidden;
 }
+/* .item-week-buy-main-block .ctm-index_shopify-payments button.shopify-payment-button__button {
+  @apply !w-full !bg-red-50;
+} */
 
 /* edits */

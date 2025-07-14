@@ -110,7 +110,7 @@
             {%- endunless -%}
           </div>
         </div>
-        <div class="product__info-wrapper grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        <div class="product__info-wrapper grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} flex flex-col justify-center">
           <section
             id="ProductInfo-{{ section.id }}"
             class="product__info-container"
@@ -186,7 +186,7 @@
                     {{- product.selected_or_first_available_variant.sku -}}
                   </p>
                 {%- when 'quantity_selector' -%}
-                  <div class="item-week-buy-main-block small_desktop:py-40 py-20 small_desktop:my-40 my-20 border-y border-pale-grey flex items-baseline gap-x-20 relative">
+                  <div class="item-week-buy-main-block small_desktop:py-40 py-20 flex items-baseline gap-x-20 relative w-fit">
                     <div
                       id="Quantity-Form-{{ section.id }}"
                       class="product-form__input dsfkjdsgyweiruyewiurgfdsjhg product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
