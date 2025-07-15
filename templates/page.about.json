@@ -42,7 +42,7 @@
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "extra_class": "about-hero-banner",
-        "image": "shopify://shop_images/about.png",
+        "image": "shopify://shop_images/4ca6ed0ee25537c4b780ba9c968f1ea5694ddd89.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "image_behavior": "none",

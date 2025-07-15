@@ -15,10 +15,10 @@
         "slide_8PVmyV": {
           "type": "slide",
           "settings": {
-            "background_image": "shopify://shop_images/Frame_92.png",
+            "background_image": "shopify://shop_images/2a0567bdf822343797c98f63664aece69038f7fd.png",
             "tagline": "Serum",
             "heading": "Products to get your glow back",
-            "subtext": "June 17, 2025 <br>Elevating Your Natural Glow with Every Application. Dive into Luxurious Beauty, Redefined.",
+            "subtext": "June 17, 2025 Elevating Your Natural Glow with Every Application. Dive into Luxurious Beauty, Redefined.",
             "button_link": "shopify://blogs/news/products-to-get-your-glow-back",
             "button_text": "Read more"
           }
@@ -26,7 +26,7 @@
         "slide_PHGLg9": {
           "type": "slide",
           "settings": {
-            "background_image": "shopify://shop_images/Frame_92.png",
+            "background_image": "shopify://shop_images/2a0567bdf822343797c98f63664aece69038f7fd.png",
             "tagline": "Serum",
             "heading": "Products to get your glow back",
             "subtext": "June 17, 2025 Elevating Your Natural Glow with Every Application. Dive into Luxurious Beauty, Redefined.",
@@ -37,31 +37,19 @@
         "slide_wH4Hxj": {
           "type": "slide",
           "settings": {
-            "background_image": "shopify://shop_images/Frame_92.png",
+            "background_image": "shopify://shop_images/2a0567bdf822343797c98f63664aece69038f7fd.png",
             "tagline": "Serum",
             "heading": "Products to get your glow back",
             "subtext": "June 17, 2025 Elevating Your Natural Glow with Every Application. Dive into Luxurious Beauty, Redefined.",
             "button_link": "shopify://blogs/news/products-to-get-your-glow-back",
             "button_text": "Read more"
           }
-        },
-        "slide_VX7qVL": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "tagline": "",
-            "heading": "",
-            "subtext": "",
-            "button_link": "",
-            "button_text": "Shop Now"
-          }
         }
       },
       "block_order": [
         "slide_8PVmyV",
         "slide_PHGLg9",
-        "slide_wH4Hxj",
-        "slide_VX7qVL"
+        "slide_wH4Hxj"
       ],
       "name": "Hero Slider",
       "settings": {
