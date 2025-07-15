@@ -1,15 +1,3 @@
-// document.addEventListener("DOMContentLoaded", function () {
-//   new Swiper("#featured-gallery", {
-//     loop: true,
-//     pagination: {
-//       el: ".swiper-pagination",
-//       clickable: true,
-//     },
-//     slidesPerView: 1,
-//     spaceBetween: 10,
-//   });
-// });
-
 // search
 function toggleSearchDetails(event) {
   event.preventDefault();

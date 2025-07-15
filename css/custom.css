@@ -3042,7 +3042,6 @@ menu-drawer.mobile-facets__wrapper
 .ctm-index
   .item-week-buy-main-block
   .ctm-index_shopify-payments
-  shopify-buy-it-now-button
   button.shopify-payment-button__button {
   @apply !w-full;
 }
@@ -3052,8 +3051,5 @@ menu-drawer.mobile-facets__wrapper
 .ctm-product .ctm-index_shopify-payments {
   @apply hidden;
 }
-/* .item-week-buy-main-block .ctm-index_shopify-payments button.shopify-payment-button__button {
-  @apply !w-full !bg-red-50;
-} */
 
 /* edits */

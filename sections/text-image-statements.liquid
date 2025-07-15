@@ -25,7 +25,7 @@
           <span class="inline-block mx-12 rounded-full overflow-hidden mdscreen6:min-w-[158px] min-w-[120px] h-40 mdscreen6:h-[47px]">
             <img
               src="{{ block.settings.image | image_url: width: 300 }}"
-              alt="icon"
+              alt="{{ block.settings.image.alt }}"
               class="w-full h-full object-cover"
               loading="lazy"
               width="auto"
