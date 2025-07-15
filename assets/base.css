@@ -4011,5 +4011,15 @@ modal-opener.product__modal-opener .wishlist-btn .heart-hulk-animation {
   pointer-events: none !important;
   opacity: 0.5 !important;
 }
+.ctm-index
+  .quick-add-modal__content
+  .quick-add-modal__content-info
+  #ctm-product-info
+  .product
+  .product__info-wrapper
+  product-form
+  .product-form__buttons {
+  flex-direction: unset !important;
+}
 
 /* Sticky Add to cart End */

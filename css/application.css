@@ -1815,7 +1815,6 @@ cart-items .title-wrapper-with-link {
   product-form
   .product-form__buttons {
   @apply !gap-[9px];
-  flex-direction: unset !important;
 }
 
 .ctm-index .quick-add-modal .quick-add-modal__content .quick-add-modal__toggle {
@@ -1865,5 +1864,4 @@ cart-items .title-wrapper-with-link {
 .ctm-index .quick-add-modal .ctm-index_shopify-payments {
   @apply hidden;
 }
-
 /* edits */
