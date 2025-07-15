@@ -884,11 +884,14 @@
         {% endfor %}
       </div>
     {% endif %}
-
-    <form method="post" action="/cart/add">
-      <input type="hidden" name="id" id="variant-id-input" value="{{ product.variants.first.id }}">
-      <button type="submit" class="add-to-cart-btn" aria-label="Add to cart">Add to cart</button>
-    </form>
+    {% if product.available %}
+      <form method="post" action="/cart/add">
+        <input type="hidden" name="id" id="variant-id-input" value="{{ product.variants.first.id }}">
+        <button type="submit" class="add-to-cart-btn" aria-label="Add to cart">Add to cart</button>
+      </form>
+    {% else %}
+      <button class="ctm-button button-outline" aria-label="Sold out" disabled>Sold Out</button>
+    {% endif %}
   </div>
 </div>
 
