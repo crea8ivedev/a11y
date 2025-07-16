@@ -98,7 +98,7 @@
         "media_card_cgArVA": {
           "type": "media_card",
           "settings": {
-            "video_aura": "shopify://files/videos/1752587067783725.mp4",
+            "image": "shopify://shop_images/vitamin-c-serum-with-bottle-shadow.png",
             "label": "Serums",
             "collection_url": "shopify://collections/serums"
           }
