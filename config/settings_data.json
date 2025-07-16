@@ -180,6 +180,11 @@
         "type": "shopify://apps/a11ypro/blocks/accessibility-autofix/1b6292c6-755d-4340-89b4-449c98087cbf",
         "disabled": false,
         "settings": {}
+      },
+      "2783554875815837874": {
+        "type": "shopify://apps/sea-accessibility/blocks/app-embed/0ab9368b-426b-42b4-93ea-63d9c8e88707",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
