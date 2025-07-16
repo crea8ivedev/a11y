@@ -57,7 +57,7 @@
                   {% endif %}
                 {% elsif block.settings.image != blank %}
                   <img
-                    src="{{ block.settings.image | img_url: '800x' }}"
+                    src="{{ block.settings.image | img_url: 'master' }}"
                     alt="{{ block.settings.label | escape }}"
                     width="auto"
                     height="auto"

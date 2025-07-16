@@ -52,15 +52,15 @@
 
 <div class="custom-slider-wrapper relative overflow-hidden hero-section-slider {{ section.settings.extra_class }}">
   <div class="swiper customSwiper">
-    <div class="swiper-wrapper">
+    <div class="swiper-wrapper relative">
       {% for block in section.blocks %}
         {% assign image = block.settings.background_image %}
         {% if image != blank %}
           <div
-            class="swiper-slide mdscreen2:!h-[70vh] mdscreen6:!h-[40vh] !h-[90dvh] bg-cover mdscreen2:bg-center bg-[20%] !flex items-end before:absolute before:top-0 before:left-0 mdscreen2:before:hidden before:block before:w-full before:h-full before:bg-black before:opacity-[0.3] before:-z-[1]"
+            class="swiper-slide mdscreen2:!h-[70vh] mdscreen6:!h-[40vh] !h-[90dvh] bg-cover mdscreen2:bg-center bg-[20%] !flex items-end  {{ block.settings.extra_class }}"
             style="background-image: url('{{ image | image_url }}');"
           >
-            <div class="container_fluid">
+            <div class="container_fluid z-9">
               <div class="slide-content mdscreen2:max-w-[481px] mdscreen6:max-w-[400px] max-w-[290px]">
                 {% if block.settings.tagline != blank %}
                   <p class="mdscreen2:text-20 text-18 leading-24 mdscreen2:leading-[22.4px] text-white mdscreen2:mb-20 mb-10">
@@ -174,6 +174,11 @@
       "type": "slide",
       "name": "Slide",
       "settings": [
+        {
+          "type": "text",
+          "id": "extra_class",
+          "label": "Extra Class"
+        },
         {
           "type": "image_picker",
           "id": "background_image",

@@ -77,18 +77,9 @@
       {% endcase %}
     </span>
     {%- render 'loading-spinner' -%}
-    <div class="product__media media media--transparent">
+    <div class="product__media media media--transparent 456">
       <a href="{{ product.url }}">
-        {{
-          media.preview_image
-          | image_url: width: 1946
-          | image_tag:
-            class: image_class,
-            loading: lazy,
-            sizes: sizes,
-            widths: '246, 493,
-           600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
-        }}
+        {{ media.preview_image | image_url: width: 4096 | image_tag: class: image_class, loading: lazy }}
       </a>
     </div>
     <button

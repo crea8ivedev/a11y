@@ -15,6 +15,7 @@
         "slide_Ewnax7": {
           "type": "slide",
           "settings": {
+            "extra_class": "gredient-slide",
             "background_image": "shopify://shop_images/ca355ac202fffeddfae7c505c9e309b47ac13a1d.jpg",
             "tagline": "Skin Friendly",
             "heading": "Unveil Your Radiance with Aura Beauty",
@@ -26,6 +27,7 @@
         "slide_tCpNLx": {
           "type": "slide",
           "settings": {
+            "extra_class": "",
             "background_image": "shopify://shop_images/f3c0ce0eb1f53d01880494b40edf49b681a69628.png",
             "tagline": "Skin Friendly",
             "heading": "Unveil Your Radiance with Aura Beauty",
@@ -37,6 +39,7 @@
         "slide_Bbmht6": {
           "type": "slide",
           "settings": {
+            "extra_class": "",
             "background_image": "shopify://shop_images/2a0567bdf822343797c98f63664aece69038f7fd.png",
             "tagline": "Serum",
             "heading": "Products to get your glow back",

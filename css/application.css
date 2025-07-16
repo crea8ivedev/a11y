@@ -1864,4 +1864,10 @@ cart-items .title-wrapper-with-link {
 .ctm-index .quick-add-modal .ctm-index_shopify-payments {
   @apply hidden;
 }
+.custom-slider-wrapper .gredient-slide {
+  @apply after:content-[''] after:absolute after:top-0 after:h-full after:w-full after:left-0 after:bg-gradient-to-b after:bg-[linear-gradient(180deg,_rgba(0,_0,_0,_0.00)_0%,_rgba(0,_0,_0,_0.50)_100%)];
+}
+.ctm-search .article-card_description {
+  @apply justify-center;
+}
 /* edits */
