@@ -21,11 +21,11 @@
 }
 
 .main-section-title {
-  @apply font-heading font-regular text-28 min-576:text-30 min-990:text-32 min-1400:text-34 leading-153p tracking-normal;
+  @apply font-heading font-regular;
 }
 
 .main-title-28 {
-  @apply font-heading font-regular text-[22px] min-576:text-24 min-990:text-[26px] min-1400:text-28 leading-[125.714%] text-primary-blue tracking-normal;
+  @apply !font-heading !font-regular !text-primary-blue;
 }
 
 .main-title-36 {
@@ -166,7 +166,7 @@
   .price
   .price__container
   .price-item {
-  @apply !font-body !font-normal !text-18 min-1200:!text-20 !leading-110p !tracking-normal;
+  @apply !font-body !font-normal min-1200:!text-20 !leading-110p !tracking-normal;
 }
 
 .ctm-product-page
@@ -774,7 +774,7 @@
   .price
   .price__container
   .price-item {
-  @apply !font-body !font-normal !text-18 min-1200:!text-20 !leading-110p !tracking-normal;
+  @apply !font-body !font-normal min-1200:!text-20 !leading-110p !tracking-normal;
 }
 
 .ctm-collection-page
@@ -1409,7 +1409,7 @@
   .facet-filters__field
   .facet-filters__label
   * {
-  @apply font-body font-semibold text-16 leading-135p text-primary-black capitalize tracking-normal;
+  @apply font-body font-semibold leading-135p text-primary-black capitalize tracking-normal;
 }
 
 .facets-vertical-form .facet-filters .facet-filters__field .select {
@@ -1429,7 +1429,7 @@
 }
 
 .facets-vertical-form .facet-filters .facet-filters__field .select select {
-  @apply pl-[24px] pr-[41px] py-[11px] font-body font-semibold text-16 leading-135p text-primary-blue tracking-normal border-[1px] border-solid border-primary-blue rounded-[100px] !outline-0 !shadow-none !w-auto !min-w-[unset] !h-auto !min-h-[auto];
+  @apply pl-[24px] pr-[41px] py-[11px] font-body font-semibold leading-135p text-primary-blue tracking-normal border-[1px] border-solid border-primary-blue rounded-[100px] !outline-0 !shadow-none !w-auto !min-w-[unset] !h-auto !min-h-[auto];
 }
 
 .facets-vertical-form .product-count-vertical {
@@ -1438,7 +1438,7 @@
 
 .facets-vertical-form .product-count-vertical .product-count__text,
 .facets-vertical-form .product-count-vertical .product-count__text * {
-  @apply font-body font-semibold text-16 leading-135p text-primary-black capitalize tracking-normal;
+  @apply font-body font-semibold leading-135p text-primary-black capitalize tracking-normal;
 }
 
 .ctm-collection-page .facets-vertical {
@@ -1485,7 +1485,7 @@
 }
 
 .facets-container facet-filters-form .facets__summary span {
-  @apply font-body font-semibold text-16 leading-[137.5%] text-primary-black capitalize tracking-normal;
+  @apply font-body font-semibold leading-[137.5%] text-primary-black capitalize tracking-normal;
 }
 
 .facets-container
@@ -1541,7 +1541,7 @@
   .facets__item
   label
   .facet-checkbox__text {
-  @apply font-body font-normal text-16 leading-[137.5%] text-primary-black capitalize tracking-normal;
+  @apply font-body font-normal leading-[137.5%] text-primary-black capitalize tracking-normal;
 }
 
 .facets-container
@@ -1893,7 +1893,7 @@
   .price
   .price__sale
   .price-item {
-  @apply font-body font-medium text-16 leading-125p tracking-normal;
+  @apply font-body font-medium leading-125p tracking-normal;
 }
 
 .product-grid
@@ -1932,11 +1932,11 @@
   facet-filters-form
   .facets__header-vertical
   .facets__selected {
-  @apply font-body font-normal text-14 leading-1375p text-primary-black tracking-normal;
+  @apply font-body font-normal leading-1375p text-primary-black tracking-normal;
 }
 
 .ctm-collection-page facet-filters-form .facets__price * {
-  @apply font-body font-semibold text-16 leading-1375p text-primary-blue capitalize tracking-normal;
+  @apply font-body font-semibold leading-1375p text-primary-blue capitalize tracking-normal;
 }
 
 .ctm-collection-page facet-filters-form .facets__price input {
@@ -2191,7 +2191,7 @@ menu-drawer.mobile-facets__wrapper
   .mobile-facets__item
   label
   .facet-checkbox__text {
-  @apply !font-body !font-normal !text-16 !leading-[137.5%] !text-primary-black !capitalize !tracking-normal;
+  @apply !font-body !font-normal !leading-[137.5%] !text-primary-black !capitalize !tracking-normal;
 }
 
 .ctm-collection-page

@@ -5,11 +5,11 @@
         <div class="faq-left min-990:pb-[20px] min-1400:pb-[37px] min-990:flex-[0_0_calc(100%_-_490px)] min-1200:flex-[0_0_calc(100%_-_551px)] min-1400:flex-[0_0_calc(100%_-_581px)]">
           <div class="pb-[30px] min-1400:pb-[44px]">
             {% if section.settings.faq_heading != blank %}
-              <h2 class="main-section-title">{{ section.settings.faq_heading }}</h2>
+              <h2 class="main-section-title !text-primary-blue">{{ section.settings.faq_heading }}</h2>
             {% endif %}
             {% if section.settings.faq_subheading != blank %}
               <div class="mt-10">
-                <p class="faq-subheading font-body font-normal text-16 leading-[137.5%] text-primary-black capitalize tracking-normal">
+                <p class="faq-subheading font-body font-normal text-primary-black capitalize">
                   {{ section.settings.faq_subheading }}
                 </p>
               </div>
@@ -19,10 +19,10 @@
             {% for block in section.blocks %}
               {% if block.settings.question != blank and block.settings.answer != blank %}
                 <details class="faq-item py-[20px] min-1200:py-[28px] border-0 border-b-[1px] border-solid border-pale-grey first:border-t-[1px] relative">
-                  <summary class="relative pr-[30px] font-body font-medium text-18 leading-[140%] text-primary-black capitalize tracking-normal">
+                  <summary class="h6 relative pr-[30px] font-body font-medium !text-primary-black capitalize">
                     {{ block.settings.question }}
                   </summary>
-                  <div class="faq-answer font-body font-normal text-16 leading-125p text-primary-black tracking-normal pt-[16px]">
+                  <div class="faq-answer common-p font-body font-normal !text-primary-black pt-[16px]">
                     {{ block.settings.answer }}
                   </div>
                 </details>
@@ -34,12 +34,12 @@
           <div class="faq-right-inside p-[20px] min-1400:px-[40px] min-1400:py-[66px] bg-[#F9F7F7] rounded-[25px]">
             {% if section.settings.contact_heading != blank %}
               <div>
-                <h3 class="main-title-28">{{ section.settings.contact_heading }}</h3>
+                <h4 class="h3 main-title-28">{{ section.settings.contact_heading }}</h4>
               </div>
             {% endif %}
             {% if section.settings.contact_text != blank %}
               <div class="mt-20 min-1200:mt-[28px]">
-                <p class="contact-text font-body font-normal text-16 leading-[137.5%] text-primary-black tracking-normal">
+                <p class="contact-text font-body font-normal text-primary-black tracking-normal">
                   {{ section.settings.contact_text }}
                 </p>
               </div>

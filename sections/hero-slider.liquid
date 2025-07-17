@@ -63,15 +63,15 @@
             <div class="container_fluid z-9">
               <div class="slide-content mdscreen2:max-w-[481px] mdscreen6:max-w-[400px] max-w-[290px]">
                 {% if block.settings.tagline != blank %}
-                  <p class="mdscreen2:text-20 text-18 leading-24 mdscreen2:leading-[22.4px] text-white mdscreen2:mb-20 mb-10">
+                  <p class="h5 !text-white mdscreen2:mb-20 mb-10">
                     {{ block.settings.tagline }}
                   </p>
                 {% endif %}
                 {% if block.settings.heading != blank %}
-                  <h2 class="text-white mb-10 normal-case xl:leading-[49px]">{{ block.settings.heading }}</h2>
+                  <h2 class="!text-white mb-10 !normal-case max-w-[340px]">{{ block.settings.heading }}</h2>
                 {% endif %}
                 {% if block.settings.subtext != blank %}
-                  <p class="subtext text-16 leading-24 text-white">{{ block.settings.subtext }}</p>
+                  <p class="subtext text-white">{{ block.settings.subtext }}</p>
                 {% endif %}
                 {% if block.settings.button_link != blank and block.settings.button_text != blank %}
                   <a
@@ -115,10 +115,10 @@
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-    autoplay: {
+    {% comment %} autoplay: {
       delay: 5000,
       disableOnInteraction: false,
-    },
+    }, {% endcomment %}
     loop: true,
     watchSlidesProgress: true,
   });

@@ -15,13 +15,13 @@
                 id="HeaderMenu-{{ link.handle }}"
                 class="header__menu-item list-menu__item link focus-inset"
               >
-                <span
+                <p
                   {%- if link.child_active %}
                     class="header__active-menu-item"
                   {% endif %}
                 >
                   {{- link.title | escape -}}
-                </span>
+                </p>
                 {{- 'icon-caret.svg' | inline_asset_content -}}
               </summary>
               <div

@@ -11,7 +11,9 @@
       <div class="media-grid-text max-mdscreen2:flex justify-between items-center max-mdscreen2:w-full max-mdscreen2:gap-20 max-mdscreen6:flex-col max-mdscreen6:items-start">
         <div class="">
           {% if section.settings.heading != blank %}
-            <h4 class="media-grid-heading mdscreen2:mb-28 mb-6">{{ section.settings.heading }}</h4>
+            <h4 class="h3 !text-primary-blue media-grid-heading mdscreen2:mb-28 mb-6">
+              {{ section.settings.heading }}
+            </h4>
           {% endif %}
           {% if section.settings.subtext != blank %}
             <div class="mdscreen2:pb-40 mdscreen2:mb-40 mdscreen2:border-b border-pale-grey">

@@ -171,9 +171,9 @@
           "collection_count_color": "#ffffff"
         }
       },
-      "16808334042028794307": {
-        "type": "shopify://apps/a11ypro/blocks/accessibility-widget/1b6292c6-755d-4340-89b4-449c98087cbf",
-        "disabled": false,
+      "2783554875815837874": {
+        "type": "shopify://apps/sea-accessibility/blocks/app-embed/0ab9368b-426b-42b4-93ea-63d9c8e88707",
+        "disabled": true,
         "settings": {}
       },
       "1906576806705129218": {
@@ -181,9 +181,9 @@
         "disabled": false,
         "settings": {}
       },
-      "2783554875815837874": {
-        "type": "shopify://apps/sea-accessibility/blocks/app-embed/0ab9368b-426b-42b4-93ea-63d9c8e88707",
-        "disabled": true,
+      "16808334042028794307": {
+        "type": "shopify://apps/a11ypro/blocks/accessibility-widget/1b6292c6-755d-4340-89b4-449c98087cbf",
+        "disabled": false,
         "settings": {}
       }
     },
